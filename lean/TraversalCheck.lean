@@ -1,0 +1,4 @@
+import KroneckerManuscriptFurtherDefinitions
+open KroneckerManuscriptQuiverDefinitions.Quiver
+#print Traversal
+#check Traversal.rec

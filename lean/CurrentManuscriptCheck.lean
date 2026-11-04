@@ -1,0 +1,3357 @@
+import KroneckerGeometricInsertionPrecursor
+import KroneckerManuscriptAdmissibleBinary
+import KroneckerManuscriptBinaryEditClaims
+import ArrowOperatorsAudit
+import Audit
+import ConnectedConventionAudit
+import DefinitionsCheck
+import DimensionsAudit
+import FiveIssueCorrectionsAudit
+import FurtherDefinitionsAudit
+import GluingStabilityAudit
+import GraphHomAudit
+import KroneckerExactExchangeAudit
+import ManuscriptProofSyncAudit
+import NaturalDefinitionsCheck
+import NotationAudit
+import PathCheck
+import PriorityDefinitionsAudit
+import ReuseAudit
+import TraversalCheck
+import KroneckerBalanceTraceCorrespondence
+import KroneckerBinaryExchangeCorrespondence
+import KroneckerChainLeafCorrespondence
+import KroneckerComponentCorrespondence
+import KroneckerExchangeColorCorrespondence
+import KroneckerExchangeRepairCorrespondence
+import KroneckerExchangeTransport
+import KroneckerManuscriptBranchCounting
+import KroneckerManuscriptExchangeDefinitions
+import KroneckerManuscriptNotationSync
+import KroneckerRepairGeometry
+import KroneckerRepairIndexCorrespondence
+import KroneckerRunEResult
+import KroneckerManuscriptFlowFamily
+import KroneckerManuscriptGradingOperations
+import KroneckerManuscriptBipartiteStability
+import KroneckerManuscriptProperColoring
+import KroneckerManuscriptEulerForms
+import KroneckerManuscriptSimpleRunGrading
+import KroneckerManuscriptAdmissiblePairs
+import KroneckerManuscriptFiniteSupportDimensions
+import KroneckerManuscriptEntropyLoss
+import KroneckerManuscriptQuiverDefinitions
+import KroneckerFurtherIntermediateLemmas
+import KroneckerAdjacentExchangeLemma
+import KroneckerConnectedCoverFiniteness
+import KroneckerIntermediateLemmas
+import KroneckerBoundedSurplusShells
+import KroneckerPrecursorDeletion
+import KroneckerBipartiteQuiverBlock
+import KroneckerUpdatedDefinitions
+import StatementAudit
+import KroneckerSplitNodeLemmas
+import KroneckerSplitGluingLemmas
+import KroneckerSplitFlowChoiceLemmas
+import KroneckerSplitMarkedChainLemmas
+import KroneckerSplitCoverLemmas
+import KroneckerSplitIntegerPropositions
+import KroneckerSplitThreePropositions
+import KroneckerSplitInteriorPropositions
+import KroneckerSplitFrameResults
+import KroneckerSplitPeriodicResults
+import KroneckerSplitReflectedLemmas
+import KroneckerSplitContinuityLemmas
+import KroneckerBetaBaselineCorrespondence
+
+import KroneckerTreeTraversalHelper
+import KroneckerReflectedSingleSlotCounts
+
+import KroneckerGluingWeightHelpers
+import KroneckerInsertionPrecursorHelpers
+import KroneckerInsertionBalanceHelpers
+import KroneckerPhasePrefixHelpers
+import KroneckerReductionIndexHelpers
+import KroneckerReductionWordHelpers
+import KroneckerEndpointFoldHelpers
+import KroneckerPrecursorPrefixHelpers
+import KroneckerClosedIntervalHelpers
+import KroneckerShadowDebtHelpers
+import KroneckerExplicitWitnessHelpers
+import KroneckerCyclicIntervalHelpers
+import KroneckerCyclicIndexHelpers
+
+/-! Current manuscript declarations and axiom profiles. -/
+
+-- Theorem 1.1: thm:main
+#check KroneckerReadableMain.theorem_1_1
+#print axioms KroneckerReadableMain.theorem_1_1
+#check KroneckerReadableMain.semantic_main
+#print axioms KroneckerReadableMain.semantic_main
+
+-- Check the limit and continuity part directly. The quantitative envelope
+-- is separate; Euler positivity and nonemptiness are included in the bundled
+-- theorem_1_1 above. Nonnegativity encodes the profile's codomain.
+open KroneckerManuscriptTarget KroneckerEndpointRoots KroneckerLogic in
+example : ∀ m : ℕ, 3 ≤ m →
+    ∃ F : ℝ → ℝ,
+      ContinuousOn F (interval m) ∧
+      F (lowerRoot m) = 0 ∧ F (upperRoot m) = 0 ∧
+      (∀ r ∈ interior m, 0 < F r) ∧
+      (∀ r ∈ interval m, 0 ≤ F r ∧
+        JointLimit
+          (height (M := KroneckerScopedCanonicalPublishedEuler.family
+            KroneckerReadableMain.geometry) (m := m)) slope value r (F r)) :=
+  KroneckerReadableMain.semantic_main
+
+-- Companion results used to interpret the logarithm and its admissible domain.
+#check KroneckerReadableMain.semantic_properties
+#print axioms KroneckerReadableMain.semantic_properties
+
+-- Lemma 2.1: lem:moduli-symmetries
+#check KroneckerManuscriptFiniteStatements.coprime_symmetries
+#print axioms KroneckerManuscriptFiniteStatements.coprime_symmetries
+#check KroneckerManuscriptFiniteStatements.euler_symmetries
+#print axioms KroneckerManuscriptFiniteStatements.euler_symmetries
+#check KroneckerManuscriptFiniteStatements.quadratic_symmetries
+#print axioms KroneckerManuscriptFiniteStatements.quadratic_symmetries
+
+-- Definition 2.2: def:word
+#check KroneckerManuscriptNotationSync.concat_direction_lists
+#print axioms KroneckerManuscriptNotationSync.concat_direction_lists
+#check KroneckerManuscriptNotationSync.concat_empty_left
+#print axioms KroneckerManuscriptNotationSync.concat_empty_left
+#check KroneckerManuscriptNotationSync.concat_empty_right
+#print axioms KroneckerManuscriptNotationSync.concat_empty_right
+#check KroneckerPaperPaths.EdgeDisjoint
+#print axioms KroneckerPaperPaths.EdgeDisjoint
+#check KroneckerPaperPaths.End_NE
+#print axioms KroneckerPaperPaths.End_NE
+#check KroneckerPaperPaths.End_NE_index
+#print axioms KroneckerPaperPaths.End_NE_index
+#check KroneckerPaperPaths.End_NE_point
+#print axioms KroneckerPaperPaths.End_NE_point
+#check KroneckerPaperPaths.End_pt
+#print axioms KroneckerPaperPaths.End_pt
+#check KroneckerPaperPaths.IsSubpath
+#print axioms KroneckerPaperPaths.IsSubpath
+#check KroneckerPaperPaths.IsSubpath.trans
+#print axioms KroneckerPaperPaths.IsSubpath.trans
+#check KroneckerPaperPaths.Start_NE
+#print axioms KroneckerPaperPaths.Start_NE
+#check KroneckerPaperPaths.Start_NE_index
+#print axioms KroneckerPaperPaths.Start_NE_index
+#check KroneckerPaperPaths.Start_NE_point
+#print axioms KroneckerPaperPaths.Start_NE_point
+#check KroneckerPaperPaths.Start_pt
+#print axioms KroneckerPaperPaths.Start_pt
+#check KroneckerPaperPaths.TNEPath
+#print axioms KroneckerPaperPaths.TNEPath
+#check KroneckerPaperPaths.subpath_End_NE
+#print axioms KroneckerPaperPaths.subpath_End_NE
+#check KroneckerPaperPaths.subpath_Start_NE
+#print axioms KroneckerPaperPaths.subpath_Start_NE
+#check KroneckerPaperPaths.subpath_nonempty
+#print axioms KroneckerPaperPaths.subpath_nonempty
+#check KroneckerPaperPaths.subpath_subpath
+#print axioms KroneckerPaperPaths.subpath_subpath
+
+-- Definition 2.3: def:word-operations
+#check KroneckerManuscriptNotationSync.concat_direction_lists
+#print axioms KroneckerManuscriptNotationSync.concat_direction_lists
+#check KroneckerPaperPaths.CRot_normalized
+#print axioms KroneckerPaperPaths.CRot_normalized
+#check KroneckerPaperPaths.Exc
+#print axioms KroneckerPaperPaths.Exc
+#check KroneckerPaperPaths.Exc_empty_prefix
+#print axioms KroneckerPaperPaths.Exc_empty_prefix
+#check KroneckerPaperPaths.Exc_formula
+#print axioms KroneckerPaperPaths.Exc_formula
+#check KroneckerPaperPaths.Exc_length
+#print axioms KroneckerPaperPaths.Exc_length
+#check KroneckerPaperPaths.Exc_origin
+#print axioms KroneckerPaperPaths.Exc_origin
+#check KroneckerPaperPaths.deleteVertical_paper_formula
+#print axioms KroneckerPaperPaths.deleteVertical_paper_formula
+#check KroneckerPaperPaths.insert_paper_formula
+#print axioms KroneckerPaperPaths.insert_paper_formula
+#check KroneckerPaperPaths.insert_positive_origin
+#print axioms KroneckerPaperPaths.insert_positive_origin
+#check KroneckerPaperPaths.insert_zero_origin
+#print axioms KroneckerPaperPaths.insert_zero_origin
+#check KroneckerPaperPaths.insertion_count_recenter
+#print axioms KroneckerPaperPaths.insertion_count_recenter
+#check KroneckerPaperPaths.path_from_steps
+#print axioms KroneckerPaperPaths.path_from_steps
+#check KroneckerPaperPaths.rotateRuns_cut
+#print axioms KroneckerPaperPaths.rotateRuns_cut
+#check KroneckerPaperPaths.rotateRuns_length
+#print axioms KroneckerPaperPaths.rotateRuns_length
+#check KroneckerPaperPaths.rotateRuns_origin
+#print axioms KroneckerPaperPaths.rotateRuns_origin
+#check KroneckerPaperPaths.rotateRuns_zero
+#print axioms KroneckerPaperPaths.rotateRuns_zero
+#check KroneckerPaperPaths.simpleRun_Start_pt
+#print axioms KroneckerPaperPaths.simpleRun_Start_pt
+
+-- Definition 2.4: def:colored-grading
+#check KroneckerManuscriptGradingOperations.concatColored
+#print axioms KroneckerManuscriptGradingOperations.concatColored
+#check KroneckerManuscriptGradingOperations.concatColors
+#print axioms KroneckerManuscriptGradingOperations.concatColors
+#check KroneckerManuscriptGradingOperations.concatEdge
+#print axioms KroneckerManuscriptGradingOperations.concatEdge
+#check KroneckerManuscriptGradingOperations.concatGrading
+#print axioms KroneckerManuscriptGradingOperations.concatGrading
+#check KroneckerManuscriptGradingOperations.concat_left_values
+#print axioms KroneckerManuscriptGradingOperations.concat_left_values
+#check KroneckerManuscriptGradingOperations.concat_right_values
+#print axioms KroneckerManuscriptGradingOperations.concat_right_values
+#check KroneckerManuscriptGradingOperations.concatenate
+#print axioms KroneckerManuscriptGradingOperations.concatenate
+#check KroneckerManuscriptGradingOperations.concatenate_steps
+#print axioms KroneckerManuscriptGradingOperations.concatenate_steps
+#check KroneckerManuscriptGradingOperations.emptyColored
+#print axioms KroneckerManuscriptGradingOperations.emptyColored
+#check KroneckerManuscriptGradingOperations.leftCopy_position
+#print axioms KroneckerManuscriptGradingOperations.leftCopy_position
+#check KroneckerManuscriptGradingOperations.restrictColored
+#print axioms KroneckerManuscriptGradingOperations.restrictColored
+#check KroneckerManuscriptGradingOperations.restrictColors
+#print axioms KroneckerManuscriptGradingOperations.restrictColors
+#check KroneckerManuscriptGradingOperations.restriction_values
+#print axioms KroneckerManuscriptGradingOperations.restriction_values
+#check KroneckerManuscriptGradingOperations.rightCopy_position
+#print axioms KroneckerManuscriptGradingOperations.rightCopy_position
+#check KroneckerNaturalPathGradings.Col
+#print axioms KroneckerNaturalPathGradings.Col
+#check KroneckerNaturalPathGradings.Col_nonempty_iff
+#print axioms KroneckerNaturalPathGradings.Col_nonempty_iff
+#check KroneckerNaturalPathGradings.ColorFiber
+#print axioms KroneckerNaturalPathGradings.ColorFiber
+#check KroneckerNaturalPathGradings.Diff
+#print axioms KroneckerNaturalPathGradings.Diff
+#check KroneckerNaturalPathGradings.Diff_add
+#print axioms KroneckerNaturalPathGradings.Diff_add
+#check KroneckerNaturalPathGradings.Diff_natCast
+#print axioms KroneckerNaturalPathGradings.Diff_natCast
+#check KroneckerNaturalPathGradings.Diff_nonneg_iff
+#print axioms KroneckerNaturalPathGradings.Diff_nonneg_iff
+#check KroneckerNaturalPathGradings.Diff_recovery
+#print axioms KroneckerNaturalPathGradings.Diff_recovery
+#check KroneckerNaturalPathGradings.Diff_self
+#print axioms KroneckerNaturalPathGradings.Diff_self
+#check KroneckerNaturalPathGradings.Diff_zero_iff
+#print axioms KroneckerNaturalPathGradings.Diff_zero_iff
+#check KroneckerNaturalPathGradings.G
+#print axioms KroneckerNaturalPathGradings.G
+#check KroneckerNaturalPathGradings.G_h
+#print axioms KroneckerNaturalPathGradings.G_h
+#check KroneckerNaturalPathGradings.Grading
+#print axioms KroneckerNaturalPathGradings.Grading
+#check KroneckerNaturalPathGradings.bBal
+#print axioms KroneckerNaturalPathGradings.bBal
+#check KroneckerNaturalPathGradings.colorFiber_nonempty_iff
+#print axioms KroneckerNaturalPathGradings.colorFiber_nonempty_iff
+#check KroneckerNaturalPathGradings.color_grade_le
+#print axioms KroneckerNaturalPathGradings.color_grade_le
+#check KroneckerNaturalPathGradings.coloredGradingEquiv
+#print axioms KroneckerNaturalPathGradings.coloredGradingEquiv
+#check KroneckerNaturalPathGradings.eBal
+#print axioms KroneckerNaturalPathGradings.eBal
+#check KroneckerNaturalPathGradings.mem_G_h
+#print axioms KroneckerNaturalPathGradings.mem_G_h
+#check KroneckerNaturalPathGradings.translateGrading
+#print axioms KroneckerNaturalPathGradings.translateGrading
+
+-- Example 2.5: ex:colored-balance
+#check KroneckerManuscriptExamples.balanceColors
+#print axioms KroneckerManuscriptExamples.balanceColors
+#check KroneckerManuscriptExamples.example_boundary_balances
+#print axioms KroneckerManuscriptExamples.example_boundary_balances
+#check KroneckerManuscriptExamples.example_edge_balances
+#print axioms KroneckerManuscriptExamples.example_edge_balances
+
+-- Definition 2.6: def:stack
+#check KroneckerNaturalPathGradings.Debt
+#print axioms KroneckerNaturalPathGradings.Debt
+#check KroneckerNaturalPathGradings.IsHPrecursor
+#print axioms KroneckerNaturalPathGradings.IsHPrecursor
+#check KroneckerNaturalPathGradings.IsNode
+#print axioms KroneckerNaturalPathGradings.IsNode
+#check KroneckerNaturalPathGradings.Node
+#print axioms KroneckerNaturalPathGradings.Node
+#check KroneckerNaturalPathGradings.debt_nonnegative
+#print axioms KroneckerNaturalPathGradings.debt_nonnegative
+#check KroneckerNaturalPathGradings.occurrenceWord
+#print axioms KroneckerNaturalPathGradings.occurrenceWord
+
+-- Lemma 2.7: lem:predecessor-uniqueness
+#check KroneckerNaturalPathGradings.hPrecursor_exists_iff
+#print axioms KroneckerNaturalPathGradings.hPrecursor_exists_iff
+#check KroneckerNaturalPathGradings.hPrecursor_unique
+#print axioms KroneckerNaturalPathGradings.hPrecursor_unique
+
+-- Example 2.8: ex:horizontal-predecessor
+#check KroneckerManuscriptExamples.example_predecessor_valid
+#print axioms KroneckerManuscriptExamples.example_predecessor_valid
+#check KroneckerManuscriptExamples.example_predecessor_values
+#print axioms KroneckerManuscriptExamples.example_predecessor_values
+
+-- Definition 2.9: def:connected-grading
+#check KroneckerNaturalPathGradings.ConnectedColorings
+#print axioms KroneckerNaturalPathGradings.ConnectedColorings
+#check KroneckerNaturalPathGradings.ConnectedGrading
+#print axioms KroneckerNaturalPathGradings.ConnectedGrading
+#check KroneckerNaturalPathGradings.CtdG
+#print axioms KroneckerNaturalPathGradings.CtdG
+#check KroneckerNaturalPathGradings.CtdG_h
+#print axioms KroneckerNaturalPathGradings.CtdG_h
+#check KroneckerNaturalPathGradings.Surp
+#print axioms KroneckerNaturalPathGradings.Surp
+#check KroneckerNaturalPathGradings.connectedColoringEquiv
+#print axioms KroneckerNaturalPathGradings.connectedColoringEquiv
+#check KroneckerNaturalPathGradings.connectedColorings_spec
+#print axioms KroneckerNaturalPathGradings.connectedColorings_spec
+#check KroneckerNaturalPathGradings.connectedCount
+#print axioms KroneckerNaturalPathGradings.connectedCount
+#check KroneckerNaturalPathGradings.mem_CtdG
+#print axioms KroneckerNaturalPathGradings.mem_CtdG
+#check KroneckerNaturalPathGradings.mem_CtdG_h
+#print axioms KroneckerNaturalPathGradings.mem_CtdG_h
+#check KroneckerNaturalPathGradings.mem_CtdG_h_of_color
+#print axioms KroneckerNaturalPathGradings.mem_CtdG_h_of_color
+
+-- Lemma 2.10: lem:word-reindexing
+#check KroneckerNaturalPathGradings.connectedCount_translate
+#print axioms KroneckerNaturalPathGradings.connectedCount_translate
+#check KroneckerNaturalPathGradings.connected_translate
+#print axioms KroneckerNaturalPathGradings.connected_translate
+#check KroneckerNaturalPathGradings.surp_translate
+#print axioms KroneckerNaturalPathGradings.surp_translate
+
+-- Lemma 2.11: lem:residual-nonnegative
+#check KroneckerNaturalPathGradings.connected_surp_nonnegative
+#print axioms KroneckerNaturalPathGradings.connected_surp_nonnegative
+
+-- Lemma 2.12: lem:colored-weight
+#check KroneckerNaturalPathGradings.connectedColoringEquiv
+#print axioms KroneckerNaturalPathGradings.connectedColoringEquiv
+#check KroneckerWeights.colored_count
+#print axioms KroneckerWeights.colored_count
+#check KroneckerWeights.fiber_card
+#print axioms KroneckerWeights.fiber_card
+
+-- Lemma 2.13: lem:precursor-prefix-counts
+#check KroneckerPrecursorPrefixHelpers.prefix_counts
+#print axioms KroneckerPrecursorPrefixHelpers.prefix_counts
+#check KroneckerPrecursorPrefixHelpers.saturated_prefix
+#print axioms KroneckerPrecursorPrefixHelpers.saturated_prefix
+#check KroneckerPrecursorPrefixHelpers.before_assigned
+#print axioms KroneckerPrecursorPrefixHelpers.before_assigned
+#check KroneckerPrecursorPrefixHelpers.assignments_between
+#print axioms KroneckerPrecursorPrefixHelpers.assignments_between
+#check KroneckerPrecursorPrefixHelpers.interior_saturated
+#print axioms KroneckerPrecursorPrefixHelpers.interior_saturated
+#check KroneckerPrecursorPrefixHelpers.interior_max_node
+#print axioms KroneckerPrecursorPrefixHelpers.interior_max_node
+
+-- Lemma 2.14: lem:precursor-closed-restriction
+#check KroneckerPredecessor.ClosedInterval
+#print axioms KroneckerPredecessor.ClosedInterval
+#check KroneckerPredecessor.closedMap
+#print axioms KroneckerPredecessor.closedMap
+#check KroneckerPredecessor.closedMap_embed
+#print axioms KroneckerPredecessor.closedMap_embed
+#check KroneckerPredecessor.closed_load
+#print axioms KroneckerPredecessor.closed_load
+#check KroneckerPredecessor.closed_valid
+#print axioms KroneckerPredecessor.closed_valid
+#check KroneckerPredecessor.closed_node_ambient
+#print axioms KroneckerPredecessor.closed_node_ambient
+#check KroneckerPredecessor.closed_ownedBalance
+#print axioms KroneckerPredecessor.closed_ownedBalance
+#check KroneckerPredecessor.ambient_node_closed
+#print axioms KroneckerPredecessor.ambient_node_closed
+#check KroneckerPredecessor.closed_node_iff
+#print axioms KroneckerPredecessor.closed_node_iff
+#check KroneckerPredecessor.closed_restriction
+#print axioms KroneckerPredecessor.closed_restriction
+#check KroneckerPredecessor.restriction_balance
+#print axioms KroneckerPredecessor.restriction_balance
+#check KroneckerPredecessor.restriction_baseline
+#print axioms KroneckerPredecessor.restriction_baseline
+#check KroneckerPredecessor.restriction_balance_inequality_iff
+#print axioms KroneckerPredecessor.restriction_balance_inequality_iff
+
+-- Lemma 2.15: lem:node-structure
+#check KroneckerNaturalPathGradings.nodeGrading_connected
+#print axioms KroneckerNaturalPathGradings.nodeGrading_connected
+#check KroneckerNaturalPathGradings.nodeGrading_surp_nonnegative
+#print axioms KroneckerNaturalPathGradings.nodeGrading_surp_nonnegative
+#check KroneckerNaturalPathGradings.node_isSubpath
+#print axioms KroneckerNaturalPathGradings.node_isSubpath
+#check KroneckerNaturalPathGradings.node_subpath_laminar
+#print axioms KroneckerNaturalPathGradings.node_subpath_laminar
+#check KroneckerNaturalPathGradings.node_surp_balance
+#print axioms KroneckerNaturalPathGradings.node_surp_balance
+#check KroneckerNaturalPathGradings.ofBounded_bounded
+#print axioms KroneckerNaturalPathGradings.ofBounded_bounded
+#check KroneckerNaturalPathGradings.restrictGrading_bBal
+#print axioms KroneckerNaturalPathGradings.restrictGrading_bBal
+#check KroneckerNaturalPathGradings.trace_bounded
+#print axioms KroneckerNaturalPathGradings.trace_bounded
+#check KroneckerPredecessor.IsNode.balance_lower_bound
+#print axioms KroneckerPredecessor.IsNode.balance_lower_bound
+#check KroneckerPredecessor.IsNode.disjoint_or_nested
+#print axioms KroneckerPredecessor.IsNode.disjoint_or_nested
+#check KroneckerPredecessor.IsNode.interior_baseline_lt
+#print axioms KroneckerPredecessor.IsNode.interior_baseline_lt
+#check KroneckerPredecessor.IsNode.interior_node
+#print axioms KroneckerPredecessor.IsNode.interior_node
+#check KroneckerPredecessor.IsNode.internal_assignment
+#print axioms KroneckerPredecessor.IsNode.internal_assignment
+#check KroneckerPredecessor.IsNode.restriction_connected
+#print axioms KroneckerPredecessor.IsNode.restriction_connected
+#check KroneckerPredecessor.IsNode.surplus_nonnegative
+#print axioms KroneckerPredecessor.IsNode.surplus_nonnegative
+#check KroneckerPredecessor.node_balance_difference
+#print axioms KroneckerPredecessor.node_balance_difference
+#check KroneckerSplitNodeLemmas.interior_node
+#print axioms KroneckerSplitNodeLemmas.interior_node
+#check KroneckerSplitNodeLemmas.node_balances
+#print axioms KroneckerSplitNodeLemmas.node_balances
+#check KroneckerSplitNodeLemmas.node_restriction
+#print axioms KroneckerSplitNodeLemmas.node_restriction
+
+-- Definition 2.16: def:node-relations
+#check KroneckerNaturalPathGradings.Node
+#print axioms KroneckerNaturalPathGradings.Node
+#check KroneckerNaturalPathGradings.Parent
+#print axioms KroneckerNaturalPathGradings.Parent
+#check KroneckerNaturalPathGradings.parent_unique
+#print axioms KroneckerNaturalPathGradings.parent_unique
+
+-- Lemma 2.17: lem:parent-unique
+#check KroneckerNaturalPathGradings.parent_unique
+#print axioms KroneckerNaturalPathGradings.parent_unique
+
+-- Definition 2.18: def:cyclic-subpaths
+#check KroneckerNaturalPathGradings.NERealColoredGrading
+#print axioms KroneckerNaturalPathGradings.NERealColoredGrading
+#check KroneckerNaturalPathGradings.NERealGrading
+#print axioms KroneckerNaturalPathGradings.NERealGrading
+#check KroneckerNaturalPathGradings.NEReal_color
+#print axioms KroneckerNaturalPathGradings.NEReal_color
+#check KroneckerNaturalPathGradings.NEReal_grade
+#print axioms KroneckerNaturalPathGradings.NEReal_grade
+#check KroneckerPaperPaths.CyclicSubpath.Disjoint
+#print axioms KroneckerPaperPaths.CyclicSubpath.Disjoint
+#check KroneckerPaperPaths.CyclicSubpath.Included
+#print axioms KroneckerPaperPaths.CyclicSubpath.Included
+#check KroneckerPaperPaths.NEReal
+#print axioms KroneckerPaperPaths.NEReal
+#check KroneckerPaperPaths.NEReal_End_NE
+#print axioms KroneckerPaperPaths.NEReal_End_NE
+#check KroneckerPaperPaths.NEReal_Start_NE
+#print axioms KroneckerPaperPaths.NEReal_Start_NE
+#check KroneckerPaperPaths.NEReal_ambient_range
+#print axioms KroneckerPaperPaths.NEReal_ambient_range
+#check KroneckerPaperPaths.cyclicE
+#print axioms KroneckerPaperPaths.cyclicE
+#check KroneckerPaperPaths.cyclicN
+#print axioms KroneckerPaperPaths.cyclicN
+#check KroneckerPaperPaths.cyclicNE
+#print axioms KroneckerPaperPaths.cyclicNE
+
+-- Definition 2.19: def:compatible-grading
+#check KroneckerNaturalPathGradings.Compatible
+#print axioms KroneckerNaturalPathGradings.Compatible
+#check KroneckerNaturalPathGradings.EGrDiff
+#print axioms KroneckerNaturalPathGradings.EGrDiff
+#check KroneckerNaturalPathGradings.EGrDiff_eq_zero_iff
+#print axioms KroneckerNaturalPathGradings.EGrDiff_eq_zero_iff
+#check KroneckerNaturalPathGradings.E_g
+#print axioms KroneckerNaturalPathGradings.E_g
+#check KroneckerNaturalPathGradings.FirstHShadow
+#print axioms KroneckerNaturalPathGradings.FirstHShadow
+#check KroneckerNaturalPathGradings.FirstVShadow
+#print axioms KroneckerNaturalPathGradings.FirstVShadow
+#check KroneckerNaturalPathGradings.HWitness
+#print axioms KroneckerNaturalPathGradings.HWitness
+#check KroneckerNaturalPathGradings.MaximalHShadowSubpath
+#print axioms KroneckerNaturalPathGradings.MaximalHShadowSubpath
+#check KroneckerNaturalPathGradings.NEReal_surp_EGrDiff
+#print axioms KroneckerNaturalPathGradings.NEReal_surp_EGrDiff
+#check KroneckerNaturalPathGradings.NGrDiff
+#print axioms KroneckerNaturalPathGradings.NGrDiff
+#check KroneckerNaturalPathGradings.NGrDiff_eq_zero_iff
+#print axioms KroneckerNaturalPathGradings.NGrDiff_eq_zero_iff
+#check KroneckerNaturalPathGradings.N_g
+#print axioms KroneckerNaturalPathGradings.N_g
+#check KroneckerNaturalPathGradings.Sh
+#print axioms KroneckerNaturalPathGradings.Sh
+#check KroneckerNaturalPathGradings.ShSet
+#print axioms KroneckerNaturalPathGradings.ShSet
+#check KroneckerNaturalPathGradings.ShSet_eq_union
+#print axioms KroneckerNaturalPathGradings.ShSet_eq_union
+#check KroneckerNaturalPathGradings.TEG
+#print axioms KroneckerNaturalPathGradings.TEG
+#check KroneckerNaturalPathGradings.TNG
+#print axioms KroneckerNaturalPathGradings.TNG
+#check KroneckerNaturalPathGradings.VWitness
+#print axioms KroneckerNaturalPathGradings.VWitness
+#check KroneckerNaturalPathGradings.compatible_iff_grading_differences
+#print axioms KroneckerNaturalPathGradings.compatible_iff_grading_differences
+#check KroneckerNaturalPathGradings.firstHShadow_NGrDiff_zero
+#print axioms KroneckerNaturalPathGradings.firstHShadow_NGrDiff_zero
+#check KroneckerNaturalPathGradings.firstVShadow_EGrDiff_zero
+#print axioms KroneckerNaturalPathGradings.firstVShadow_EGrDiff_zero
+#check KroneckerNaturalPathGradings.hCloses_iff_NGrDiff_zero
+#print axioms KroneckerNaturalPathGradings.hCloses_iff_NGrDiff_zero
+#check KroneckerNaturalPathGradings.hShadow
+#print axioms KroneckerNaturalPathGradings.hShadow
+#check KroneckerNaturalPathGradings.hWitness_iff_NGrDiff_zero
+#print axioms KroneckerNaturalPathGradings.hWitness_iff_NGrDiff_zero
+#check KroneckerNaturalPathGradings.maximalHShadow_ofBounded
+#print axioms KroneckerNaturalPathGradings.maximalHShadow_ofBounded
+#check KroneckerNaturalPathGradings.s
+#print axioms KroneckerNaturalPathGradings.s
+#check KroneckerNaturalPathGradings.t
+#print axioms KroneckerNaturalPathGradings.t
+#check KroneckerNaturalPathGradings.vCloses_iff_EGrDiff_zero
+#print axioms KroneckerNaturalPathGradings.vCloses_iff_EGrDiff_zero
+#check KroneckerNaturalPathGradings.vShadow
+#print axioms KroneckerNaturalPathGradings.vShadow
+#check KroneckerNaturalPathGradings.vWitness_iff_EGrDiff_zero
+#print axioms KroneckerNaturalPathGradings.vWitness_iff_EGrDiff_zero
+
+-- Definition 2.20: def:dyck-grading
+#check KroneckerNaturalPathGradings.CG
+#print axioms KroneckerNaturalPathGradings.CG
+#check KroneckerNaturalPathGradings.TCG
+#print axioms KroneckerNaturalPathGradings.TCG
+#check KroneckerNaturalPathGradings.TCG_finite
+#print axioms KroneckerNaturalPathGradings.TCG_finite
+#check KroneckerNaturalPathGradings.TCG_subset_CG
+#print axioms KroneckerNaturalPathGradings.TCG_subset_CG
+#check KroneckerNaturalPathGradings.Tight
+#print axioms KroneckerNaturalPathGradings.Tight
+#check KroneckerNaturalPathGradings.compatibleAtTotals_finite
+#print axioms KroneckerNaturalPathGradings.compatibleAtTotals_finite
+#check KroneckerNaturalPathGradings.maximalDyckPath
+#print axioms KroneckerNaturalPathGradings.maximalDyckPath
+#check KroneckerNaturalPathGradings.maximalDyckPath_runs
+#print axioms KroneckerNaturalPathGradings.maximalDyckPath_runs
+#check KroneckerNaturalPathGradings.maximalDyckPath_vertex
+#print axioms KroneckerNaturalPathGradings.maximalDyckPath_vertex
+#check KroneckerNaturalPathGradings.mem_TCG
+#print axioms KroneckerNaturalPathGradings.mem_TCG
+#check KroneckerNaturalPathGradings.mem_TCG_det_negative_one
+#print axioms KroneckerNaturalPathGradings.mem_TCG_det_negative_one
+#check KroneckerNaturalPathGradings.mem_TCG_negative
+#print axioms KroneckerNaturalPathGradings.mem_TCG_negative
+#check KroneckerNaturalPathGradings.mem_TCG_positive
+#print axioms KroneckerNaturalPathGradings.mem_TCG_positive
+#check KroneckerNaturalPathGradings.pi
+#print axioms KroneckerNaturalPathGradings.pi
+#check KroneckerNaturalPathGradings.pi_formula
+#print axioms KroneckerNaturalPathGradings.pi_formula
+#check KroneckerNaturalPathGradings.pi_injective
+#print axioms KroneckerNaturalPathGradings.pi_injective
+#check KroneckerNaturalPathGradings.tight_negative
+#print axioms KroneckerNaturalPathGradings.tight_negative
+#check KroneckerNaturalPathGradings.tight_positive
+#print axioms KroneckerNaturalPathGradings.tight_positive
+#check KroneckerNaturalPathGradings.zero_totals_support
+#print axioms KroneckerNaturalPathGradings.zero_totals_support
+
+-- Lemma 2.21: lem:node-debt-sum
+#check KroneckerShadowDebtHelpers.intervalLoad
+#print axioms KroneckerShadowDebtHelpers.intervalLoad
+#check KroneckerShadowDebtHelpers.intervalLoad_eq_load
+#print axioms KroneckerShadowDebtHelpers.intervalLoad_eq_load
+#check KroneckerShadowDebtHelpers.intervalLoad_zero_outside
+#print axioms KroneckerShadowDebtHelpers.intervalLoad_zero_outside
+#check KroneckerShadowDebtHelpers.interval_count_eq_sum_load
+#print axioms KroneckerShadowDebtHelpers.interval_count_eq_sum_load
+#check KroneckerShadowDebtHelpers.horizontalInterval
+#print axioms KroneckerShadowDebtHelpers.horizontalInterval
+#check KroneckerShadowDebtHelpers.load_zero_vertical
+#print axioms KroneckerShadowDebtHelpers.load_zero_vertical
+#check KroneckerShadowDebtHelpers.node_prefix_load
+#print axioms KroneckerShadowDebtHelpers.node_prefix_load
+#check KroneckerShadowDebtHelpers.node_debt_sum
+#print axioms KroneckerShadowDebtHelpers.node_debt_sum
+#check KroneckerShadowDebtHelpers.node_first_zero
+#print axioms KroneckerShadowDebtHelpers.node_first_zero
+
+-- Lemma 2.22: lem:explicit-compatibility-witness
+#check KroneckerExplicitWitnessHelpers.crossingSet
+#print axioms KroneckerExplicitWitnessHelpers.crossingSet
+#check KroneckerExplicitWitnessHelpers.crossing_nonempty
+#print axioms KroneckerExplicitWitnessHelpers.crossing_nonempty
+#check KroneckerExplicitWitnessHelpers.first_crossing
+#print axioms KroneckerExplicitWitnessHelpers.first_crossing
+#check KroneckerExplicitWitnessHelpers.failureSet
+#print axioms KroneckerExplicitWitnessHelpers.failureSet
+#check KroneckerExplicitWitnessHelpers.least_failure
+#print axioms KroneckerExplicitWitnessHelpers.least_failure
+#check KroneckerExplicitWitnessHelpers.before_first_failure
+#print axioms KroneckerExplicitWitnessHelpers.before_first_failure
+#check KroneckerExplicitWitnessHelpers.first_failure_contract
+#print axioms KroneckerExplicitWitnessHelpers.first_failure_contract
+
+-- Lemma 2.23: lem:cyclic-witness-extension
+#check KroneckerCyclicIntervalHelpers.intervalEdges_succ
+#print axioms KroneckerCyclicIntervalHelpers.intervalEdges_succ
+#check KroneckerCyclicIntervalHelpers.intervalHorizontalGrade_succ
+#print axioms KroneckerCyclicIntervalHelpers.intervalHorizontalGrade_succ
+#check KroneckerCyclicIntervalHelpers.intervalVerticalCount_succ
+#print axioms KroneckerCyclicIntervalHelpers.intervalVerticalCount_succ
+#check KroneckerCyclicIntervalHelpers.debt_interval_counts
+#print axioms KroneckerCyclicIntervalHelpers.debt_interval_counts
+#check KroneckerCyclicIntervalHelpers.PositiveClosures
+#print axioms KroneckerCyclicIntervalHelpers.PositiveClosures
+#check KroneckerCyclicIntervalHelpers.nodes_close
+#print axioms KroneckerCyclicIntervalHelpers.nodes_close
+#check KroneckerCyclicIntervalHelpers.walk_prefix
+#print axioms KroneckerCyclicIntervalHelpers.walk_prefix
+#check KroneckerCyclicIntervalHelpers.ordered_witness_at
+#print axioms KroneckerCyclicIntervalHelpers.ordered_witness_at
+#check KroneckerCyclicIntervalHelpers.ordered_witness_iff
+#print axioms KroneckerCyclicIntervalHelpers.ordered_witness_iff
+#check KroneckerCyclicIntervalHelpers.reversed_endpoint
+#print axioms KroneckerCyclicIntervalHelpers.reversed_endpoint
+#check KroneckerCyclicIntervalHelpers.restriction_compatible
+#print axioms KroneckerCyclicIntervalHelpers.restriction_compatible
+#check KroneckerCyclicIntervalHelpers.zero_extension_compatible
+#print axioms KroneckerCyclicIntervalHelpers.zero_extension_compatible
+#check KroneckerCyclicIntervalHelpers.nodes_restriction_compatible
+#print axioms KroneckerCyclicIntervalHelpers.nodes_restriction_compatible
+#check KroneckerCyclicIndexHelpers.eta
+#print axioms KroneckerCyclicIndexHelpers.eta
+#check KroneckerCyclicIndexHelpers.theta
+#print axioms KroneckerCyclicIndexHelpers.theta
+#check KroneckerCyclicIndexHelpers.eta_cases
+#print axioms KroneckerCyclicIndexHelpers.eta_cases
+#check KroneckerCyclicIndexHelpers.theta_cases
+#print axioms KroneckerCyclicIndexHelpers.theta_cases
+#check KroneckerCyclicIndexHelpers.theta_eta
+#print axioms KroneckerCyclicIndexHelpers.theta_eta
+#check KroneckerCyclicIndexHelpers.eta_theta
+#print axioms KroneckerCyclicIndexHelpers.eta_theta
+#check KroneckerCyclicIndexHelpers.cyclicEquiv
+#print axioms KroneckerCyclicIndexHelpers.cyclicEquiv
+#check KroneckerCyclicIndexHelpers.cyclic_span
+#print axioms KroneckerCyclicIndexHelpers.cyclic_span
+#check KroneckerCyclicIndexHelpers.inclusion
+#print axioms KroneckerCyclicIndexHelpers.inclusion
+#check KroneckerCyclicIndexHelpers.zeroGrades
+#print axioms KroneckerCyclicIndexHelpers.zeroGrades
+#check KroneckerCyclicIndexHelpers.zeroGrades_inside
+#print axioms KroneckerCyclicIndexHelpers.zeroGrades_inside
+#check KroneckerCyclicIndexHelpers.zeroGrades_outside
+#print axioms KroneckerCyclicIndexHelpers.zeroGrades_outside
+#check KroneckerCyclicIndexHelpers.zeroGrades_positive_index
+#print axioms KroneckerCyclicIndexHelpers.zeroGrades_positive_index
+#check KroneckerCyclicIndexHelpers.zeroEdge
+#print axioms KroneckerCyclicIndexHelpers.zeroEdge
+#check KroneckerCyclicIndexHelpers.zeroWord
+#print axioms KroneckerCyclicIndexHelpers.zeroWord
+#check KroneckerCyclicIndexHelpers.zeroTrace
+#print axioms KroneckerCyclicIndexHelpers.zeroTrace
+#check KroneckerCyclicIndexHelpers.zeroTrace_periodic
+#print axioms KroneckerCyclicIndexHelpers.zeroTrace_periodic
+#check KroneckerCyclicIndexHelpers.zeroTrace_inside
+#print axioms KroneckerCyclicIndexHelpers.zeroTrace_inside
+#check KroneckerCyclicIndexHelpers.zeroTrace_outside
+#print axioms KroneckerCyclicIndexHelpers.zeroTrace_outside
+#check KroneckerCyclicIndexHelpers.explicit_zero_extension_compatible
+#print axioms KroneckerCyclicIndexHelpers.explicit_zero_extension_compatible
+#check KroneckerCyclicIndexHelpers.nodes_explicit_zero_extension
+#print axioms KroneckerCyclicIndexHelpers.nodes_explicit_zero_extension
+
+-- Lemma 2.24: lem:compatibility
+#check KroneckerNaturalPathGradings.EGrDiff_bBal
+#print axioms KroneckerNaturalPathGradings.EGrDiff_bBal
+#check KroneckerNaturalPathGradings.EGrDiff_eBal
+#print axioms KroneckerNaturalPathGradings.EGrDiff_eBal
+#check KroneckerNaturalPathGradings.NEReal_shadow_balance_iff
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_balance_iff
+#check KroneckerNaturalPathGradings.NEReal_shadow_balance_of_compatible
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_balance_of_compatible
+#check KroneckerNaturalPathGradings.NEReal_shadow_compatible_of_balance
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_compatible_of_balance
+#check KroneckerNaturalPathGradings.NEReal_shadow_connected
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_connected
+#check KroneckerNaturalPathGradings.NEReal_shadow_nodes
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_nodes
+#check KroneckerNaturalPathGradings.NEReal_shadow_zero_extension
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_zero_extension
+#check KroneckerNaturalPathGradings.NEReal_surp_EGrDiff
+#print axioms KroneckerNaturalPathGradings.NEReal_surp_EGrDiff
+#check KroneckerNaturalPathGradings.NEReal_zeroExtension
+#print axioms KroneckerNaturalPathGradings.NEReal_zeroExtension
+#check KroneckerNaturalPathGradings.NGrDiff_debt
+#print axioms KroneckerNaturalPathGradings.NGrDiff_debt
+#check KroneckerNaturalPathGradings.firstHShadow_zeroExtension
+#print axioms KroneckerNaturalPathGradings.firstHShadow_zeroExtension
+#check KroneckerNaturalPathGradings.maximalHShadow_connected
+#print axioms KroneckerNaturalPathGradings.maximalHShadow_connected
+#check KroneckerNaturalPathGradings.zeroExtension
+#print axioms KroneckerNaturalPathGradings.zeroExtension
+#check KroneckerNaturalPathGradings.zeroExtension_compatible_iff_connected
+#print axioms KroneckerNaturalPathGradings.zeroExtension_compatible_iff_connected
+#check KroneckerNaturalPathGradings.zeroExtension_off
+#print axioms KroneckerNaturalPathGradings.zeroExtension_off
+#check KroneckerNaturalPathGradings.zeroExtension_on
+#print axioms KroneckerNaturalPathGradings.zeroExtension_on
+
+-- Definition 2.25: def:frame
+#check KroneckerManuscriptRun.calU
+#print axioms KroneckerManuscriptRun.calU
+#check KroneckerManuscriptRun.runLengths
+#print axioms KroneckerManuscriptRun.runLengths
+
+-- Proposition 2.26: prop:frame
+#check KroneckerFiniteCoefficientIntegration.application
+#print axioms KroneckerFiniteCoefficientIntegration.application
+#check KroneckerFiniteCoefficientIntegration.weighted_euler
+#print axioms KroneckerFiniteCoefficientIntegration.weighted_euler
+#check KroneckerGeneralFrame.finite_frame_identity
+#print axioms KroneckerGeneralFrame.finite_frame_identity
+#check KroneckerManuscriptRun.calU
+#print axioms KroneckerManuscriptRun.calU
+#check KroneckerManuscriptRun.connectedCount_calU
+#print axioms KroneckerManuscriptRun.connectedCount_calU
+#check KroneckerManuscriptRun.counting_colored_gradings
+#print axioms KroneckerManuscriptRun.counting_colored_gradings
+#check KroneckerManuscriptRun.first_runs_vertical_count
+#print axioms KroneckerManuscriptRun.first_runs_vertical_count
+#check KroneckerManuscriptRun.runLengths
+#print axioms KroneckerManuscriptRun.runLengths
+#check KroneckerManuscriptRun.runLengths_length
+#print axioms KroneckerManuscriptRun.runLengths_length
+#check KroneckerManuscriptRun.runLengths_sum
+#print axioms KroneckerManuscriptRun.runLengths_sum
+#check KroneckerNaturalPathGradings.NEReal_shadow_surp_nonnegative
+#print axioms KroneckerNaturalPathGradings.NEReal_shadow_surp_nonnegative
+#check KroneckerNaturalPathGradings.NEReal_surp_formula
+#print axioms KroneckerNaturalPathGradings.NEReal_surp_formula
+#check KroneckerNaturalPathGradings.binomialWeight_zero
+#print axioms KroneckerNaturalPathGradings.binomialWeight_zero
+#check KroneckerNaturalPathGradings.connectedCount_eq_pathCount
+#print axioms KroneckerNaturalPathGradings.connectedCount_eq_pathCount
+#check KroneckerNaturalPathGradings.negativeTight_iff_source
+#print axioms KroneckerNaturalPathGradings.negativeTight_iff_source
+#check KroneckerNaturalPathGradings.tight_det_negative_one
+#print axioms KroneckerNaturalPathGradings.tight_det_negative_one
+#check KroneckerScopedActualFrameApplication.literal_identity
+#print axioms KroneckerScopedActualFrameApplication.literal_identity
+#check KroneckerSplitFrameResults.counting_colored_gradings
+#print axioms KroneckerSplitFrameResults.counting_colored_gradings
+
+-- Example 2.27: ex:small-frame
+#check KroneckerExample25.count
+#print axioms KroneckerExample25.count
+#check KroneckerExample25.euler
+#print axioms KroneckerExample25.euler
+#check KroneckerExample25.frame_word
+#print axioms KroneckerExample25.frame_word
+#check KroneckerExample25.geometric_count
+#print axioms KroneckerExample25.geometric_count
+#check KroneckerExample25.grading_classification
+#print axioms KroneckerExample25.grading_classification
+#check KroneckerExample25.node_classification
+#print axioms KroneckerExample25.node_classification
+#check KroneckerExample25.three_arrow_count
+#print axioms KroneckerExample25.three_arrow_count
+
+-- Definition 3.1: def:shell
+#check KroneckerColoredShell.shellColoring_word
+#print axioms KroneckerColoredShell.shellColoring_word
+#check KroneckerExplicitShellCorrespondence.gradedWord_shell
+#print axioms KroneckerExplicitShellCorrespondence.gradedWord_shell
+#check KroneckerExplicitShellCorrespondence.shell_encoding
+#print axioms KroneckerExplicitShellCorrespondence.shell_encoding
+#check KroneckerManuscriptRecolorMaps.shellIndices
+#print axioms KroneckerManuscriptRecolorMaps.shellIndices
+#check KroneckerManuscriptShell.GShell
+#print axioms KroneckerManuscriptShell.GShell
+#check KroneckerManuscriptShell.GShell_bound
+#print axioms KroneckerManuscriptShell.GShell_bound
+#check KroneckerManuscriptShell.GShell_copy
+#print axioms KroneckerManuscriptShell.GShell_copy
+#check KroneckerManuscriptShell.GShell_first
+#print axioms KroneckerManuscriptShell.GShell_first
+#check KroneckerManuscriptShell.GShell_last
+#print axioms KroneckerManuscriptShell.GShell_last
+#check KroneckerManuscriptShell.GShell_right
+#print axioms KroneckerManuscriptShell.GShell_right
+#check KroneckerManuscriptShell.Shell
+#print axioms KroneckerManuscriptShell.Shell
+#check KroneckerManuscriptShell.Shell_eq
+#print axioms KroneckerManuscriptShell.Shell_eq
+#check KroneckerManuscriptShell.coloring
+#print axioms KroneckerManuscriptShell.coloring
+#check KroneckerManuscriptShell.coloring_copy
+#print axioms KroneckerManuscriptShell.coloring_copy
+#check KroneckerManuscriptShell.path
+#print axioms KroneckerManuscriptShell.path
+#check KroneckerManuscriptShell.path_length
+#print axioms KroneckerManuscriptShell.path_length
+#check KroneckerPaperPathGradings.paletteEncoding_color
+#print axioms KroneckerPaperPathGradings.paletteEncoding_color
+#check KroneckerRecolConcatenation.binary_palette
+#print axioms KroneckerRecolConcatenation.binary_palette
+#check KroneckerRecolConcatenation.concatenated_grading_word
+#print axioms KroneckerRecolConcatenation.concatenated_grading_word
+#check KroneckerRecolShell.explicit_shell_eq
+#print axioms KroneckerRecolShell.explicit_shell_eq
+#check KroneckerRecolShell.shellPalette_drain
+#print axioms KroneckerRecolShell.shellPalette_drain
+#check KroneckerRecolShell.shellPalette_grade
+#print axioms KroneckerRecolShell.shellPalette_grade
+#check KroneckerRecolShell.shellPalette_preserve
+#print axioms KroneckerRecolShell.shellPalette_preserve
+
+-- Definition 3.2: def:recolor
+#check KroneckerColoring.RespectsRecol
+#print axioms KroneckerColoring.RespectsRecol
+#check KroneckerColoring.regrade
+#print axioms KroneckerColoring.regrade
+#check KroneckerColoring.regrade_changed
+#print axioms KroneckerColoring.regrade_changed
+#check KroneckerColoring.regrade_grade
+#print axioms KroneckerColoring.regrade_grade
+#check KroneckerColoring.regrade_one_based_color
+#print axioms KroneckerColoring.regrade_one_based_color
+#check KroneckerColoring.regrade_respects
+#print axioms KroneckerColoring.regrade_respects
+#check KroneckerColoring.regrade_same
+#print axioms KroneckerColoring.regrade_same
+#check KroneckerManuscriptRecolorMaps.fromPalette
+#print axioms KroneckerManuscriptRecolorMaps.fromPalette
+#check KroneckerManuscriptRecolorMaps.fromPalette_color
+#print axioms KroneckerManuscriptRecolorMaps.fromPalette_color
+#check KroneckerManuscriptRecolorMaps.fromPalette_grade
+#print axioms KroneckerManuscriptRecolorMaps.fromPalette_grade
+#check KroneckerNaturalPathGradings.Recol
+#print axioms KroneckerNaturalPathGradings.Recol
+#check KroneckerNaturalPathGradings.Recol_changed
+#print axioms KroneckerNaturalPathGradings.Recol_changed
+#check KroneckerNaturalPathGradings.Recol_default
+#print axioms KroneckerNaturalPathGradings.Recol_default
+#check KroneckerNaturalPathGradings.Recol_new
+#print axioms KroneckerNaturalPathGradings.Recol_new
+#check KroneckerNaturalPathGradings.Recol_preserved
+#print axioms KroneckerNaturalPathGradings.Recol_preserved
+#check KroneckerNaturalPathGradings.Recol_unique
+#print axioms KroneckerNaturalPathGradings.Recol_unique
+#check KroneckerRecolConcatenation.fromPalette_surjective
+#print axioms KroneckerRecolConcatenation.fromPalette_surjective
+#check KroneckerRecolPaletteBridge.fromPalette_recol
+#print axioms KroneckerRecolPaletteBridge.fromPalette_recol
+#check KroneckerRecolPaletteBridge.fromPalette_recol_total
+#print axioms KroneckerRecolPaletteBridge.fromPalette_recol_total
+
+-- Lemma 3.3: lem:shell
+#check KroneckerExplicitShellCorrespondence.connected_of_gradedWord
+#print axioms KroneckerExplicitShellCorrespondence.connected_of_gradedWord
+#check KroneckerExplicitShellCorrespondence.explicit_shell_connected
+#print axioms KroneckerExplicitShellCorrespondence.explicit_shell_connected
+#check KroneckerManuscriptShell.GShell_bound
+#print axioms KroneckerManuscriptShell.GShell_bound
+#check KroneckerManuscriptShell.coloring_copy
+#print axioms KroneckerManuscriptShell.coloring_copy
+#check KroneckerManuscriptShell.coloring_injective
+#print axioms KroneckerManuscriptShell.coloring_injective
+#check KroneckerManuscriptShell.connected
+#print axioms KroneckerManuscriptShell.connected
+#check KroneckerManuscriptShell.grades
+#print axioms KroneckerManuscriptShell.grades
+#check KroneckerManuscriptShell.surplus
+#print axioms KroneckerManuscriptShell.surplus
+#check KroneckerRecolConcatenation.concatenated_grading_word
+#print axioms KroneckerRecolConcatenation.concatenated_grading_word
+#check KroneckerRecolShell.explicit_shell_eq
+#print axioms KroneckerRecolShell.explicit_shell_eq
+
+-- Definition 3.4: def:simple-run-grading
+#check KroneckerManuscriptSimpleRunGrading.color_at
+#print axioms KroneckerManuscriptSimpleRunGrading.color_at
+#check KroneckerManuscriptSimpleRunGrading.colored
+#print axioms KroneckerManuscriptSimpleRunGrading.colored
+#check KroneckerManuscriptSimpleRunGrading.colored_connected
+#print axioms KroneckerManuscriptSimpleRunGrading.colored_connected
+#check KroneckerManuscriptSimpleRunGrading.colored_grade
+#print axioms KroneckerManuscriptSimpleRunGrading.colored_grade
+#check KroneckerManuscriptSimpleRunGrading.colors
+#print axioms KroneckerManuscriptSimpleRunGrading.colors
+#check KroneckerManuscriptSimpleRunGrading.grade_at
+#print axioms KroneckerManuscriptSimpleRunGrading.grade_at
+#check KroneckerManuscriptSimpleRunGrading.grading
+#print axioms KroneckerManuscriptSimpleRunGrading.grading
+#check KroneckerManuscriptSimpleRunGrading.insertion_model
+#print axioms KroneckerManuscriptSimpleRunGrading.insertion_model
+#check KroneckerManuscriptSimpleRunGrading.insertion_uses_fixed_run
+#print axioms KroneckerManuscriptSimpleRunGrading.insertion_uses_fixed_run
+#check KroneckerManuscriptSimpleRunGrading.palette
+#print axioms KroneckerManuscriptSimpleRunGrading.palette
+#check KroneckerManuscriptSimpleRunGrading.palette_entries
+#print axioms KroneckerManuscriptSimpleRunGrading.palette_entries
+
+-- Lemma 3.5: lem:word-bounds
+#check KroneckerManuscriptSimpleRunGrading.colored_connected
+#print axioms KroneckerManuscriptSimpleRunGrading.colored_connected
+#check KroneckerPaperPathGradings.geometric_word_bounds
+#print axioms KroneckerPaperPathGradings.geometric_word_bounds
+
+-- Lemma 3.6: lem:outer-shell-extension
+#check KroneckerManuscriptOuterExtension.Extension
+#print axioms KroneckerManuscriptOuterExtension.Extension
+#check KroneckerManuscriptOuterExtension.Extension.injective
+#print axioms KroneckerManuscriptOuterExtension.Extension.injective
+#check KroneckerManuscriptOuterExtension.Extension.map
+#print axioms KroneckerManuscriptOuterExtension.Extension.map
+#check KroneckerManuscriptOuterExtension.Extension.recover
+#print axioms KroneckerManuscriptOuterExtension.Extension.recover
+#check KroneckerManuscriptOuterExtension.balanced_extension
+#print axioms KroneckerManuscriptOuterExtension.balanced_extension
+#check KroneckerManuscriptOuterExtension.balanced_injection
+#print axioms KroneckerManuscriptOuterExtension.balanced_injection
+#check KroneckerManuscriptOuterExtension.i_d
+#print axioms KroneckerManuscriptOuterExtension.i_d
+#check KroneckerManuscriptOuterExtension.i_d_extension
+#print axioms KroneckerManuscriptOuterExtension.i_d_extension
+#check KroneckerManuscriptOuterExtension.i_d_grade_color
+#print axioms KroneckerManuscriptOuterExtension.i_d_grade_color
+#check KroneckerManuscriptOuterExtension.i_d_injective
+#print axioms KroneckerManuscriptOuterExtension.i_d_injective
+#check KroneckerManuscriptOuterExtension.i_d_recover
+#print axioms KroneckerManuscriptOuterExtension.i_d_recover
+#check KroneckerManuscriptSimpleRunGrading.colored_connected
+#print axioms KroneckerManuscriptSimpleRunGrading.colored_connected
+
+-- Lemma 3.7: lem:shifted-growth
+#check KroneckerFurtherIntermediateLemmas.shifted_growth
+#print axioms KroneckerFurtherIntermediateLemmas.shifted_growth
+
+-- Proposition 3.8: prop:periodic
+#check KroneckerManuscriptPeriodic.finite_bound
+#print axioms KroneckerManuscriptPeriodic.finite_bound
+#check KroneckerManuscriptPeriodic.limit_eq_sup
+#print axioms KroneckerManuscriptPeriodic.limit_eq_sup
+#check KroneckerManuscriptPeriodic.shifted_supermultiplicativity
+#print axioms KroneckerManuscriptPeriodic.shifted_supermultiplicativity
+#check KroneckerSplitPeriodicResults.finite_bound
+#print axioms KroneckerSplitPeriodicResults.finite_bound
+#check KroneckerSplitPeriodicResults.limit_eq_sup
+#print axioms KroneckerSplitPeriodicResults.limit_eq_sup
+#check KroneckerSplitPeriodicResults.shifted_supermultiplicativity
+#print axioms KroneckerSplitPeriodicResults.shifted_supermultiplicativity
+
+-- Definition 3.9: def:periodic-growth-rate
+#check KroneckerManuscriptPeriodic.ell
+#print axioms KroneckerManuscriptPeriodic.ell
+#check KroneckerManuscriptPeriodic.ell_eq_growth
+#print axioms KroneckerManuscriptPeriodic.ell_eq_growth
+#check KroneckerManuscriptPeriodic.ell_limit
+#print axioms KroneckerManuscriptPeriodic.ell_limit
+
+-- Lemma 3.10: lem:dimension-reduction
+#check KroneckerFurtherIntermediateLemmas.reduced_dimensions
+#print axioms KroneckerFurtherIntermediateLemmas.reduced_dimensions
+
+-- Proposition 3.11: prop:finite-endpoint
+#check KroneckerExplicitFiniteBound.finite_endpoint
+#print axioms KroneckerExplicitFiniteBound.finite_endpoint
+
+-- Definition 4.1: surgery:2
+#check KroneckerPaperPaths.EditProgram
+#print axioms KroneckerPaperPaths.EditProgram
+#check KroneckerPaperPaths.EditProgram.length
+#print axioms KroneckerPaperPaths.EditProgram.length
+#check KroneckerPaperPaths.EditProgram.length_eq
+#print axioms KroneckerPaperPaths.EditProgram.length_eq
+#check KroneckerPaperPaths.EditProgram.toRaw
+#print axioms KroneckerPaperPaths.EditProgram.toRaw
+#check KroneckerPaperPaths.IsRun
+#print axioms KroneckerPaperPaths.IsRun
+#check KroneckerPaperPaths.RunEResult
+#print axioms KroneckerPaperPaths.RunEResult
+#check KroneckerPaperPaths.RunEResult_append
+#print axioms KroneckerPaperPaths.RunEResult_append
+#check KroneckerPaperPaths.RunEResult_nil
+#print axioms KroneckerPaperPaths.RunEResult_nil
+#check KroneckerPaperPaths.RunEResult_snoc
+#print axioms KroneckerPaperPaths.RunEResult_snoc
+#check KroneckerPaperPaths.RunEdit
+#print axioms KroneckerPaperPaths.RunEdit
+#check KroneckerPaperPaths.RunEdit.IsVertical
+#print axioms KroneckerPaperPaths.RunEdit.IsVertical
+#check KroneckerPaperPaths.RunEdit.source_isRun
+#print axioms KroneckerPaperPaths.RunEdit.source_isRun
+#check KroneckerPaperPaths.RunEditList
+#print axioms KroneckerPaperPaths.RunEditList
+#check KroneckerPaperPaths.RunEditList.append
+#print axioms KroneckerPaperPaths.RunEditList.append
+#check KroneckerPaperPaths.RunEditList.empty_target
+#print axioms KroneckerPaperPaths.RunEditList.empty_target
+#check KroneckerPaperPaths.RunEditList.source_isRun
+#print axioms KroneckerPaperPaths.RunEditList.source_isRun
+#check KroneckerPaperPaths.exchangeRuns_adjacent
+#print axioms KroneckerPaperPaths.exchangeRuns_adjacent
+#check KroneckerPaperPaths.rawProgram_realization
+#print axioms KroneckerPaperPaths.rawProgram_realization
+#check KroneckerPaperPaths.rawProgram_translated_target
+#print axioms KroneckerPaperPaths.rawProgram_translated_target
+
+-- Lemma 4.2: lem:insert-precursor-chain
+#check KroneckerInsertionPrecursorHelpers.cycle
+#print axioms KroneckerInsertionPrecursorHelpers.cycle
+#check KroneckerInsertionPrecursorHelpers.cycle_fixed
+#print axioms KroneckerInsertionPrecursorHelpers.cycle_fixed
+#check KroneckerInsertionPrecursorHelpers.cycle_none_cons
+#print axioms KroneckerInsertionPrecursorHelpers.cycle_none_cons
+#check KroneckerInsertionPrecursorHelpers.cycle_at
+#print axioms KroneckerInsertionPrecursorHelpers.cycle_at
+#check KroneckerInsertionPrecursorHelpers.extend
+#print axioms KroneckerInsertionPrecursorHelpers.extend
+#check KroneckerInsertionPrecursorHelpers.inserted
+#print axioms KroneckerInsertionPrecursorHelpers.inserted
+#check KroneckerInsertionPrecursorHelpers.inserted_new
+#print axioms KroneckerInsertionPrecursorHelpers.inserted_new
+#check KroneckerInsertionPrecursorHelpers.inserted_new_empty
+#print axioms KroneckerInsertionPrecursorHelpers.inserted_new_empty
+#check KroneckerInsertionPrecursorHelpers.inserted_unchanged
+#print axioms KroneckerInsertionPrecursorHelpers.inserted_unchanged
+#check KroneckerInsertionPrecursorHelpers.inserted_ending
+#print axioms KroneckerInsertionPrecursorHelpers.inserted_ending
+#check KroneckerInsertionPrecursorHelpers.fiberEquiv
+#print axioms KroneckerInsertionPrecursorHelpers.fiberEquiv
+#check KroneckerInsertionPrecursorHelpers.fiber_count
+#print axioms KroneckerInsertionPrecursorHelpers.fiber_count
+#check KroneckerInsertionPrecursorHelpers.fiber_set
+#print axioms KroneckerInsertionPrecursorHelpers.fiber_set
+#check KroneckerInsertionPrecursorHelpers.prefixTest
+#print axioms KroneckerInsertionPrecursorHelpers.prefixTest
+#check KroneckerInsertionPrecursorHelpers.prefixCount
+#print axioms KroneckerInsertionPrecursorHelpers.prefixCount
+#check KroneckerInsertionPrecursorHelpers.prefixCount_extend
+#print axioms KroneckerInsertionPrecursorHelpers.prefixCount_extend
+#check KroneckerInsertionPrecursorHelpers.prefixCount_swap
+#print axioms KroneckerInsertionPrecursorHelpers.prefixCount_swap
+#check KroneckerInsertionPrecursorHelpers.nextOwner
+#print axioms KroneckerInsertionPrecursorHelpers.nextOwner
+#check KroneckerInsertionPrecursorHelpers.prefix_count_formula
+#print axioms KroneckerInsertionPrecursorHelpers.prefix_count_formula
+#check KroneckerInsertionPrecursorHelpers.debt_transfer
+#print axioms KroneckerInsertionPrecursorHelpers.debt_transfer
+#check KroneckerInsertionPrecursorHelpers.last_positive_retained
+#print axioms KroneckerInsertionPrecursorHelpers.last_positive_retained
+#check KroneckerInsertionPrecursorHelpers.last_positive_parent
+#print axioms KroneckerInsertionPrecursorHelpers.last_positive_parent
+#check KroneckerInsertionPrecursorHelpers.descending
+#print axioms KroneckerInsertionPrecursorHelpers.descending
+#check KroneckerInsertionPrecursorHelpers.descending_mem
+#print axioms KroneckerInsertionPrecursorHelpers.descending_mem
+#check KroneckerInsertionPrecursorHelpers.descending_antitone
+#print axioms KroneckerInsertionPrecursorHelpers.descending_antitone
+#check KroneckerInsertionPrecursorHelpers.descending_covers
+#print axioms KroneckerInsertionPrecursorHelpers.descending_covers
+#check KroneckerInsertionPrecursorHelpers.active_node_end_order
+#print axioms KroneckerInsertionPrecursorHelpers.active_node_end_order
+#check KroneckerInsertionPrecursorHelpers.active_iff_ending
+#print axioms KroneckerInsertionPrecursorHelpers.active_iff_ending
+#check KroneckerPrecursorDeletion.natural_precursor_iff
+#print axioms KroneckerPrecursorDeletion.natural_precursor_iff
+
+-- Lemma 4.3: lem:insert-balance-connected
+#check KroneckerInsertionBalanceHelpers.execute_nonempty_stack
+#print axioms KroneckerInsertionBalanceHelpers.execute_nonempty_stack
+#check KroneckerInsertionBalanceHelpers.insert_one_zero
+#print axioms KroneckerInsertionBalanceHelpers.insert_one_zero
+#check KroneckerInsertionBalanceHelpers.root_insertion_node
+#print axioms KroneckerInsertionBalanceHelpers.root_insertion_node
+#check KroneckerInsertionBalanceHelpers.node_insertion
+#print axioms KroneckerInsertionBalanceHelpers.node_insertion
+#check KroneckerInsertionBalanceHelpers.insertion_grade_bound
+#print axioms KroneckerInsertionBalanceHelpers.insertion_grade_bound
+#check KroneckerInsertionBalanceHelpers.connected_insertion
+#print axioms KroneckerInsertionBalanceHelpers.connected_insertion
+#check KroneckerInsertionBalanceHelpers.prefixBalance
+#print axioms KroneckerInsertionBalanceHelpers.prefixBalance
+#check KroneckerInsertionBalanceHelpers.sum_take_zero
+#print axioms KroneckerInsertionBalanceHelpers.sum_take_zero
+#check KroneckerInsertionBalanceHelpers.insertion_prefix_balances
+#print axioms KroneckerInsertionBalanceHelpers.insertion_prefix_balances
+#check KroneckerInsertionBalanceHelpers.insertion_surplus
+#print axioms KroneckerInsertionBalanceHelpers.insertion_surplus
+
+-- Lemma 4.4: lem:vertical-insert
+#check KroneckerInsertionColorConnected.insertionColoring_connected
+#print axioms KroneckerInsertionColorConnected.insertionColoring_connected
+#check KroneckerInsertionColorRecovery.insertionColoring_injective
+#print axioms KroneckerInsertionColorRecovery.insertionColoring_injective
+#check KroneckerManuscriptRecolorMaps.copy_color
+#print axioms KroneckerManuscriptRecolorMaps.copy_color
+#check KroneckerManuscriptRecolorMaps.insertionIndices
+#print axioms KroneckerManuscriptRecolorMaps.insertionIndices
+#check KroneckerPaperPathGradings.wrappedInsertion
+#print axioms KroneckerPaperPathGradings.wrappedInsertion
+#check KroneckerPaperPathGradings.wrappedInsertion_injective
+#print axioms KroneckerPaperPathGradings.wrappedInsertion_injective
+#check KroneckerPaperPathGradings.wrappedInsertion_palette
+#print axioms KroneckerPaperPathGradings.wrappedInsertion_palette
+#check KroneckerPaperPathGradings.wrappedInsertion_target
+#print axioms KroneckerPaperPathGradings.wrappedInsertion_target
+#check KroneckerRecolOperations.insertion_copy
+#print axioms KroneckerRecolOperations.insertion_copy
+#check KroneckerRecolOperations.insertion_eq
+#print axioms KroneckerRecolOperations.insertion_eq
+#check KroneckerRecolOperations.insertion_new
+#print axioms KroneckerRecolOperations.insertion_new
+#check KroneckerRecolorConstructions.insertion
+#print axioms KroneckerRecolorConstructions.insertion
+#check KroneckerRecolorConstructions.insertion_connected
+#print axioms KroneckerRecolorConstructions.insertion_connected
+#check KroneckerRecolorConstructions.insertion_grade
+#print axioms KroneckerRecolorConstructions.insertion_grade
+#check KroneckerVerticalInsertionRuns.insert_runWord
+#print axioms KroneckerVerticalInsertionRuns.insert_runWord
+
+-- Lemma 4.5: lem:delete-precursors
+#check KroneckerPrecursorDeletion.erase_precursor_compressed
+#print axioms KroneckerPrecursorDeletion.erase_precursor_compressed
+#check KroneckerPrecursorDeletion.geometric_erasure
+#print axioms KroneckerPrecursorDeletion.geometric_erasure
+#check KroneckerPrecursorDeletion.natural_precursor_iff
+#print axioms KroneckerPrecursorDeletion.natural_precursor_iff
+
+-- Lemma 4.6: lem:vertical-delete
+#check KroneckerDeletePrescribedRuns.prescribed_run_count
+#print axioms KroneckerDeletePrescribedRuns.prescribed_run_count
+#check KroneckerDeletionWitness.Rule
+#print axioms KroneckerDeletionWitness.Rule
+#check KroneckerDeletionWitness.Witness
+#print axioms KroneckerDeletionWitness.Witness
+#check KroneckerDeletionWitness.standard
+#print axioms KroneckerDeletionWitness.standard
+#check KroneckerManuscriptRecolorMaps.deletionIndices
+#print axioms KroneckerManuscriptRecolorMaps.deletionIndices
+#check KroneckerManuscriptRecolorMaps.partialEdgeCopy
+#print axioms KroneckerManuscriptRecolorMaps.partialEdgeCopy
+#check KroneckerPaperPathGradings.geometric_deletion_exists
+#print axioms KroneckerPaperPathGradings.geometric_deletion_exists
+#check KroneckerPaperPathGradings.geometric_deletion_target
+#print axioms KroneckerPaperPathGradings.geometric_deletion_target
+#check KroneckerPrecursorDeletion.geometric_erasure
+#print axioms KroneckerPrecursorDeletion.geometric_erasure
+#check KroneckerRecolDeletion.deletion_copy
+#print axioms KroneckerRecolDeletion.deletion_copy
+#check KroneckerRecolDeletion.deletion_eq
+#print axioms KroneckerRecolDeletion.deletion_eq
+#check KroneckerRecolDeletion.deletion_exists
+#print axioms KroneckerRecolDeletion.deletion_exists
+#check KroneckerRecolDeletion.deletion_new
+#print axioms KroneckerRecolDeletion.deletion_new
+#check KroneckerRecolorConstructions.deletion
+#print axioms KroneckerRecolorConstructions.deletion
+#check KroneckerRecolorConstructions.deletion_grade
+#print axioms KroneckerRecolorConstructions.deletion_grade
+
+-- Lemma 4.7: lem:simple-run-insertion
+#check KroneckerCompleteRunInjection.completeRun_injective
+#print axioms KroneckerCompleteRunInjection.completeRun_injective
+#check KroneckerCompleteRunMap.completeColoring_connected
+#print axioms KroneckerCompleteRunMap.completeColoring_connected
+#check KroneckerManuscriptSimpleRunGrading.insertion_model
+#print axioms KroneckerManuscriptSimpleRunGrading.insertion_model
+#check KroneckerManuscriptSimpleRunGrading.insertion_uses_fixed_run
+#print axioms KroneckerManuscriptSimpleRunGrading.insertion_uses_fixed_run
+#check KroneckerManuscriptSimpleRunGrading.palette_entries
+#print axioms KroneckerManuscriptSimpleRunGrading.palette_entries
+#check KroneckerRecolOperations.complete_eq
+#print axioms KroneckerRecolOperations.complete_eq
+#check KroneckerRecolorConstructions.complete
+#print axioms KroneckerRecolorConstructions.complete
+
+-- Lemma 4.8: lem:surplus-reduction
+#check KroneckerBoundedSurplusShells.zeroShells
+#print axioms KroneckerBoundedSurplusShells.zeroShells
+#check KroneckerBoundedSurplusShells.zeroShells_execution
+#print axioms KroneckerBoundedSurplusShells.zeroShells_execution
+#check KroneckerBoundedSurplusShells.zeroShells_injective
+#print axioms KroneckerBoundedSurplusShells.zeroShells_injective
+#check KroneckerBoundedSurplusShells.zeroShells_recover
+#print axioms KroneckerBoundedSurplusShells.zeroShells_recover
+
+-- Definition 4.9: def:fiber-bound
+#check KroneckerFiberBudget.fiberBudget
+#print axioms KroneckerFiberBudget.fiberBudget
+
+-- Proposition 4.10: prop:composition
+#check KroneckerCompositionMap.geometric_composition_map
+#print axioms KroneckerCompositionMap.geometric_composition_map
+#check KroneckerDeletePrescribedRuns.prescribed_run_count
+#print axioms KroneckerDeletePrescribedRuns.prescribed_run_count
+#check KroneckerDeletePrescribedRuns.prescribed_run_real
+#print axioms KroneckerDeletePrescribedRuns.prescribed_run_real
+#check KroneckerManuscriptFiveIssueCorrections.zero_budget_composition
+#print axioms KroneckerManuscriptFiveIssueCorrections.zero_budget_composition
+#check KroneckerManuscriptFiveIssueCorrections.zero_budget_parameters
+#print axioms KroneckerManuscriptFiveIssueCorrections.zero_budget_parameters
+#check KroneckerManuscriptRecolorMaps.completeIndices
+#print axioms KroneckerManuscriptRecolorMaps.completeIndices
+#check KroneckerNaturalPathGradings.Diff
+#print axioms KroneckerNaturalPathGradings.Diff
+#check KroneckerNaturalPathGradings.Diff_add
+#print axioms KroneckerNaturalPathGradings.Diff_add
+#check KroneckerNaturalPathGradings.Diff_natCast
+#print axioms KroneckerNaturalPathGradings.Diff_natCast
+#check KroneckerNaturalPathGradings.Diff_nonneg_iff
+#print axioms KroneckerNaturalPathGradings.Diff_nonneg_iff
+#check KroneckerNaturalPathGradings.Diff_recovery
+#print axioms KroneckerNaturalPathGradings.Diff_recovery
+#check KroneckerNaturalPathGradings.Diff_self
+#print axioms KroneckerNaturalPathGradings.Diff_self
+#check KroneckerNaturalPathGradings.Diff_surviving
+#print axioms KroneckerNaturalPathGradings.Diff_surviving
+#check KroneckerNaturalPathGradings.Diff_zero_iff
+#print axioms KroneckerNaturalPathGradings.Diff_zero_iff
+#check KroneckerNaturalPathGradings.gradeDifferenceVector
+#print axioms KroneckerNaturalPathGradings.gradeDifferenceVector
+#check KroneckerNaturalPathGradings.gradeDifferenceVector_card
+#print axioms KroneckerNaturalPathGradings.gradeDifferenceVector_card
+#check KroneckerNaturalPathGradings.gradeDifferenceVector_recovery
+#print axioms KroneckerNaturalPathGradings.gradeDifferenceVector_recovery
+#check KroneckerNaturalPathGradings.gradeDifferenceVector_spec
+#print axioms KroneckerNaturalPathGradings.gradeDifferenceVector_spec
+#check KroneckerNaturalPathGradings.recoveryGrading
+#print axioms KroneckerNaturalPathGradings.recoveryGrading
+#check KroneckerNaturalPathGradings.recoveryGrading_deleted
+#print axioms KroneckerNaturalPathGradings.recoveryGrading_deleted
+#check KroneckerNaturalPathGradings.recoveryGrading_surviving
+#print axioms KroneckerNaturalPathGradings.recoveryGrading_surviving
+#check KroneckerPaperPathGradings.geometric_composition
+#print axioms KroneckerPaperPathGradings.geometric_composition
+#check KroneckerPaperPaths.EditProgram.length
+#print axioms KroneckerPaperPaths.EditProgram.length
+#check KroneckerPaperPaths.EditProgram.length_eq
+#print axioms KroneckerPaperPaths.EditProgram.length_eq
+#check KroneckerRecolCollars.collar_execution
+#print axioms KroneckerRecolCollars.collar_execution
+#check KroneckerRecolCollars.zero_delete_execution
+#print axioms KroneckerRecolCollars.zero_delete_execution
+#check KroneckerRecolCollars.zero_mixed_execution
+#print axioms KroneckerRecolCollars.zero_mixed_execution
+#check KroneckerRecolComposition.actual_execution
+#print axioms KroneckerRecolComposition.actual_execution
+#check KroneckerRecolComposition.run_execution
+#print axioms KroneckerRecolComposition.run_execution
+#check KroneckerRecolComposition.run_standard
+#print axioms KroneckerRecolComposition.run_standard
+#check KroneckerRecolDeleteComposition.actual_execution
+#print axioms KroneckerRecolDeleteComposition.actual_execution
+#check KroneckerRecolDeleteComposition.run_execution
+#print axioms KroneckerRecolDeleteComposition.run_execution
+#check KroneckerRecolOperations.complete_eq
+#print axioms KroneckerRecolOperations.complete_eq
+#check KroneckerRecolorConstructions.complete
+#print axioms KroneckerRecolorConstructions.complete
+#check KroneckerRecolorConstructions.complete_grade
+#print axioms KroneckerRecolorConstructions.complete_grade
+#check KroneckerWitnessBufferedMixedCount.buffered_mixed_real
+#print axioms KroneckerWitnessBufferedMixedCount.buffered_mixed_real
+#check KroneckerWitnessDeleteBufferedCount.buffered_delete_real
+#print axioms KroneckerWitnessDeleteBufferedCount.buffered_delete_real
+#check KroneckerWitnessDeletePreparedProgramRecovery.preparedSpec
+#print axioms KroneckerWitnessDeletePreparedProgramRecovery.preparedSpec
+#check KroneckerWitnessDeleteZeroProgramCount.zero_program_fiber
+#print axioms KroneckerWitnessDeleteZeroProgramCount.zero_program_fiber
+#check KroneckerWitnessDeleteZeroProgramRecovery.zeroProgram_decode
+#print axioms KroneckerWitnessDeleteZeroProgramRecovery.zeroProgram_decode
+#check KroneckerWitnessMixedFiber.mixed_fiber_bound
+#print axioms KroneckerWitnessMixedFiber.mixed_fiber_bound
+#check KroneckerWitnessMixedRecovery.mixed_recover
+#print axioms KroneckerWitnessMixedRecovery.mixed_recover
+#check KroneckerWitnessPreparedMixedRecovery.preparedMixedSpec
+#print axioms KroneckerWitnessPreparedMixedRecovery.preparedMixedSpec
+#check KroneckerWitnessZeroMixedCount.zero_mixed_fiber
+#print axioms KroneckerWitnessZeroMixedCount.zero_mixed_fiber
+
+-- Definition 4.11: def:entropy-loss-function
+#check KroneckerLogBinomialBound.log_additive_choose_bound
+#print axioms KroneckerLogBinomialBound.log_additive_choose_bound
+#check KroneckerLogFiberBudget.log_fiberBudget_bound
+#print axioms KroneckerLogFiberBudget.log_fiberBudget_bound
+#check KroneckerManuscriptEntropyLoss.psi
+#print axioms KroneckerManuscriptEntropyLoss.psi
+#check KroneckerManuscriptEntropyLoss.psi_continuous
+#print axioms KroneckerManuscriptEntropyLoss.psi_continuous
+#check KroneckerManuscriptEntropyLoss.psi_tendsto_zero
+#print axioms KroneckerManuscriptEntropyLoss.psi_tendsto_zero
+#check KroneckerManuscriptEntropyLoss.psi_zero
+#print axioms KroneckerManuscriptEntropyLoss.psi_zero
+
+-- Lemma 4.12: lem:entropy-loss
+#check KroneckerLogBinomialBound.log_additive_choose_bound
+#print axioms KroneckerLogBinomialBound.log_additive_choose_bound
+#check KroneckerLogFiberBudget.log_fiberBudget_bound
+#print axioms KroneckerLogFiberBudget.log_fiberBudget_bound
+#check KroneckerManuscriptEntropyLoss.entropy_loss
+#print axioms KroneckerManuscriptEntropyLoss.entropy_loss
+
+-- Proposition 5.1: prop:integer
+#check KroneckerRestrictedIntegerLimits.A_m
+#print axioms KroneckerRestrictedIntegerLimits.A_m
+#check KroneckerRestrictedIntegerLimits.RestrictedDimension
+#print axioms KroneckerRestrictedIntegerLimits.RestrictedDimension
+#check KroneckerRestrictedIntegerLimits.S_m
+#print axioms KroneckerRestrictedIntegerLimits.S_m
+#check KroneckerRestrictedIntegerLimits.downarrow_one
+#print axioms KroneckerRestrictedIntegerLimits.downarrow_one
+#check KroneckerRestrictedIntegerLimits.integer_joint
+#print axioms KroneckerRestrictedIntegerLimits.integer_joint
+#check KroneckerRestrictedIntegerLimits.uparrow_M
+#print axioms KroneckerRestrictedIntegerLimits.uparrow_M
+#check KroneckerSplitIntegerPropositions.downarrow_one
+#print axioms KroneckerSplitIntegerPropositions.downarrow_one
+#check KroneckerSplitIntegerPropositions.integer_joint
+#print axioms KroneckerSplitIntegerPropositions.integer_joint
+#check KroneckerSplitIntegerPropositions.uparrow_M
+#print axioms KroneckerSplitIntegerPropositions.uparrow_M
+
+-- Definition 5.2: def:mechanical-paths
+#check KroneckerBetaRationalRuns.length
+#print axioms KroneckerBetaRationalRuns.length
+#check KroneckerBetaRationalRuns.length_formula
+#print axioms KroneckerBetaRationalRuns.length_formula
+#check KroneckerBetaRationalRuns.path
+#print axioms KroneckerBetaRationalRuns.path
+#check KroneckerBetaRationalRuns.path_mechanical_factor
+#print axioms KroneckerBetaRationalRuns.path_mechanical_factor
+#check KroneckerBetaRationalRuns.sequence
+#print axioms KroneckerBetaRationalRuns.sequence
+#check KroneckerBetaRationalRuns.sequence_length
+#print axioms KroneckerBetaRationalRuns.sequence_length
+#check KroneckerCurrentMechanicalNotation.MechRunFactor
+#print axioms KroneckerCurrentMechanicalNotation.MechRunFactor
+#check KroneckerCurrentMechanicalNotation.RunFactor
+#print axioms KroneckerCurrentMechanicalNotation.RunFactor
+#check KroneckerCurrentMechanicalNotation.RunFactor_steps
+#print axioms KroneckerCurrentMechanicalNotation.RunFactor_steps
+#check KroneckerCurrentMechanicalNotation.RunFactor_vertical_length
+#print axioms KroneckerCurrentMechanicalNotation.RunFactor_vertical_length
+#check KroneckerManuscriptMechanicalDefinitions.RunPhase
+#print axioms KroneckerManuscriptMechanicalDefinitions.RunPhase
+#check KroneckerManuscriptMechanicalDefinitions.ccsRunFactor
+#print axioms KroneckerManuscriptMechanicalDefinitions.ccsRunFactor
+#check KroneckerManuscriptMechanicalDefinitions.ccsRunFactor_horizontal_length
+#print axioms KroneckerManuscriptMechanicalDefinitions.ccsRunFactor_horizontal_length
+#check KroneckerManuscriptMechanicalDefinitions.ccsRunFactor_steps
+#print axioms KroneckerManuscriptMechanicalDefinitions.ccsRunFactor_steps
+#check KroneckerManuscriptMechanicalDefinitions.ccsRunFactor_vertical_length
+#print axioms KroneckerManuscriptMechanicalDefinitions.ccsRunFactor_vertical_length
+#check KroneckerManuscriptMechanicalDefinitions.phaseGap_spec
+#print axioms KroneckerManuscriptMechanicalDefinitions.phaseGap_spec
+#check KroneckerManuscriptMechanicalDefinitions.phaseGap_unique
+#print axioms KroneckerManuscriptMechanicalDefinitions.phaseGap_unique
+#check KroneckerManuscriptMechanicalDefinitions.runPhase_after_gap
+#print axioms KroneckerManuscriptMechanicalDefinitions.runPhase_after_gap
+#check KroneckerManuscriptMechanicalDefinitions.runPhase_formula
+#print axioms KroneckerManuscriptMechanicalDefinitions.runPhase_formula
+#check KroneckerManuscriptMechanicalDefinitions.runPhase_range
+#print axioms KroneckerManuscriptMechanicalDefinitions.runPhase_range
+#check KroneckerMechanicalRuns.mechanicalRun
+#print axioms KroneckerMechanicalRuns.mechanicalRun
+#check KroneckerMechanicalWords.mechanicalWord
+#print axioms KroneckerMechanicalWords.mechanicalWord
+#check KroneckerPeriodicTail.periodicGrowth
+#print axioms KroneckerPeriodicTail.periodicGrowth
+#check KroneckerPhasePieces.PhasePiece
+#print axioms KroneckerPhasePieces.PhasePiece
+#check KroneckerRationalWordRotation.rationalPeriod
+#print axioms KroneckerRationalWordRotation.rationalPeriod
+
+-- Lemma 5.3: lem:rational-mechanical
+#check KroneckerMechanicalBounds.floor_increment_integer_bounds
+#print axioms KroneckerMechanicalBounds.floor_increment_integer_bounds
+#check KroneckerMechanicalRuns.mechanicalRun
+#print axioms KroneckerMechanicalRuns.mechanicalRun
+#check KroneckerNearbyRationalPhase.nearby_good_window_rotation
+#print axioms KroneckerNearbyRationalPhase.nearby_good_window_rotation
+#check KroneckerNearbyShortFactor.nearby_short_factor
+#print axioms KroneckerNearbyShortFactor.nearby_short_factor
+
+-- Definition 5.4: rational:264
+#check KroneckerCurrentMechanicalNotation.Dbad
+#print axioms KroneckerCurrentMechanicalNotation.Dbad
+#check KroneckerCurrentMechanicalNotation.Dbad_formula
+#print axioms KroneckerCurrentMechanicalNotation.Dbad_formula
+#check KroneckerFiniteWindows.badWordWindows
+#print axioms KroneckerFiniteWindows.badWordWindows
+#check KroneckerManuscriptMechanicalDefinitions.bad_window_geometric
+#print axioms KroneckerManuscriptMechanicalDefinitions.bad_window_geometric
+#check KroneckerManuscriptMechanicalDefinitions.full_window_starts
+#print axioms KroneckerManuscriptMechanicalDefinitions.full_window_starts
+
+-- Lemma 5.5: lem:floor-discrepancies
+#check KroneckerFurtherIntermediateLemmas.exceptional_floor_differences
+#print axioms KroneckerFurtherIntermediateLemmas.exceptional_floor_differences
+
+-- Lemma 5.6: lem:bad-factors
+#check KroneckerManuscriptBadFactors.density_zero
+#print axioms KroneckerManuscriptBadFactors.density_zero
+#check KroneckerManuscriptBadFactors.finite_bound
+#print axioms KroneckerManuscriptBadFactors.finite_bound
+#check KroneckerManuscriptBadFactors.finite_bound_of_discrepancy
+#print axioms KroneckerManuscriptBadFactors.finite_bound_of_discrepancy
+
+-- Lemma 5.7: lem:separated-subwords
+#check KroneckerPaperPathGradings.geometric_power_rotation_count
+#print axioms KroneckerPaperPathGradings.geometric_power_rotation_count
+#check KroneckerPaperPathGradings.geometric_separated_count
+#print axioms KroneckerPaperPathGradings.geometric_separated_count
+#check KroneckerScaffoldCounts.scaffold_product_bound
+#print axioms KroneckerScaffoldCounts.scaffold_product_bound
+#check KroneckerScaffoldCounts.scaffold_realized
+#print axioms KroneckerScaffoldCounts.scaffold_realized
+
+-- Theorem 5.8: thm:rational
+#check KroneckerManuscriptLimitStatements.rational_manuscript
+#print axioms KroneckerManuscriptLimitStatements.rational_manuscript
+#check KroneckerRationalEntropy.rate_joint
+#print axioms KroneckerRationalEntropy.rate_joint
+#check KroneckerRationalFrameJoint.rational_frame_joint
+#print axioms KroneckerRationalFrameJoint.rational_frame_joint
+#check KroneckerScopedActualFrameJointTransfer.joint_to_actual
+#print axioms KroneckerScopedActualFrameJointTransfer.joint_to_actual
+
+-- Lemma 6.1: lem:vertical-length-comparison
+#check KroneckerBoundedRunEdits.vertical_length_comparison
+#print axioms KroneckerBoundedRunEdits.vertical_length_comparison
+#check KroneckerBoundedRunEdits.vertical_program
+#print axioms KroneckerBoundedRunEdits.vertical_program
+
+-- Definition 6.2: def:admissible-mechanical
+#check KroneckerMechanicalEditsStatement.Admissible
+#print axioms KroneckerMechanicalEditsStatement.Admissible
+
+-- Lemma 6.3: lem:fractional-part-estimates
+#check KroneckerFractionalPartEstimates.near_integer_count
+#print axioms KroneckerFractionalPartEstimates.near_integer_count
+#check KroneckerFractionalPartEstimates.ordered_gaps
+#print axioms KroneckerFractionalPartEstimates.ordered_gaps
+
+-- Lemma 6.4: lem:phase-prefix-discrepancy
+#check KroneckerPhasePrefixHelpers.phase_exists
+#print axioms KroneckerPhasePrefixHelpers.phase_exists
+#check KroneckerPhasePrefixHelpers.leastPhase
+#print axioms KroneckerPhasePrefixHelpers.leastPhase
+#check KroneckerPhasePrefixHelpers.least_phase_spec
+#print axioms KroneckerPhasePrefixHelpers.least_phase_spec
+#check KroneckerPhasePrefixHelpers.rational_visits
+#print axioms KroneckerPhasePrefixHelpers.rational_visits
+#check KroneckerPhasePrefixHelpers.visits_le_length
+#print axioms KroneckerPhasePrefixHelpers.visits_le_length
+#check KroneckerPhasePrefixHelpers.multiple_visits
+#print axioms KroneckerPhasePrefixHelpers.multiple_visits
+#check KroneckerPhasePrefixHelpers.rational_visits_total
+#print axioms KroneckerPhasePrefixHelpers.rational_visits_total
+#check KroneckerPhasePrefixHelpers.aligned_error
+#print axioms KroneckerPhasePrefixHelpers.aligned_error
+#check KroneckerPhasePrefixHelpers.prefix_mass_bound
+#print axioms KroneckerPhasePrefixHelpers.prefix_mass_bound
+#check KroneckerPhasePrefixHelpers.run_variation_bound
+#print axioms KroneckerPhasePrefixHelpers.run_variation_bound
+#check KroneckerPhasePrefixHelpers.run_variation_with_endpoint
+#print axioms KroneckerPhasePrefixHelpers.run_variation_with_endpoint
+#check KroneckerPhasePrefixHelpers.phase_alignment_bounds
+#print axioms KroneckerPhasePrefixHelpers.phase_alignment_bounds
+#check KroneckerPrefixDiscrepancy.discrepancy_zero
+#print axioms KroneckerPrefixDiscrepancy.discrepancy_zero
+#check KroneckerFloorUnitDifference.floor_unit_difference
+#print axioms KroneckerFloorUnitDifference.floor_unit_difference
+#check KroneckerFloorStability.floor_change_near_boundary
+#print axioms KroneckerFloorStability.floor_change_near_boundary
+
+-- Lemma 6.5: lem:mechanical-edits
+#check KroneckerMechanicalEditsStatement.mechanical_edits
+#print axioms KroneckerMechanicalEditsStatement.mechanical_edits
+
+-- Lemma 6.6: lem:approaching-sequence
+#check KroneckerCanonicalClosedApproximableFromFundamental.approximable
+#print axioms KroneckerCanonicalClosedApproximableFromFundamental.approximable
+#check KroneckerReadableMain.slope_approximable
+#print axioms KroneckerReadableMain.slope_approximable
+
+-- Theorem 6.7: thm:irrational-large-m
+#check KroneckerIrrationalFrameJoint.irrational_frame_joint
+#print axioms KroneckerIrrationalFrameJoint.irrational_frame_joint
+#check KroneckerManuscriptLimitStatements.irrational_actual_joint
+#print axioms KroneckerManuscriptLimitStatements.irrational_actual_joint
+#check KroneckerScopedActualFrameJointTransfer.below_joint
+#print axioms KroneckerScopedActualFrameJointTransfer.below_joint
+
+-- Lemma 6.8: lem:continuity
+#check KroneckerLogic.continuousOn_of_jointLimits
+#print axioms KroneckerLogic.continuousOn_of_jointLimits
+#check KroneckerLogic.jointLimit_iff_sequences
+#print axioms KroneckerLogic.jointLimit_iff_sequences
+#check KroneckerLogic.jointLimit_of_sequences
+#print axioms KroneckerLogic.jointLimit_of_sequences
+#check KroneckerLogic.jointLimit_sequence
+#print axioms KroneckerLogic.jointLimit_sequence
+#check KroneckerSplitContinuityLemmas.continuous
+#print axioms KroneckerSplitContinuityLemmas.continuous
+#check KroneckerSplitContinuityLemmas.neighborhood
+#print axioms KroneckerSplitContinuityLemmas.neighborhood
+#check KroneckerSplitContinuityLemmas.sequential_iff_joint
+#print axioms KroneckerSplitContinuityLemmas.sequential_iff_joint
+
+-- Definition 7.1: def:central-euler-characteristic
+#check KroneckerManuscriptCentralNotation.E
+#print axioms KroneckerManuscriptCentralNotation.E
+#check KroneckerManuscriptCentralNotation.E_eq
+#print axioms KroneckerManuscriptCentralNotation.E_eq
+#check KroneckerManuscriptCentralNotation.E_real
+#print axioms KroneckerManuscriptCentralNotation.E_real
+
+-- Definition 7.2: def:graphs
+#check KroneckerManuscriptQuiverDefinitions.Graph
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph
+#check KroneckerManuscriptQuiverDefinitions.Graph.Hom
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Hom
+#check KroneckerManuscriptQuiverDefinitions.Graph.IsSimple
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.IsSimple
+#check KroneckerManuscriptQuiverDefinitions.Graph.Iso
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Iso
+#check KroneckerManuscriptQuiverDefinitions.Graph.Leaf
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Leaf
+#check KroneckerManuscriptQuiverDefinitions.Graph.degree
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.degree
+
+-- Definition 7.3: def:graph-notions
+#check KroneckerManuscriptQuiverDefinitions.Graph.AdjVert
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.AdjVert
+#check KroneckerManuscriptQuiverDefinitions.Graph.Connected
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Connected
+#check KroneckerManuscriptQuiverDefinitions.Graph.IncEdge
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.IncEdge
+#check KroneckerManuscriptQuiverDefinitions.Graph.IsForest
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.IsForest
+#check KroneckerManuscriptQuiverDefinitions.Graph.IsSimple
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.IsSimple
+#check KroneckerManuscriptQuiverDefinitions.Graph.Leaf
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Leaf
+#check KroneckerManuscriptQuiverDefinitions.Graph.Subgraph
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Subgraph
+#check KroneckerManuscriptQuiverDefinitions.Graph.connectedComponent
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.connectedComponent
+#check KroneckerManuscriptQuiverDefinitions.Graph.connected_iff_cutConnected
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.connected_iff_cutConnected
+#check KroneckerManuscriptQuiverDefinitions.Graph.ctdComp_iff_maximal
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.ctdComp_iff_maximal
+#check KroneckerManuscriptQuiverDefinitions.Graph.degree
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.degree
+#check KroneckerManuscriptQuiverDefinitions.Graph.tree_iff_connected_forest
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.tree_iff_connected_forest
+
+-- Definition 7.4: def:bipartite-graphs
+#check KroneckerManuscriptQuiverDefinitions.Graph.Bipartition
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Bipartition
+#check KroneckerManuscriptQuiverDefinitions.Graph.Bipartition.restrictSubgraph
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.Bipartition.restrictSubgraph
+#check KroneckerManuscriptQuiverDefinitions.Graph.IsBipartite
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.IsBipartite
+#check KroneckerManuscriptQuiverDefinitions.Graph.IsBipartiteOn
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.IsBipartiteOn
+#check KroneckerManuscriptQuiverDefinitions.Graph.isBipartiteOn_iff
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.isBipartiteOn_iff
+#check KroneckerManuscriptQuiverDefinitions.Graph.isBipartite_iff_exists_pair
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.isBipartite_iff_exists_pair
+#check KroneckerManuscriptQuiverDefinitions.Graph.snkAdjOn_eq
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.snkAdjOn_eq
+#check KroneckerManuscriptQuiverDefinitions.Graph.srcAdjOn_eq
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.srcAdjOn_eq
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.ofParts
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.ofParts
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.restrict_sinks_image
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.restrict_sinks_image
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.restrict_sources_image
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.restrict_sources_image
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.sinks
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.sinks
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.snkAdj
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.snkAdj
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.sources
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.sources
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.srcAdj
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.srcAdj
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.subSnk
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.subSnk
+#check KroneckerManuscriptQuiverDefinitions.StructuredGraph.subSrc
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredGraph.subSrc
+
+-- Lemma 7.5: lem:colored-tree-rigidity
+#check KroneckerManuscriptTreeRigidity.Unrooted.tree_automorphism_card
+#print axioms KroneckerManuscriptTreeRigidity.Unrooted.tree_automorphism_card
+#check KroneckerManuscriptTreeRigidity.Unrooted.tree_iso_unique
+#print axioms KroneckerManuscriptTreeRigidity.Unrooted.tree_iso_unique
+#check KroneckerManuscriptTreeRigidity.Unrooted.unrooted_rigidity
+#print axioms KroneckerManuscriptTreeRigidity.Unrooted.unrooted_rigidity
+
+-- Definition 7.6: def:cut-components
+#check KroneckerManuscriptQuiverDefinitions.Graph.CtdComp
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.CtdComp
+#check KroneckerManuscriptQuiverDefinitions.Graph.CtdCompAt
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.CtdCompAt
+#check KroneckerManuscriptQuiverDefinitions.Graph.DelEdge
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.DelEdge
+#check KroneckerManuscriptQuiverDefinitions.Graph.SnkCtdComp
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.SnkCtdComp
+#check KroneckerManuscriptQuiverDefinitions.Graph.snkCtdComp_eq_of_parts
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.snkCtdComp_eq_of_parts
+
+-- Definition 7.7: def:quivers
+#check KroneckerManuscriptQuiverDefinitions.Quiver
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Iso
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Iso
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Iso.graphIso
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Iso.graphIso
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Iso.map_delta
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Iso.map_delta
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Iso.refl
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Iso.refl
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Iso.trans
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Iso.trans
+#check KroneckerManuscriptQuiverDefinitions.Quiver.degree
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.degree
+#check KroneckerManuscriptQuiverDefinitions.Quiver.delta_eq
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.delta_eq
+#check KroneckerManuscriptQuiverDefinitions.Quiver.fullSubquiver
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.fullSubquiver
+#check KroneckerManuscriptQuiverDefinitions.Quiver.ofTyped
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.ofTyped
+#check KroneckerManuscriptQuiverDefinitions.Quiver.ofTyped_toTyped
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.ofTyped_toTyped
+#check KroneckerManuscriptQuiverDefinitions.Quiver.source
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.source
+#check KroneckerManuscriptQuiverDefinitions.Quiver.target
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.target
+#check KroneckerManuscriptQuiverDefinitions.Quiver.toTyped
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.toTyped
+#check KroneckerManuscriptQuiverDefinitions.Quiver.toTyped_ofTyped
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.toTyped_ofTyped
+#check KroneckerManuscriptQuiverDefinitions.Quiver.typedEquiv
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.typedEquiv
+#check KroneckerManuscriptQuiverDefinitions.Quiver.underlyingGraph
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.underlyingGraph
+#check KroneckerManuscriptQuiverDefinitions.Quiver.underlying_endpoints
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.underlying_endpoints
+
+-- Definition 7.8: def:directed-paths
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Acyclic
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Acyclic
+#check KroneckerManuscriptQuiverDefinitions.Quiver.DirectedCycle
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.DirectedCycle
+#check KroneckerManuscriptQuiverDefinitions.Quiver.DirectedPath
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.DirectedPath
+
+-- Definition 7.9: def:quiver-notions
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Hom
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Hom
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Subquiver
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Subquiver
+#check KroneckerManuscriptQuiverDefinitions.Quiver.underGIso
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.underGIso
+#check KroneckerManuscriptQuiverDefinitions.Quiver.underlyingGraph
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.underlyingGraph
+
+-- Definition 7.10: def:bipartite-quivers
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.IsBipartite
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.IsBipartite
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.properBipartition
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.properBipartition
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.Iso
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.Iso
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.endpoints_ne
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.endpoints_ne
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.restrictVertices
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.restrictVertices
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.underlying
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.underlying
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.underlying_simple
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.underlying_simple
+#check KroneckerManuscriptQuiverDefinitions.Quiver.IsBipartite
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.IsBipartite
+#check KroneckerManuscriptQuiverDefinitions.Quiver.IsBipartiteOn
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.IsBipartiteOn
+#check KroneckerManuscriptQuiverDefinitions.Quiver.IsBipartiteOn.underlying
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.IsBipartiteOn.underlying
+#check KroneckerManuscriptQuiverDefinitions.Quiver.isBipartiteOn_iff
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.isBipartiteOn_iff
+#check KroneckerManuscriptQuiverDefinitions.StructuredQuiver.underlyingGraph
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredQuiver.underlyingGraph
+
+-- Definition 7.11: def:colored-quivers
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.AddArrow
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.AddArrow
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ColArrow
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ColArrow
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.DelArrow
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.DelArrow
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Hom
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Hom
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Hom.comp
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Hom.comp
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Hom.id
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Hom.id
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.IsBipartite
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.IsBipartite
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso.refl
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso.refl
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso.symm
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso.symm
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso.trans
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Iso.trans
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Proper
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.Proper
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.QCol
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.QCol
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.colVacSlot_eq_of_parts
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.colVacSlot_eq_of_parts
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.fullSubquiver
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.fullSubquiver
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.fullSubquiver_color
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.fullSubquiver_color
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.isoSetoid
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.isoSetoid
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ofProperColoring
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ofProperColoring
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ofProperColoring_color
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ofProperColoring_color
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ofProperColoring_proper
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.ofProperColoring_proper
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.properBipartition
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.properBipartition
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.proper_iff_endpoint_injective
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.proper_iff_endpoint_injective
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.toProperColoring
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.toProperColoring
+#check KroneckerManuscriptQuiverDefinitions.ColoredQuiver.toProperColoring_color
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredQuiver.toProperColoring_color
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.restrictSubquiver
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Bipartition.restrictSubquiver
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.colVacSlot
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.colVacSlot
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.restrict
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.restrict
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.underlyingQuiver
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.underlyingQuiver
+
+-- Definition 7.12: def:quiver-representations
+#check KroneckerManuscriptQuiverDefinitions.Representation
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation
+#check KroneckerManuscriptQuiverDefinitions.Representation.Hom
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.Hom
+#check KroneckerManuscriptQuiverDefinitions.Representation.Hom.comp
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.Hom.comp
+#check KroneckerManuscriptQuiverDefinitions.Representation.Hom.id
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.Hom.id
+#check KroneckerManuscriptQuiverDefinitions.Representation.HomOver
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.HomOver
+#check KroneckerManuscriptQuiverDefinitions.Representation.HomOver.comp
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.HomOver.comp
+#check KroneckerManuscriptQuiverDefinitions.Representation.Iso
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.Iso
+#check KroneckerManuscriptQuiverDefinitions.Representation.Iso.refl
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.Iso.refl
+#check KroneckerManuscriptQuiverDefinitions.Representation.RepSupp
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.RepSupp
+#check KroneckerManuscriptQuiverDefinitions.Representation.arrowOver
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.arrowOver
+#check KroneckerManuscriptQuiverDefinitions.Representation.coordinateSubrepEquiv
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.coordinateSubrepEquiv
+#check KroneckerManuscriptQuiverDefinitions.Representation.coordinate_arrow
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.coordinate_arrow
+#check KroneckerManuscriptQuiverDefinitions.Representation.coordinates
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.coordinates
+#check KroneckerManuscriptQuiverDefinitions.Representation.dimension
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.dimension
+#check KroneckerManuscriptQuiverDefinitions.Representation.mem_support_iff_dimension_pos
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.mem_support_iff_dimension_pos
+#check KroneckerManuscriptQuiverDefinitions.Representation.ofCoordinateIso
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.ofCoordinateIso
+#check KroneckerManuscriptQuiverDefinitions.Representation.ofCoordinates
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.ofCoordinates
+#check KroneckerManuscriptQuiverDefinitions.Representation.ofCoordinates_dimension
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.ofCoordinates_dimension
+#check KroneckerManuscriptQuiverDefinitions.Representation.restrictToSupport
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.restrictToSupport
+#check KroneckerManuscriptQuiverDefinitions.Representation.restrictToSupport_arrow
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.restrictToSupport_arrow
+#check KroneckerManuscriptQuiverDefinitions.Representation.spaceCast
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.spaceCast
+#check KroneckerManuscriptQuiverDefinitions.Representation.support
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.support
+#check KroneckerManuscriptQuiverDefinitions.Representation.supportQuiver
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.supportQuiver
+#check KroneckerManuscriptQuiverDefinitions.Representation.toCoordinates
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.toCoordinates
+#check KroneckerManuscriptQuiverDefinitions.Representation.toRepresentationOn
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.toRepresentationOn
+
+-- Definition 7.13: def:rep-restriction-zero
+#check KroneckerManuscriptQuiverDefinitions.Representation.ExtZero
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.ExtZero
+#check KroneckerManuscriptQuiverDefinitions.Representation.ExtZeroHom
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.ExtZeroHom
+#check KroneckerManuscriptQuiverDefinitions.Representation.Res
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.Res
+#check KroneckerManuscriptQuiverDefinitions.Representation.ResHom
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.ResHom
+
+-- Lemma 7.14: lem:rep-restriction-zero
+#check KroneckerManuscriptQuiverDefinitions.Representation.subrepEquivalence
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.subrepEquivalence
+#check KroneckerManuscriptQuiverDefinitions.Representation.subrep_dimension_preserved
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.subrep_dimension_preserved
+#check KroneckerManuscriptQuiverDefinitions.Representation.supportEquivalence
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.supportEquivalence
+#check KroneckerManuscriptQuiverDefinitions.Representation.supported_iff_repSupp_subset
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.supported_iff_repSupp_subset
+
+-- Definition 7.15: def:euler-tits-forms
+#check KroneckerManuscriptEulerForms.block_tits_eq
+#print axioms KroneckerManuscriptEulerForms.block_tits_eq
+#check KroneckerManuscriptEulerForms.block_tits_one
+#print axioms KroneckerManuscriptEulerForms.block_tits_one
+#check KroneckerManuscriptEulerForms.dimension
+#print axioms KroneckerManuscriptEulerForms.dimension
+#check KroneckerManuscriptEulerForms.supportQuiver
+#print axioms KroneckerManuscriptEulerForms.supportQuiver
+#check KroneckerManuscriptQuiverDefinitions.Quiver.EulerForm
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.EulerForm
+#check KroneckerManuscriptQuiverDefinitions.Quiver.TitsForm
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.TitsForm
+#check KroneckerManuscriptQuiverDefinitions.Quiver.tits_eq_euler
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.tits_eq_euler
+
+-- Definition 7.16: def:colored-quiver-representations
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentation
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentation
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentation.SuppColQuiv
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentation.SuppColQuiv
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentation.supportQuiver
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentation.supportQuiver
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentationHom
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentationHom
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentationHom.comp
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentationHom.comp
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentationHom.id
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentationHom.id
+#check KroneckerManuscriptQuiverDefinitions.ColoredRepresentationIso
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredRepresentationIso
+#check KroneckerManuscriptQuiverDefinitions.Representation.SnkDim
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.SnkDim
+#check KroneckerManuscriptQuiverDefinitions.Representation.SrcDim
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.SrcDim
+#check KroneckerManuscriptQuiverDefinitions.Representation.dimension_eq_zero_outside_support
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.dimension_eq_zero_outside_support
+#check KroneckerManuscriptQuiverDefinitions.Representation.finiteSnkDim
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.finiteSnkDim
+#check KroneckerManuscriptQuiverDefinitions.Representation.finiteSnkDim_eq
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.finiteSnkDim_eq
+#check KroneckerManuscriptQuiverDefinitions.Representation.finiteSrcDim
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.finiteSrcDim
+#check KroneckerManuscriptQuiverDefinitions.Representation.finiteSrcDim_eq
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.finiteSrcDim_eq
+#check KroneckerManuscriptQuiverDefinitions.Representation.finiteTotalDimensionPair
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.finiteTotalDimensionPair
+#check KroneckerManuscriptQuiverDefinitions.Representation.finiteTotalDimensionPair_eq
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.finiteTotalDimensionPair_eq
+#check KroneckerManuscriptQuiverDefinitions.Representation.partDim
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.partDim
+#check KroneckerManuscriptQuiverDefinitions.Representation.partDim_eq_sum
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.partDim_eq_sum
+#check KroneckerManuscriptQuiverDefinitions.Representation.totalDimensionPair
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.totalDimensionPair
+
+-- Definition 7.17: def:bipartite-stability
+#check KroneckerManuscriptBipartiteStability.Stable
+#print axioms KroneckerManuscriptBipartiteStability.Stable
+#check KroneckerManuscriptBipartiteStability.block_stability_weight_iff
+#print axioms KroneckerManuscriptBipartiteStability.block_stability_weight_iff
+#check KroneckerManuscriptBipartiteStability.glue_stability_weight_iff
+#print axioms KroneckerManuscriptBipartiteStability.glue_stability_weight_iff
+#check KroneckerManuscriptBipartiteStability.negativeVertexWeight
+#print axioms KroneckerManuscriptBipartiteStability.negativeVertexWeight
+#check KroneckerManuscriptBipartiteStability.positiveWeight
+#print axioms KroneckerManuscriptBipartiteStability.positiveWeight
+#check KroneckerManuscriptBipartiteStability.positiveWeight_pos_iff
+#print axioms KroneckerManuscriptBipartiteStability.positiveWeight_pos_iff
+#check KroneckerManuscriptBipartiteStability.stable_iff_coordinate
+#print axioms KroneckerManuscriptBipartiteStability.stable_iff_coordinate
+#check KroneckerManuscriptBipartiteStability.subrepFiniteSupport
+#print axioms KroneckerManuscriptBipartiteStability.subrepFiniteSupport
+#check KroneckerManuscriptBipartiteStability.subrep_support_subset
+#print axioms KroneckerManuscriptBipartiteStability.subrep_support_subset
+#check KroneckerManuscriptBipartiteStability.total_dimension_sum
+#print axioms KroneckerManuscriptBipartiteStability.total_dimension_sum
+#check KroneckerManuscriptBipartiteStability.weight
+#print axioms KroneckerManuscriptBipartiteStability.weight
+#check KroneckerManuscriptBipartiteStability.weightOn_eq
+#print axioms KroneckerManuscriptBipartiteStability.weightOn_eq
+
+-- Definition 7.18: def:representation-arrow-operators
+#check KroneckerManuscriptQuiverDefinitions.Representation.AddArrow
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.AddArrow
+#check KroneckerManuscriptQuiverDefinitions.Representation.DelArrow
+#print axioms KroneckerManuscriptQuiverDefinitions.Representation.DelArrow
+
+-- Definition 7.19: def:colored-representation-markings
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.cIsomClass
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.cIsomClass
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.markedCIsom
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.markedCIsom
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.representation
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.representation
+
+-- Definition 7.20: def:reflected-block
+#check KroneckerBipartiteQuiverBlock.ZS
+#print axioms KroneckerBipartiteQuiverBlock.ZS
+#check KroneckerBipartiteQuiverBlock.ZS_arrow_apply
+#print axioms KroneckerBipartiteQuiverBlock.ZS_arrow_apply
+#check KroneckerBipartiteQuiverBlock.ZS_source_dimension
+#print axioms KroneckerBipartiteQuiverBlock.ZS_source_dimension
+#check KroneckerBipartiteQuiverBlock.ZS_zero_sum
+#print axioms KroneckerBipartiteQuiverBlock.ZS_zero_sum
+
+-- Definition 7.21: def:source-trivalent-tree
+#check KroneckerBipartiteQuiverBlock.incidenceQuiver
+#print axioms KroneckerBipartiteQuiverBlock.incidenceQuiver
+#check KroneckerBipartiteQuiverBlock.outgoingEquiv
+#print axioms KroneckerBipartiteQuiverBlock.outgoingEquiv
+#check KroneckerBipartiteQuiverBlock.reflected_arrow_agrees
+#print axioms KroneckerBipartiteQuiverBlock.reflected_arrow_agrees
+#check KroneckerBipartiteQuiverBlock.reflected_space_equiv
+#print axioms KroneckerBipartiteQuiverBlock.reflected_space_equiv
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.ofColoredTree
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.ofColoredTree
+#check KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.ofColoredTreeZeroSum
+#print axioms KroneckerManuscriptQuiverDefinitions.StructuredColoredQuiver.ofColoredTreeZeroSum
+#check KroneckerReflectedLinearBlock.reflectedBlock
+#print axioms KroneckerReflectedLinearBlock.reflectedBlock
+#check KroneckerRetainedBlockSupport.retained_support_iff
+#print axioms KroneckerRetainedBlockSupport.retained_support_iff
+#check KroneckerRetainedVacantSlots.Slot
+#print axioms KroneckerRetainedVacantSlots.Slot
+#check KroneckerRetainedVacantSlots.actualSlotLeafEquiv
+#print axioms KroneckerRetainedVacantSlots.actualSlotLeafEquiv
+
+-- Lemma 7.22: lem:zero-sum-source-bound
+#check KroneckerIntermediateLemmas.zero_sum_source_bound
+#print axioms KroneckerIntermediateLemmas.zero_sum_source_bound
+#check KroneckerManuscriptQuiverDefinitions.Graph.SourceTrivalentTree.source_dimension_bound
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.SourceTrivalentTree.source_dimension_bound
+
+-- Lemma 7.23: lem:reflected-blocks
+#check KroneckerManuscriptBipartiteStability.block_stability_weight_iff
+#print axioms KroneckerManuscriptBipartiteStability.block_stability_weight_iff
+#check KroneckerManuscriptBlockStatements.reflected_block_statement
+#print axioms KroneckerManuscriptBlockStatements.reflected_block_statement
+#check KroneckerManuscriptEulerForms.block_tits_eq
+#print axioms KroneckerManuscriptEulerForms.block_tits_eq
+#check KroneckerManuscriptEulerForms.block_tits_one
+#print axioms KroneckerManuscriptEulerForms.block_tits_one
+#check KroneckerReflectedLinearBlock.reflectedBlock
+#print axioms KroneckerReflectedLinearBlock.reflectedBlock
+#check KroneckerReflectedLinearBlock.reflected_arrows_generate
+#print axioms KroneckerReflectedLinearBlock.reflected_arrows_generate
+#check KroneckerReflectedLinearBlock.reflected_positive_defect
+#print axioms KroneckerReflectedLinearBlock.reflected_positive_defect
+#check KroneckerReflectedLinearBlock.reflected_total_source
+#print axioms KroneckerReflectedLinearBlock.reflected_total_source
+#check KroneckerSplitReflectedLemmas.dimensions
+#print axioms KroneckerSplitReflectedLemmas.dimensions
+
+-- Lemma 7.24: lem:vacant-slots
+#check KroneckerRetainedVacantSlots.actualSlotLeafEquiv
+#print axioms KroneckerRetainedVacantSlots.actualSlotLeafEquiv
+#check KroneckerRetainedVacantSlots.coloredSlotLeafEquiv
+#print axioms KroneckerRetainedVacantSlots.coloredSlotLeafEquiv
+
+-- Definition 7.25: def:attachments
+#check KroneckerManuscriptAttachments.nonzero_attachment
+#print axioms KroneckerManuscriptAttachments.nonzero_attachment
+#check KroneckerManuscriptAttachments.one_dimensional_map
+#print axioms KroneckerManuscriptAttachments.one_dimensional_map
+#check KroneckerManuscriptAttachments.rescale_stable_iff
+#print axioms KroneckerManuscriptAttachments.rescale_stable_iff
+#check KroneckerManuscriptAttachments.rescale_support
+#print axioms KroneckerManuscriptAttachments.rescale_support
+#check KroneckerManuscriptAttachments.subrepEquiv
+#print axioms KroneckerManuscriptAttachments.subrepEquiv
+#check KroneckerTreeGluingCriterion.unique_flow_and_gluing_criterion
+#print axioms KroneckerTreeGluingCriterion.unique_flow_and_gluing_criterion
+
+-- Definition 7.26: def:flows-vertex-sums
+#check KroneckerManuscriptQuiverDefinitions.Graph.FlowSumEquations
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.FlowSumEquations
+#check KroneckerManuscriptQuiverDefinitions.Graph.FlowWithSums
+#print axioms KroneckerManuscriptQuiverDefinitions.Graph.FlowWithSums
+
+-- Lemma 7.27: lem:tree-flow-cut
+#check KroneckerIntermediateLemmas.tree_flow_cut_formula
+#print axioms KroneckerIntermediateLemmas.tree_flow_cut_formula
+#check KroneckerIntermediateLemmas.tree_flow_exists_unique
+#print axioms KroneckerIntermediateLemmas.tree_flow_exists_unique
+#check KroneckerManuscriptFiveIssueCorrections.source_closed_boundary_exists
+#print axioms KroneckerManuscriptFiveIssueCorrections.source_closed_boundary_exists
+#check KroneckerManuscriptFiveIssueCorrections.source_closed_flow_difference_positive
+#print axioms KroneckerManuscriptFiveIssueCorrections.source_closed_flow_difference_positive
+#check KroneckerPositiveFlowBoundary.positive_boundary_flux
+#print axioms KroneckerPositiveFlowBoundary.positive_boundary_flux
+
+-- Lemma 7.28: lem:zero-sum-weight
+#check KroneckerGluingWeightHelpers.block_sink_bound
+#print axioms KroneckerGluingWeightHelpers.block_sink_bound
+#check KroneckerGluingWeightHelpers.block_eq_full_of_dimensions
+#print axioms KroneckerGluingWeightHelpers.block_eq_full_of_dimensions
+#check KroneckerGluingWeightHelpers.zero_sum_weight_lower
+#print axioms KroneckerGluingWeightHelpers.zero_sum_weight_lower
+#check KroneckerGluingWeightHelpers.zero_sum_weight_eq_iff_full
+#print axioms KroneckerGluingWeightHelpers.zero_sum_weight_eq_iff_full
+
+-- Lemma 7.29: lem:gluing-subrepresentation-weights
+#check KroneckerGluingWeightHelpers.boundary_flow
+#print axioms KroneckerGluingWeightHelpers.boundary_flow
+#check KroneckerGluingWeightHelpers.glued_weight_boundary_formula
+#print axioms KroneckerGluingWeightHelpers.glued_weight_boundary_formula
+#check KroneckerGluingWeightHelpers.cutSubrep
+#print axioms KroneckerGluingWeightHelpers.cutSubrep
+#check KroneckerGluingWeightHelpers.cut_subrep_dimensions
+#print axioms KroneckerGluingWeightHelpers.cut_subrep_dimensions
+#check KroneckerGluingWeightHelpers.cut_subrep_nonzero_proper
+#print axioms KroneckerGluingWeightHelpers.cut_subrep_nonzero_proper
+#check KroneckerGluingWeightHelpers.cut_subrep_weight
+#print axioms KroneckerGluingWeightHelpers.cut_subrep_weight
+#check KroneckerGluingWeightHelpers.manuscript_weight_formula
+#print axioms KroneckerGluingWeightHelpers.manuscript_weight_formula
+#check KroneckerGluingWeightHelpers.manuscriptCutSubrep
+#print axioms KroneckerGluingWeightHelpers.manuscriptCutSubrep
+#check KroneckerGluingWeightHelpers.group_manuscript_cut
+#print axioms KroneckerGluingWeightHelpers.group_manuscript_cut
+#check KroneckerGluingWeightHelpers.manuscript_cut_dimensions
+#print axioms KroneckerGluingWeightHelpers.manuscript_cut_dimensions
+#check KroneckerGluingWeightHelpers.manuscript_cut_nonzero_proper
+#print axioms KroneckerGluingWeightHelpers.manuscript_cut_nonzero_proper
+#check KroneckerGluingWeightHelpers.manuscript_cut_weight
+#print axioms KroneckerGluingWeightHelpers.manuscript_cut_weight
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.added_invariant_iff
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.added_invariant_iff
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.group
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.group
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.flatten
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.flatten
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.subrepEquiv
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.subrepEquiv
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.group_source_dimension
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.group_source_dimension
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.group_sink_dimension
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.group_sink_dimension
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.block_positive_defect
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.block_positive_defect
+
+-- Lemma 7.30: lem:flow-stability
+#check KroneckerGluedProperColoring.glued_color_sink_injective
+#print axioms KroneckerGluedProperColoring.glued_color_sink_injective
+#check KroneckerGluedProperColoring.glued_color_source_injective
+#print axioms KroneckerGluedProperColoring.glued_color_source_injective
+#check KroneckerGluedSupportTree.glued_graph_tree
+#print axioms KroneckerGluedSupportTree.glued_graph_tree
+#check KroneckerManuscriptAttachments.rescale_stable_iff
+#print axioms KroneckerManuscriptAttachments.rescale_stable_iff
+#check KroneckerManuscriptAttachments.rescale_support
+#print axioms KroneckerManuscriptAttachments.rescale_support
+#check KroneckerManuscriptBipartiteStability.glue_stability_weight_iff
+#print axioms KroneckerManuscriptBipartiteStability.glue_stability_weight_iff
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.slope_matches_manuscript
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.slope_matches_manuscript
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.stability_iff_positive_edge_flow
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.stability_iff_positive_edge_flow
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.total_dimension_pair
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.total_dimension_pair
+#check KroneckerSplitGluingLemmas.ProperGluingData.a
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.a
+#check KroneckerSplitGluingLemmas.ProperGluingData.a_eq_source_dimension
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.a_eq_source_dimension
+#check KroneckerSplitGluingLemmas.ProperGluingData.alpha
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.alpha
+#check KroneckerSplitGluingLemmas.ProperGluingData.c
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.c
+#check KroneckerSplitGluingLemmas.ProperGluingData.dimensions
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.dimensions
+#check KroneckerSplitGluingLemmas.ProperGluingData.flows
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.flows
+#check KroneckerSplitGluingLemmas.ProperGluingData.k
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.k
+#check KroneckerSplitGluingLemmas.ProperGluingData.sourceDimensionAt
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.sourceDimensionAt
+#check KroneckerSplitGluingLemmas.ProperGluingData.stable_iff_positive
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.stable_iff_positive
+#check KroneckerSplitGluingLemmas.ProperGluingData.x
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.x
+#check KroneckerSplitGluingLemmas.ProperGluingData.x_eq_slope
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.x_eq_slope
+#check KroneckerSplitGluingLemmas.ProperGluingData.xi
+#print axioms KroneckerSplitGluingLemmas.ProperGluingData.xi
+#check KroneckerTreeGluingCriterion.unique_flow_and_gluing_criterion
+#print axioms KroneckerTreeGluingCriterion.unique_flow_and_gluing_criterion
+
+-- Definition 7.31: def:marked-block-counts
+#check KroneckerManuscriptMarkedCounts.P
+#print axioms KroneckerManuscriptMarkedCounts.P
+#check KroneckerManuscriptMarkedCounts.P_color_independent
+#print axioms KroneckerManuscriptMarkedCounts.P_color_independent
+#check KroneckerManuscriptMarkedCounts.P_formula
+#print axioms KroneckerManuscriptMarkedCounts.P_formula
+#check KroneckerManuscriptMarkedCounts.Qeq
+#print axioms KroneckerManuscriptMarkedCounts.Qeq
+#check KroneckerManuscriptMarkedCounts.Qeq_color_independent
+#print axioms KroneckerManuscriptMarkedCounts.Qeq_color_independent
+#check KroneckerManuscriptMarkedCounts.Qeq_formula
+#print axioms KroneckerManuscriptMarkedCounts.Qeq_formula
+#check KroneckerManuscriptMarkedCounts.Qne
+#print axioms KroneckerManuscriptMarkedCounts.Qne
+#check KroneckerManuscriptMarkedCounts.Qne_color_independent
+#print axioms KroneckerManuscriptMarkedCounts.Qne_color_independent
+#check KroneckerManuscriptMarkedCounts.Qne_ratio
+#print axioms KroneckerManuscriptMarkedCounts.Qne_ratio
+
+-- Definition 7.32: def:colored-branches
+#check KroneckerManuscriptBranchCounting.D
+#print axioms KroneckerManuscriptBranchCounting.D
+#check KroneckerManuscriptBranchCounting.T
+#print axioms KroneckerManuscriptBranchCounting.T
+#check KroneckerManuscriptBranchCounting.U
+#print axioms KroneckerManuscriptBranchCounting.U
+#check KroneckerManuscriptBranchCounting.sink_branch_iff
+#print axioms KroneckerManuscriptBranchCounting.sink_branch_iff
+#check KroneckerManuscriptBranchCounting.source_branch_iff
+#print axioms KroneckerManuscriptBranchCounting.source_branch_iff
+#check KroneckerManuscriptQuiverDefinitions.Branch
+#print axioms KroneckerManuscriptQuiverDefinitions.Branch
+#check KroneckerManuscriptQuiverDefinitions.ColoredBranch.Data
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredBranch.Data
+#check KroneckerManuscriptQuiverDefinitions.ColoredBranch.IsSink
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredBranch.IsSink
+#check KroneckerManuscriptQuiverDefinitions.ColoredBranch.IsSource
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredBranch.IsSource
+#check KroneckerManuscriptQuiverDefinitions.ColoredBranch.Iso
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredBranch.Iso
+#check KroneckerManuscriptQuiverDefinitions.ColoredBranch.leafCount
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredBranch.leafCount
+#check KroneckerManuscriptQuiverDefinitions.ColoredBranch.sourceCount
+#print axioms KroneckerManuscriptQuiverDefinitions.ColoredBranch.sourceCount
+
+-- Lemma 7.33: lem:branch-series
+#check KroneckerBranchClassWeights.sinkClassWeight
+#print axioms KroneckerBranchClassWeights.sinkClassWeight
+#check KroneckerBranchClassWeights.sourceClassWeight
+#print axioms KroneckerBranchClassWeights.sourceClassWeight
+#check KroneckerBranchWeights.sink_weight_iso
+#print axioms KroneckerBranchWeights.sink_weight_iso
+#check KroneckerBranchWeights.source_weight_iso
+#print axioms KroneckerBranchWeights.source_weight_iso
+#check KroneckerFiniteBranchClasses.SinkDegreeClass
+#print axioms KroneckerFiniteBranchClasses.SinkDegreeClass
+#check KroneckerFiniteBranchClasses.SourceDegreeClass
+#print axioms KroneckerFiniteBranchClasses.SourceDegreeClass
+#check KroneckerFiniteBranchObjects.sink_object_dimensions
+#print axioms KroneckerFiniteBranchObjects.sink_object_dimensions
+#check KroneckerFiniteBranchObjects.source_object_dimensions
+#print axioms KroneckerFiniteBranchObjects.source_object_dimensions
+#check KroneckerManuscriptBranchCounting.leaf_derivative
+#print axioms KroneckerManuscriptBranchCounting.leaf_derivative
+#check KroneckerManuscriptBranchCounting.sink_series_equation
+#print axioms KroneckerManuscriptBranchCounting.sink_series_equation
+#check KroneckerManuscriptBranchCounting.source_series_equation
+#print axioms KroneckerManuscriptBranchCounting.source_series_equation
+
+-- Lemma 7.34: slots
+#check KroneckerReflectedPairSlotCounts.reflected_same_slot_count
+#print axioms KroneckerReflectedPairSlotCounts.reflected_same_slot_count
+#check KroneckerReflectedPairSlotCounts.reflected_slot_pair_comparison
+#print axioms KroneckerReflectedPairSlotCounts.reflected_slot_pair_comparison
+#check KroneckerReflectedPairSlotCounts.reflected_slot_pair_ratio
+#print axioms KroneckerReflectedPairSlotCounts.reflected_slot_pair_ratio
+#check KroneckerReflectedSingleSlotCounts.reflected_single_slot_closed_count
+#print axioms KroneckerReflectedSingleSlotCounts.reflected_single_slot_closed_count
+
+-- Definition 7.35: def:admissible-pairs
+#check KroneckerManuscriptAdmissiblePairs.Admissible
+#print axioms KroneckerManuscriptAdmissiblePairs.Admissible
+#check KroneckerManuscriptAdmissiblePairs.admissible_iff_slotBounds
+#print axioms KroneckerManuscriptAdmissiblePairs.admissible_iff_slotBounds
+#check KroneckerManuscriptAdmissiblePairs.equalPairCount
+#print axioms KroneckerManuscriptAdmissiblePairs.equalPairCount
+#check KroneckerManuscriptAdmissiblePairs.singleCount
+#print axioms KroneckerManuscriptAdmissiblePairs.singleCount
+#check KroneckerManuscriptSlotBounds.SlotBounds256
+#print axioms KroneckerManuscriptSlotBounds.SlotBounds256
+#check KroneckerManuscriptSlotBounds.from_one_color
+#print axioms KroneckerManuscriptSlotBounds.from_one_color
+
+-- Lemma 7.36: lem:slot-bounds
+#check KroneckerReflectedPairSlotCounts.reflected_pair_slot_uniform_lower
+#print axioms KroneckerReflectedPairSlotCounts.reflected_pair_slot_uniform_lower
+#check KroneckerReflectedSingleSlotCounts.reflected_single_slot_uniform_lower
+#print axioms KroneckerReflectedSingleSlotCounts.reflected_single_slot_uniform_lower
+
+-- Definition 7.37: def:labeled-chain
+#check KroneckerChainLeafCorrespondence.named_sink_degree_two_iff
+#print axioms KroneckerChainLeafCorrespondence.named_sink_degree_two_iff
+#check KroneckerChainLeafCorrespondence.named_sink_leaf_iff
+#print axioms KroneckerChainLeafCorrespondence.named_sink_leaf_iff
+#check KroneckerManuscriptQuiverDefinitions.LabeledChain.Ch
+#print axioms KroneckerManuscriptQuiverDefinitions.LabeledChain.Ch
+#check KroneckerManuscriptQuiverDefinitions.LabeledChain.LSTrivCh
+#print axioms KroneckerManuscriptQuiverDefinitions.LabeledChain.LSTrivCh
+#check KroneckerManuscriptQuiverDefinitions.LabeledChain.LeftEdge
+#print axioms KroneckerManuscriptQuiverDefinitions.LabeledChain.LeftEdge
+#check KroneckerManuscriptQuiverDefinitions.LabeledChain.MidEdge
+#print axioms KroneckerManuscriptQuiverDefinitions.LabeledChain.MidEdge
+#check KroneckerManuscriptQuiverDefinitions.LabeledChain.RightEdge
+#print axioms KroneckerManuscriptQuiverDefinitions.LabeledChain.RightEdge
+
+-- Lemma 7.38: lem:labeled-chain-tree
+#check KroneckerChainLeafCorrespondence.named_chain_tree
+#print axioms KroneckerChainLeafCorrespondence.named_chain_tree
+#check KroneckerChainLeafCorrespondence.named_source_degree
+#print axioms KroneckerChainLeafCorrespondence.named_source_degree
+#check KroneckerChainLeafCorrespondence.one_source_all_sinks_are_leaves
+#print axioms KroneckerChainLeafCorrespondence.one_source_all_sinks_are_leaves
+#check KroneckerChainSkeletonTree.chain_tree
+#print axioms KroneckerChainSkeletonTree.chain_tree
+#check KroneckerManuscriptQuiverDefinitions.LabeledChain.source_degree
+#print axioms KroneckerManuscriptQuiverDefinitions.LabeledChain.source_degree
+
+-- Definition 7.39: def:chain-flow-family
+#check KroneckerManuscriptFlowFamily.Coordinates
+#print axioms KroneckerManuscriptFlowFamily.Coordinates
+#check KroneckerManuscriptFlowFamily.Family
+#print axioms KroneckerManuscriptFlowFamily.Family
+#check KroneckerManuscriptFlowFamily.dimension_bounds
+#print axioms KroneckerManuscriptFlowFamily.dimension_bounds
+#check KroneckerManuscriptFlowFamily.dimension_sum
+#print axioms KroneckerManuscriptFlowFamily.dimension_sum
+#check KroneckerManuscriptFlowFamily.dimensions_integral
+#print axioms KroneckerManuscriptFlowFamily.dimensions_integral
+#check KroneckerManuscriptFlowFamily.ofCanonical
+#print axioms KroneckerManuscriptFlowFamily.ofCanonical
+#check KroneckerManuscriptFlowFamily.port_values
+#print axioms KroneckerManuscriptFlowFamily.port_values
+#check KroneckerManuscriptFlowFamily.positive
+#print axioms KroneckerManuscriptFlowFamily.positive
+#check KroneckerManuscriptFlowFamily.sourceDimension
+#print axioms KroneckerManuscriptFlowFamily.sourceDimension
+#check KroneckerManuscriptFlowFamily.sourceDimension_eq
+#print axioms KroneckerManuscriptFlowFamily.sourceDimension_eq
+#check KroneckerManuscriptFlowFamily.toCanonical
+#print axioms KroneckerManuscriptFlowFamily.toCanonical
+#check KroneckerManuscriptFlowFamily.toFlow
+#print axioms KroneckerManuscriptFlowFamily.toFlow
+
+-- Lemma 7.40: lem:flow-choices
+#check KroneckerChainDimensionSum.chain_dimension_sum
+#print axioms KroneckerChainDimensionSum.chain_dimension_sum
+#check KroneckerChainDimensionWeight.three_leaf_weight_lower
+#print axioms KroneckerChainDimensionWeight.three_leaf_weight_lower
+#check KroneckerChainLatticeParameters.lattice_parameter_integrality
+#print axioms KroneckerChainLatticeParameters.lattice_parameter_integrality
+#check KroneckerChainTransitionWeights.bin_scale_inverse
+#print axioms KroneckerChainTransitionWeights.bin_scale_inverse
+#check KroneckerChainTransitionWeights.chain_transition_weight_lower
+#print axioms KroneckerChainTransitionWeights.chain_transition_weight_lower
+#check KroneckerFixedFlowWeight.fixed_word_weight
+#print axioms KroneckerFixedFlowWeight.fixed_word_weight
+#check KroneckerLatticeDimensionEmbedding.parameter_dimensions_injective
+#print axioms KroneckerLatticeDimensionEmbedding.parameter_dimensions_injective
+#check KroneckerLogic.matrix_entry_constant
+#print axioms KroneckerLogic.matrix_entry_constant
+#check KroneckerManuscriptFlowFamily.dimension_bounds
+#print axioms KroneckerManuscriptFlowFamily.dimension_bounds
+#check KroneckerManuscriptFlowFamily.dimension_sum
+#print axioms KroneckerManuscriptFlowFamily.dimension_sum
+#check KroneckerManuscriptFlowFamily.dimensions_integral
+#print axioms KroneckerManuscriptFlowFamily.dimensions_integral
+#check KroneckerManuscriptFlowFamily.positive
+#print axioms KroneckerManuscriptFlowFamily.positive
+#check KroneckerManuscriptFlowFamily.sourceDimension_injective
+#print axioms KroneckerManuscriptFlowFamily.sourceDimension_injective
+#check KroneckerManuscriptFlowIntervals.block_dimensions
+#print axioms KroneckerManuscriptFlowIntervals.block_dimensions
+#check KroneckerManuscriptFlowIntervals.lattice_point_counts
+#print axioms KroneckerManuscriptFlowIntervals.lattice_point_counts
+#check KroneckerManuscriptFlowIntervals.left_interval
+#print axioms KroneckerManuscriptFlowIntervals.left_interval
+#check KroneckerManuscriptFlowIntervals.right_interval
+#print axioms KroneckerManuscriptFlowIntervals.right_interval
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.slope_matches_manuscript
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.slope_matches_manuscript
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.stability_iff_positive_edge_flow
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.stability_iff_positive_edge_flow
+#check KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.total_dimension_pair
+#print axioms KroneckerManuscriptQuiverDefinitions.ZeroSumGlueData.total_dimension_pair
+#check KroneckerMarkedLatticeInputs.marked_input_stable
+#print axioms KroneckerMarkedLatticeInputs.marked_input_stable
+#check KroneckerSplitFlowChoiceLemmas.dimensions
+#print axioms KroneckerSplitFlowChoiceLemmas.dimensions
+#check KroneckerSplitFlowChoiceLemmas.dimensions_injective
+#print axioms KroneckerSplitFlowChoiceLemmas.dimensions_injective
+#check KroneckerSplitFlowChoiceLemmas.lattice_counts
+#print axioms KroneckerSplitFlowChoiceLemmas.lattice_counts
+#check KroneckerSplitFlowChoiceLemmas.leaf_weight
+#print axioms KroneckerSplitFlowChoiceLemmas.leaf_weight
+#check KroneckerSplitFlowChoiceLemmas.transition_weight
+#print axioms KroneckerSplitFlowChoiceLemmas.transition_weight
+
+-- Definition 7.41: def:quiver-covering
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Covering
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Covering
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Covering.IsUniversal
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Covering.IsUniversal
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Deck
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Deck
+#check KroneckerManuscriptQuiverDefinitions.Quiver.DeckAction
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.DeckAction
+#check KroneckerManuscriptQuiverDefinitions.Quiver.DeckClass
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.DeckClass
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Embedding
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Embedding
+
+-- Definition 7.42: def:path-lift
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Lift
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Lift
+#check KroneckerManuscriptQuiverDefinitions.Quiver.Traversal
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.Traversal
+#check KroneckerManuscriptQuiverDefinitions.Quiver.liftedTraversal
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.liftedTraversal
+
+-- Lemma 7.43: lem:path-lift
+#check KroneckerManuscriptQuiverDefinitions.Quiver.lift_start
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.lift_start
+#check KroneckerManuscriptQuiverDefinitions.Quiver.unique_traversal_lift
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.unique_traversal_lift
+
+-- Definition 7.44: def:unique-path-lift
+#check KroneckerManuscriptQuiverDefinitions.Quiver.lift_start
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.lift_start
+#check KroneckerManuscriptQuiverDefinitions.Quiver.liftedTraversal
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.liftedTraversal
+
+-- Definition 7.45: def:cover-dimension-vectors
+#check KroneckerManuscriptQuiverDefinitions.DimVecFin
+#print axioms KroneckerManuscriptQuiverDefinitions.DimVecFin
+#check KroneckerManuscriptQuiverDefinitions.VecSnkDim
+#print axioms KroneckerManuscriptQuiverDefinitions.VecSnkDim
+#check KroneckerManuscriptQuiverDefinitions.VecSrcDim
+#print axioms KroneckerManuscriptQuiverDefinitions.VecSrcDim
+#check KroneckerManuscriptQuiverDefinitions.VecSupp
+#print axioms KroneckerManuscriptQuiverDefinitions.VecSupp
+
+-- Definition 7.46: def:covering-arrow-coloring
+#check KroneckerManuscriptQuiverDefinitions.Quiver.CovCol
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.CovCol
+#check KroneckerManuscriptQuiverDefinitions.Quiver.covCol_apply
+#print axioms KroneckerManuscriptQuiverDefinitions.Quiver.covCol_apply
+
+-- Definition 7.47: def:cover-dimension-classes
+#check KroneckerManuscriptBipartiteStability.Stable
+#print axioms KroneckerManuscriptBipartiteStability.Stable
+#check KroneckerManuscriptBipartiteStability.weight
+#print axioms KroneckerManuscriptBipartiteStability.weight
+#check KroneckerManuscriptQuiverDefinitions.CovDim
+#print axioms KroneckerManuscriptQuiverDefinitions.CovDim
+#check KroneckerManuscriptQuiverDefinitions.CoverWeight
+#print axioms KroneckerManuscriptQuiverDefinitions.CoverWeight
+#check KroneckerManuscriptQuiverDefinitions.compatible_weight_zero
+#print axioms KroneckerManuscriptQuiverDefinitions.compatible_weight_zero
+
+-- Definition 7.48: def:marked-chain-data
+#check KroneckerBetaRepresentativeChoices.supportMap
+#print axioms KroneckerBetaRepresentativeChoices.supportMap
+#check KroneckerDimensionedChainGluing.dimensionedGlueClasses
+#print axioms KroneckerDimensionedChainGluing.dimensionedGlueClasses
+#check KroneckerIntrinsicBlockDeletion.intrinsicDeletion
+#print axioms KroneckerIntrinsicBlockDeletion.intrinsicDeletion
+#check KroneckerIntrinsicConnectors.IsConnector
+#print axioms KroneckerIntrinsicConnectors.IsConnector
+#check KroneckerManuscriptFiveIssueCorrections.internal_mark_attachments
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_mark_attachments
+#check KroneckerManuscriptFiveIssueCorrections.internal_mark_colors
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_mark_colors
+#check KroneckerManuscriptFiveIssueCorrections.internal_mark_sources
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_mark_sources
+#check KroneckerManuscriptFiveIssueCorrections.internal_marks_distinct
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_marks_distinct
+#check KroneckerManuscriptFixedCoverCount.Marked
+#print axioms KroneckerManuscriptFixedCoverCount.Marked
+#check KroneckerRecoveredSkeleton.recoveredIncidence
+#print axioms KroneckerRecoveredSkeleton.recoveredIncidence
+
+-- Lemma 7.49: lem:retained-tree-recovery
+#check KroneckerManuscriptBranchCounting.colored_tree_rigidity
+#print axioms KroneckerManuscriptBranchCounting.colored_tree_rigidity
+#check KroneckerReflectedMarkedIsomorphisms.marked_reflection_isomorphism_iff
+#print axioms KroneckerReflectedMarkedIsomorphisms.marked_reflection_isomorphism_iff
+#check KroneckerReflectedReconstruction.reconstructionIso
+#print axioms KroneckerReflectedReconstruction.reconstructionIso
+#check KroneckerReflectionFaithfulness.recoverIso
+#print axioms KroneckerReflectionFaithfulness.recoverIso
+#check KroneckerReflectionNaturality.retained_recover_iso
+#print axioms KroneckerReflectionNaturality.retained_recover_iso
+#check KroneckerReflectionReindexing.kernelEquiv
+#print axioms KroneckerReflectionReindexing.kernelEquiv
+#check KroneckerReflectionReindexing.kernel_equiv_projection
+#print axioms KroneckerReflectionReindexing.kernel_equiv_projection
+#check KroneckerRetainedIsoTransport.retained_arrow_intertwines
+#print axioms KroneckerRetainedIsoTransport.retained_arrow_intertwines
+
+-- Lemma 7.50: lem:marked-chain-recovery
+#check KroneckerBetaRepresentativeChoices.supportImage_independent
+#print axioms KroneckerBetaRepresentativeChoices.supportImage_independent
+#check KroneckerBetaRepresentativeChoices.supportMap_eq
+#print axioms KroneckerBetaRepresentativeChoices.supportMap_eq
+#check KroneckerBetaRepresentativeChoices.supportMap_independent
+#print axioms KroneckerBetaRepresentativeChoices.supportMap_independent
+#check KroneckerChainFixedLabelRecovery.fixed_label_colors
+#print axioms KroneckerChainFixedLabelRecovery.fixed_label_colors
+#check KroneckerChainFixedLabelRecovery.fixed_label_dimensions
+#print axioms KroneckerChainFixedLabelRecovery.fixed_label_dimensions
+#check KroneckerChainFixedLabelRecovery.fixed_label_marked_classes
+#print axioms KroneckerChainFixedLabelRecovery.fixed_label_marked_classes
+#check KroneckerDimensionedChainGluing.dimensioned_representative_independence
+#print axioms KroneckerDimensionedChainGluing.dimensioned_representative_independence
+#check KroneckerLatticeParameterRecovery.lattice_parameter_recovery
+#print axioms KroneckerLatticeParameterRecovery.lattice_parameter_recovery
+#check KroneckerManuscriptFiveIssueCorrections.internal_mark_attachments
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_mark_attachments
+#check KroneckerManuscriptFiveIssueCorrections.internal_marks_distinct
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_marks_distinct
+
+-- Lemma 7.51: lem:forget-markings
+#check KroneckerChainClassFibers.labelingBound
+#print axioms KroneckerChainClassFibers.labelingBound
+#check KroneckerChainLocalSlotClasses.family_class_card
+#print axioms KroneckerChainLocalSlotClasses.family_class_card
+#check KroneckerChainLocalSlotClasses.internal_local_class_card
+#print axioms KroneckerChainLocalSlotClasses.internal_local_class_card
+#check KroneckerChainLocalSlotClasses.leaf_local_class_card
+#print axioms KroneckerChainLocalSlotClasses.leaf_local_class_card
+#check KroneckerChainPortColors.independent_color_count
+#print axioms KroneckerChainPortColors.independent_color_count
+#check KroneckerFiniteChainFibers.complete_input_all_fibers
+#print axioms KroneckerFiniteChainFibers.complete_input_all_fibers
+#check KroneckerFiniteChainFibers.complete_input_fiber_le
+#print axioms KroneckerFiniteChainFibers.complete_input_fiber_le
+#check KroneckerManuscriptSlotBounds.family_lower
+#print axioms KroneckerManuscriptSlotBounds.family_lower
+#check KroneckerSplitMarkedChainLemmas.fiber_bounds
+#print axioms KroneckerSplitMarkedChainLemmas.fiber_bounds
+#check KroneckerSplitMarkedChainLemmas.representation_count
+#print axioms KroneckerSplitMarkedChainLemmas.representation_count
+#check KroneckerSplitMarkedChainLemmas.representation_lower
+#print axioms KroneckerSplitMarkedChainLemmas.representation_lower
+
+-- Proposition 7.52: prop:cover-count
+#check KroneckerManuscriptFixedCoverCount.cover_card
+#print axioms KroneckerManuscriptFixedCoverCount.cover_card
+#check KroneckerManuscriptFixedCoverCount.cover_lower
+#print axioms KroneckerManuscriptFixedCoverCount.cover_lower
+#check KroneckerManuscriptFixedCoverCount.cover_realized
+#print axioms KroneckerManuscriptFixedCoverCount.cover_realized
+#check KroneckerManuscriptFixedCoverCount.inputs_card
+#print axioms KroneckerManuscriptFixedCoverCount.inputs_card
+#check KroneckerManuscriptSlotBounds.SlotBounds256
+#print axioms KroneckerManuscriptSlotBounds.SlotBounds256
+#check KroneckerManuscriptSlotBounds.from_one_color
+#print axioms KroneckerManuscriptSlotBounds.from_one_color
+#check KroneckerManuscriptSupportBound.enumerated_manuscript_lower
+#print axioms KroneckerManuscriptSupportBound.enumerated_manuscript_lower
+
+-- Lemma 7.53: lem:tree-traversal-distinct
+#check KroneckerTreeTraversalHelper.NoReversal
+#print axioms KroneckerTreeTraversalHelper.NoReversal
+#check KroneckerTreeTraversalHelper.noReversal_isPath
+#print axioms KroneckerTreeTraversalHelper.noReversal_isPath
+#check KroneckerTreeTraversalHelper.noReversal_vertices_nodup
+#print axioms KroneckerTreeTraversalHelper.noReversal_vertices_nodup
+
+-- Lemma 7.54: lem:cover-tree-embedding
+#check KroneckerColoredTreeLift.rootLift_color
+#print axioms KroneckerColoredTreeLift.rootLift_color
+#check KroneckerColoredTreeLift.rootLift_injective
+#print axioms KroneckerColoredTreeLift.rootLift_injective
+
+-- Lemma 7.55: lem:cover-deck-transitivity
+#check KroneckerCoverDeckTranslations.deck_transitive_same_parity
+#print axioms KroneckerCoverDeckTranslations.deck_transitive_same_parity
+#check KroneckerUniversalDeckRootTorsor.deck_ext_at
+#print axioms KroneckerUniversalDeckRootTorsor.deck_ext_at
+
+-- Lemma 7.56: lem:cover-dimension-equivalence
+#check KroneckerCoverDeckTranslations.deck_transitive_same_parity
+#print axioms KroneckerCoverDeckTranslations.deck_transitive_same_parity
+#check KroneckerUniversalWeightedSupportCriterion.dimension_relation_weightedIso
+#print axioms KroneckerUniversalWeightedSupportCriterion.dimension_relation_weightedIso
+#check KroneckerUniversalWeightedSupportCriterion.weightedIso_dimension_relation
+#print axioms KroneckerUniversalWeightedSupportCriterion.weightedIso_dimension_relation
+
+-- Lemma 7.57: lem:cover-trees-finite
+#check KroneckerColoredTreeLift.rootLift_color
+#print axioms KroneckerColoredTreeLift.rootLift_color
+#check KroneckerColoredTreeLift.rootLift_injective
+#print axioms KroneckerColoredTreeLift.rootLift_injective
+#check KroneckerConnectedCoverFiniteness.connected_classes_finite
+#print axioms KroneckerConnectedCoverFiniteness.connected_classes_finite
+#check KroneckerCoverDeckTranslations.deck_transitive_same_parity
+#print axioms KroneckerCoverDeckTranslations.deck_transitive_same_parity
+
+-- Lemma 7.58: lem:cover-localization
+#check KroneckerFiniteSupportStability.finiteSupportStable_iff_restrict
+#print axioms KroneckerFiniteSupportStability.finiteSupportStable_iff_restrict
+#check KroneckerLocalizationApplication.distinct_nonempty_localization_lower
+#print axioms KroneckerLocalizationApplication.distinct_nonempty_localization_lower
+#check KroneckerManuscriptFixedCoverCount.fixed_cover_localization_manuscript
+#print axioms KroneckerManuscriptFixedCoverCount.fixed_cover_localization_manuscript
+#check KroneckerMatrixKingDictionary.kingStable_iff_internal
+#print axioms KroneckerMatrixKingDictionary.kingStable_iff_internal
+#check KroneckerSplitCoverLemmas.localization_bound
+#print axioms KroneckerSplitCoverLemmas.localization_bound
+#check KroneckerStableCoverIndexFinite.stable_cover_support_preconnected
+#print axioms KroneckerStableCoverIndexFinite.stable_cover_support_preconnected
+#check KroneckerStableOrbitEuler.stableOrbit_subsingleton
+#print axioms KroneckerStableOrbitEuler.stableOrbit_subsingleton
+#check KroneckerUniversalWeightedSupportCriterion.dimension_relation_weightedIso
+#print axioms KroneckerUniversalWeightedSupportCriterion.dimension_relation_weightedIso
+#check KroneckerUniversalWeightedSupportCriterion.weightedIso_dimension_relation
+#print axioms KroneckerUniversalWeightedSupportCriterion.weightedIso_dimension_relation
+
+-- Theorem 7.59: thm:central-lower
+#check KroneckerCurrentLimitStatements.central_lower
+#print axioms KroneckerCurrentLimitStatements.central_lower
+#check KroneckerScopedWeistFiniteLower.finite_lower
+#print axioms KroneckerScopedWeistFiniteLower.finite_lower
+
+-- Definition 8.1: central-upper-deletion:4
+#check KroneckerPaperPaths.Binary
+#print axioms KroneckerPaperPaths.Binary
+#check KroneckerPaperPaths.binary_runPath_iff
+#print axioms KroneckerPaperPaths.binary_runPath_iff
+
+-- Lemma 8.2: lem:three-delete
+#check KroneckerManuscriptFiveIssueCorrections.three_arrow_fiber_budget
+#print axioms KroneckerManuscriptFiveIssueCorrections.three_arrow_fiber_budget
+#check KroneckerPaperPathGradings.geometric_binary_deletion
+#print axioms KroneckerPaperPathGradings.geometric_binary_deletion
+
+-- Proposition 8.3: prop:central-delete-upper
+#check KroneckerManuscriptFiniteStatements.central_finite_comparison
+#print axioms KroneckerManuscriptFiniteStatements.central_finite_comparison
+
+-- Corollary 8.4: cor:central-delete-limsup
+#check KroneckerCurrentLimitStatements.central_upper
+#print axioms KroneckerCurrentLimitStatements.central_upper
+#check KroneckerScopedDeleteActualCentral.central_upper
+#print axioms KroneckerScopedDeleteActualCentral.central_upper
+
+-- Corollary 9.1: cor:central
+#check KroneckerManuscriptCorollaries.central_joint_limit
+#print axioms KroneckerManuscriptCorollaries.central_joint_limit
+#check KroneckerManuscriptCorollaries.central_value_formula
+#print axioms KroneckerManuscriptCorollaries.central_value_formula
+#check KroneckerScopedDeleteActualCentral.central_limit
+#print axioms KroneckerScopedDeleteActualCentral.central_limit
+
+-- Definition 9.2: def:balance-operations
+#check KroneckerBalanceTraceCorrespondence.geometricBalList_eq_guarded_execution
+#print axioms KroneckerBalanceTraceCorrespondence.geometricBalList_eq_guarded_execution
+#check KroneckerBalanceTraceCorrespondence.geometricBalList_eq_trace_units
+#print axioms KroneckerBalanceTraceCorrespondence.geometricBalList_eq_trace_units
+#check KroneckerManuscriptExchangeDefinitions.BalList
+#print axioms KroneckerManuscriptExchangeDefinitions.BalList
+#check KroneckerManuscriptExchangeDefinitions.BalState
+#print axioms KroneckerManuscriptExchangeDefinitions.BalState
+#check KroneckerManuscriptExchangeDefinitions.HStep
+#print axioms KroneckerManuscriptExchangeDefinitions.HStep
+#check KroneckerManuscriptExchangeDefinitions.IntList
+#print axioms KroneckerManuscriptExchangeDefinitions.IntList
+#check KroneckerManuscriptExchangeDefinitions.ListComparison
+#print axioms KroneckerManuscriptExchangeDefinitions.ListComparison
+#check KroneckerManuscriptExchangeDefinitions.VDomain
+#print axioms KroneckerManuscriptExchangeDefinitions.VDomain
+#check KroneckerManuscriptExchangeDefinitions.VStep
+#print axioms KroneckerManuscriptExchangeDefinitions.VStep
+#check KroneckerManuscriptExchangeDefinitions.comparison_iff
+#print axioms KroneckerManuscriptExchangeDefinitions.comparison_iff
+#check KroneckerManuscriptExchangeDefinitions.flatten_stack
+#print axioms KroneckerManuscriptExchangeDefinitions.flatten_stack
+#check KroneckerManuscriptExchangeDefinitions.horizontal_step
+#print axioms KroneckerManuscriptExchangeDefinitions.horizontal_step
+#check KroneckerManuscriptExchangeDefinitions.vertical_step
+#print axioms KroneckerManuscriptExchangeDefinitions.vertical_step
+#check KroneckerManuscriptNotationSync.vertical_domain_iff
+#print axioms KroneckerManuscriptNotationSync.vertical_domain_iff
+#check KroneckerNaturalPathGradings.BalList
+#print axioms KroneckerNaturalPathGradings.BalList
+#check KroneckerNaturalPathGradings.BalList_precursor_independent
+#print axioms KroneckerNaturalPathGradings.BalList_precursor_independent
+#check KroneckerNaturalPathGradings.BalList_repeat_count
+#print axioms KroneckerNaturalPathGradings.BalList_repeat_count
+#check KroneckerNaturalPathGradings.BalList_zero
+#print axioms KroneckerNaturalPathGradings.BalList_zero
+
+-- Lemma 9.3: lem:balance-list-comparison
+#check KroneckerBoundaryListComparison.execute_comparison
+#print axioms KroneckerBoundaryListComparison.execute_comparison
+#check KroneckerBoundaryListComparison.prefix_comparison
+#print axioms KroneckerBoundaryListComparison.prefix_comparison
+#check KroneckerManuscriptNotationSync.balance_comparison_prefixes
+#print axioms KroneckerManuscriptNotationSync.balance_comparison_prefixes
+
+-- Definition 9.4: def:shell-adjacent-exchange
+#check KroneckerAdjacentExchangeLemma.edges
+#print axioms KroneckerAdjacentExchangeLemma.edges
+#check KroneckerAdjacentExchangeLemma.geometric_pair
+#print axioms KroneckerAdjacentExchangeLemma.geometric_pair
+#check KroneckerAdjacentExchangeLemma.shell
+#print axioms KroneckerAdjacentExchangeLemma.shell
+#check KroneckerExchangeRepairCorrespondence.RepGr
+#print axioms KroneckerExchangeRepairCorrespondence.RepGr
+#check KroneckerExchangeTransport.Pair.ordinal
+#print axioms KroneckerExchangeTransport.Pair.ordinal
+#check KroneckerExchangeTransport.transported_shell_word
+#print axioms KroneckerExchangeTransport.transported_shell_word
+#check KroneckerLiteralRepair.literalDelta
+#print axioms KroneckerLiteralRepair.literalDelta
+#check KroneckerLiteralRepair.positive_formula
+#print axioms KroneckerLiteralRepair.positive_formula
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.X
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.X
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.X'
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.X'
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.Y
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.Y
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.Y'
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.Y'
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.exchange
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.exchange
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.exchange_fiber
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.exchange_fiber
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.exchange_surplus
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.exchange_surplus
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.i
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.i
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.j
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.j
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.r
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.r
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.same_step_counts
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.same_step_counts
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.source_origin
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.source_origin
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.source_steps
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.source_steps
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.spec
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.spec
+#check KroneckerManuscriptExchangeDefinitions.AdjShellExch.target_eq
+#print axioms KroneckerManuscriptExchangeDefinitions.AdjShellExch.target_eq
+#check KroneckerManuscriptExchangeDefinitions.repairIndex
+#print axioms KroneckerManuscriptExchangeDefinitions.repairIndex
+#check KroneckerRepairGeometry.geometric_position_ordinal
+#print axioms KroneckerRepairGeometry.geometric_position_ordinal
+#check KroneckerRepairGeometry.gradedWord_boundary
+#print axioms KroneckerRepairGeometry.gradedWord_boundary
+
+-- Lemma 9.5: lem:exchange-repair-index
+#check KroneckerExchangeIntermediateLemma.changeIndex_of_horizontal
+#print axioms KroneckerExchangeIntermediateLemma.changeIndex_of_horizontal
+#check KroneckerExchangeIntermediateLemma.changeIndex_sameDebt
+#print axioms KroneckerExchangeIntermediateLemma.changeIndex_sameDebt
+#check KroneckerManuscriptExchangeDefinitions.repairIndex_horizontal
+#print axioms KroneckerManuscriptExchangeDefinitions.repairIndex_horizontal
+#check KroneckerRepairGeometry.geometric_index_least
+#print axioms KroneckerRepairGeometry.geometric_index_least
+#check KroneckerRepairGeometry.geometric_position_bound
+#print axioms KroneckerRepairGeometry.geometric_position_bound
+#check KroneckerRepairGeometry.geometric_position_ordinal
+#print axioms KroneckerRepairGeometry.geometric_position_ordinal
+#check KroneckerRepairIndexCorrespondence.geometric_connected_node_literal_index
+#print axioms KroneckerRepairIndexCorrespondence.geometric_connected_node_literal_index
+#check KroneckerRepairIndexCorrespondence.geometric_connected_node_paper_index
+#print axioms KroneckerRepairIndexCorrespondence.geometric_connected_node_paper_index
+#check KroneckerRepairIndexCorrespondence.geometric_shell_literal_index
+#print axioms KroneckerRepairIndexCorrespondence.geometric_shell_literal_index
+#check KroneckerRepairIndexCorrespondence.literal_eq_paperOrdinals
+#print axioms KroneckerRepairIndexCorrespondence.literal_eq_paperOrdinals
+#check KroneckerRepairIndexCorrespondence.positive_changeIndex_isLeast
+#print axioms KroneckerRepairIndexCorrespondence.positive_changeIndex_isLeast
+
+-- Lemma 9.6: lem:uncolored-adjacent-exchange
+#check KroneckerAdjacentExchangeLemma.geometric_pair
+#print axioms KroneckerAdjacentExchangeLemma.geometric_pair
+#check KroneckerAdjacentExchangeLemma.shell_edges
+#print axioms KroneckerAdjacentExchangeLemma.shell_edges
+#check KroneckerExchangeIntermediateLemma.changeIndex_of_horizontal
+#print axioms KroneckerExchangeIntermediateLemma.changeIndex_of_horizontal
+#check KroneckerExchangeIntermediateLemma.constructed_exchange_decrease
+#print axioms KroneckerExchangeIntermediateLemma.constructed_exchange_decrease
+#check KroneckerExchangeIntermediateLemma.shell_decrease
+#print axioms KroneckerExchangeIntermediateLemma.shell_decrease
+#check KroneckerExchangeRepairCorrespondence.exchange_eq_RepGr
+#print axioms KroneckerExchangeRepairCorrespondence.exchange_eq_RepGr
+#check KroneckerExchangeRepairCorrespondence.geometric_reduction_eq
+#print axioms KroneckerExchangeRepairCorrespondence.geometric_reduction_eq
+#check KroneckerRepairGeometry.RepGr_connected_bound
+#print axioms KroneckerRepairGeometry.RepGr_connected_bound
+#check KroneckerRepairGeometry.RepGr_surplus
+#print axioms KroneckerRepairGeometry.RepGr_surplus
+#check KroneckerRepairGeometry.RepGr_vertical_decrease
+#print axioms KroneckerRepairGeometry.RepGr_vertical_decrease
+#check KroneckerRepairGeometry.reduction_eq_chosen
+#print axioms KroneckerRepairGeometry.reduction_eq_chosen
+#check KroneckerRepairIndexCorrespondence.positive_reduction_formula
+#print axioms KroneckerRepairIndexCorrespondence.positive_reduction_formula
+#check KroneckerRepairIndexCorrespondence.positive_right_exact
+#print axioms KroneckerRepairIndexCorrespondence.positive_right_exact
+#check KroneckerWrappedExchangeWitness.witness_exists
+#print axioms KroneckerWrappedExchangeWitness.witness_exists
+
+-- Corollary 9.7: cor:adjacent-repair-map
+#check KroneckerExchangeIntermediateLemma.constructed_exchange_decrease
+#print axioms KroneckerExchangeIntermediateLemma.constructed_exchange_decrease
+#check KroneckerExchangeRepairCorrespondence.exchange_eq_RepGr
+#print axioms KroneckerExchangeRepairCorrespondence.exchange_eq_RepGr
+#check KroneckerRepairGeometry.RepGr_connected_bound
+#print axioms KroneckerRepairGeometry.RepGr_connected_bound
+#check KroneckerRepairGeometry.RepGr_surplus
+#print axioms KroneckerRepairGeometry.RepGr_surplus
+#check KroneckerRepairGeometry.RepGr_vertical_decrease
+#print axioms KroneckerRepairGeometry.RepGr_vertical_decrease
+#check KroneckerRepairGeometry.geometric_position_ordinal
+#print axioms KroneckerRepairGeometry.geometric_position_ordinal
+#check KroneckerWrappedExchangeWitness.witness_exists
+#print axioms KroneckerWrappedExchangeWitness.witness_exists
+
+-- Lemma 9.8: lem:exchange-precursors
+#check KroneckerAdjacentExchangeLemma.adjacent_exchange
+#print axioms KroneckerAdjacentExchangeLemma.adjacent_exchange
+#check KroneckerAdjacentExchangeLemma.exchange_colors
+#print axioms KroneckerAdjacentExchangeLemma.exchange_colors
+#check KroneckerAdjacentExchangeLemma.exchange_recol
+#print axioms KroneckerAdjacentExchangeLemma.exchange_recol
+#check KroneckerAdjacentExchangeLemma.exchange_recovery
+#print axioms KroneckerAdjacentExchangeLemma.exchange_recovery
+#check KroneckerAdjacentExchangeLemma.exchange_surplus
+#print axioms KroneckerAdjacentExchangeLemma.exchange_surplus
+#check KroneckerAdjacentExchangeLemma.geometric_pair
+#print axioms KroneckerAdjacentExchangeLemma.geometric_pair
+#check KroneckerAdjacentExchangeLemma.shell_edges
+#print axioms KroneckerAdjacentExchangeLemma.shell_edges
+#check KroneckerExchangeColorCorrespondence.copy_eq_tau
+#print axioms KroneckerExchangeColorCorrespondence.copy_eq_tau
+#check KroneckerExchangeColorCorrespondence.exchange_exact
+#print axioms KroneckerExchangeColorCorrespondence.exchange_exact
+#check KroneckerRepairGeometry.geometric_recovery_code
+#print axioms KroneckerRepairGeometry.geometric_recovery_code
+
+-- Definition 9.9: def:exchange-decomposition
+#check KroneckerBinaryExchangeCorrespondence.geometric_exchange_decomposition_wrapped
+#print axioms KroneckerBinaryExchangeCorrespondence.geometric_exchange_decomposition_wrapped
+#check KroneckerExchangeIntermediateLemma.changeIndex
+#print axioms KroneckerExchangeIntermediateLemma.changeIndex
+#check KroneckerExchangeIntermediateLemma.changeIndex_prefix
+#print axioms KroneckerExchangeIntermediateLemma.changeIndex_prefix
+#check KroneckerExchangeIntermediateLemma.changeIndex_sameDebt
+#print axioms KroneckerExchangeIntermediateLemma.changeIndex_sameDebt
+
+-- Lemma 9.10: lem:exchange
+#check KroneckerAdjacentExchangeLemma.adjacent_exchange
+#print axioms KroneckerAdjacentExchangeLemma.adjacent_exchange
+#check KroneckerAdjacentExchangeLemma.exchange_fiber
+#print axioms KroneckerAdjacentExchangeLemma.exchange_fiber
+#check KroneckerBinaryExchangeCorrespondence.geometric_exchange_decomposition_wrapped
+#print axioms KroneckerBinaryExchangeCorrespondence.geometric_exchange_decomposition_wrapped
+#check KroneckerBinaryExchangeShapes.binary_source
+#print axioms KroneckerBinaryExchangeShapes.binary_source
+#check KroneckerBinaryExchangeShapes.binary_target
+#print axioms KroneckerBinaryExchangeShapes.binary_target
+#check KroneckerColoredRepair.ColoredRepairAt
+#print axioms KroneckerColoredRepair.ColoredRepairAt
+#check KroneckerColoredRepairLift.repair_lift
+#print axioms KroneckerColoredRepairLift.repair_lift
+#check KroneckerColoring.RespectsRecol
+#print axioms KroneckerColoring.RespectsRecol
+#check KroneckerExchangeRecolor.binary_vertical
+#print axioms KroneckerExchangeRecolor.binary_vertical
+#check KroneckerExchangeRecolor.exchangeMap_vertical
+#print axioms KroneckerExchangeRecolor.exchangeMap_vertical
+#check KroneckerExchangeRecolor.exchange_vertical
+#print axioms KroneckerExchangeRecolor.exchange_vertical
+#check KroneckerExchangeRecolor.list_refl
+#print axioms KroneckerExchangeRecolor.list_refl
+#check KroneckerExchangeRecolor.repair_vertical
+#print axioms KroneckerExchangeRecolor.repair_vertical
+#check KroneckerPaperPathGradings.wrappedExchange
+#print axioms KroneckerPaperPathGradings.wrappedExchange
+#check KroneckerPaperPathGradings.wrappedExchange_colors
+#print axioms KroneckerPaperPathGradings.wrappedExchange_colors
+#check KroneckerPaperPathGradings.wrappedExchange_fiber
+#print axioms KroneckerPaperPathGradings.wrappedExchange_fiber
+#check KroneckerPaperPathGradings.wrappedExchange_surplus
+#print axioms KroneckerPaperPathGradings.wrappedExchange_surplus
+#check KroneckerPaperPathGradings.wrappedExchange_target
+#print axioms KroneckerPaperPathGradings.wrappedExchange_target
+#check KroneckerPaperPaths.Exc_formula
+#print axioms KroneckerPaperPaths.Exc_formula
+#check KroneckerRightColoredChange.RightChange
+#print axioms KroneckerRightColoredChange.RightChange
+#check KroneckerRightColoredExecution.right_colored_execute
+#print axioms KroneckerRightColoredExecution.right_colored_execute
+#check KroneckerWrappedExchangeAssembly.wrapped_exchange_theorem
+#print axioms KroneckerWrappedExchangeAssembly.wrapped_exchange_theorem
+#check KroneckerWrappedExchangeMap.exchangeMap_repairWord
+#print axioms KroneckerWrappedExchangeMap.exchangeMap_repairWord
+
+-- Definition 9.11: def:wrapped-exchange
+#check KroneckerBinaryExchangeCorrespondence.geometric_exchange_decomposition_wrapped
+#print axioms KroneckerBinaryExchangeCorrespondence.geometric_exchange_decomposition_wrapped
+#check KroneckerManuscriptNotationSync.WrapExch
+#print axioms KroneckerManuscriptNotationSync.WrapExch
+#check KroneckerManuscriptNotationSync.WrapExch_nonempty
+#print axioms KroneckerManuscriptNotationSync.WrapExch_nonempty
+#check KroneckerManuscriptNotationSync.adjacent_exchange_mem
+#print axioms KroneckerManuscriptNotationSync.adjacent_exchange_mem
+#check KroneckerPaperPathGradings.wrappedExchange
+#print axioms KroneckerPaperPathGradings.wrappedExchange
+#check KroneckerPaperPathGradings.wrappedExchange_fiber
+#print axioms KroneckerPaperPathGradings.wrappedExchange_fiber
+#check KroneckerPaperPathGradings.wrappedExchange_target
+#print axioms KroneckerPaperPathGradings.wrappedExchange_target
+#check KroneckerWrappedExchangeMap.exchangeMap_repairWord
+#print axioms KroneckerWrappedExchangeMap.exchangeMap_repairWord
+
+-- Definition 9.12: def:binary-run-count
+#check KroneckerBinarySwapRuns.bitRuns
+#print axioms KroneckerBinarySwapRuns.bitRuns
+
+-- Definition 9.13: def:prefix-discrepancy
+#check KroneckerManuscriptQuiverDefinitions.PrefDiff
+#print axioms KroneckerManuscriptQuiverDefinitions.PrefDiff
+#check KroneckerManuscriptQuiverDefinitions.PrefSum
+#print axioms KroneckerManuscriptQuiverDefinitions.PrefSum
+#check KroneckerManuscriptQuiverDefinitions.prefDiff_swap
+#print axioms KroneckerManuscriptQuiverDefinitions.prefDiff_swap
+
+-- Lemma 9.14: lem:binary-prefix-exchanges
+#check KroneckerBinaryGreedyExchange.binary_area_program
+#print axioms KroneckerBinaryGreedyExchange.binary_area_program
+#check KroneckerBinaryPrefixSum.swapDistance_prefix_sum
+#print axioms KroneckerBinaryPrefixSum.swapDistance_prefix_sum
+
+-- Lemma 9.15: lem:binary-completion
+#check KroneckerBinaryBalancingLetters.balancing_counts
+#print axioms KroneckerBinaryBalancingLetters.balancing_counts
+#check KroneckerBinaryBalancingLetters.balancing_length_sub
+#print axioms KroneckerBinaryBalancingLetters.balancing_length_sub
+#check KroneckerBinaryInsertionExchange.insertionExchange
+#print axioms KroneckerBinaryInsertionExchange.insertionExchange
+#check KroneckerIntermediateLemmas.balanced_tail_triangular
+#print axioms KroneckerIntermediateLemmas.balanced_tail_triangular
+#check KroneckerIntermediateLemmas.binary_completion_cost
+#print axioms KroneckerIntermediateLemmas.binary_completion_cost
+
+-- Definition 9.16: def:binary-run-edit-lists
+#check KroneckerPaperPaths.BinEdit
+#print axioms KroneckerPaperPaths.BinEdit
+#check KroneckerPaperPaths.BinEdit.toProgram
+#print axioms KroneckerPaperPaths.BinEdit.toProgram
+#check KroneckerPaperPaths.BinaryProgram
+#print axioms KroneckerPaperPaths.BinaryProgram
+#check KroneckerPaperPaths.BinaryProgram.toBinEdit
+#print axioms KroneckerPaperPaths.BinaryProgram.toBinEdit
+#check KroneckerPaperPaths.BinaryProgram.toRaw
+#print axioms KroneckerPaperPaths.BinaryProgram.toRaw
+#check KroneckerPaperPaths.RunBoundary
+#print axioms KroneckerPaperPaths.RunBoundary
+#check KroneckerPaperPaths.RunEdit.IsBinaryStep
+#print axioms KroneckerPaperPaths.RunEdit.IsBinaryStep
+#check KroneckerPaperPaths.RunEdit.exchangeCount
+#print axioms KroneckerPaperPaths.RunEdit.exchangeCount
+#check KroneckerPaperPaths.RunEdit.insertionCount
+#print axioms KroneckerPaperPaths.RunEdit.insertionCount
+#check KroneckerPaperPaths.RunEditList.IsBinary
+#print axioms KroneckerPaperPaths.RunEditList.IsBinary
+#check KroneckerPaperPaths.RunEditList.IsBinary.length_eq
+#print axioms KroneckerPaperPaths.RunEditList.IsBinary.length_eq
+#check KroneckerPaperPaths.RunEditList.IsBinary.reify
+#print axioms KroneckerPaperPaths.RunEditList.IsBinary.reify
+#check KroneckerPaperPaths.RunEditList.IsBinary.source
+#print axioms KroneckerPaperPaths.RunEditList.IsBinary.source
+#check KroneckerPaperPaths.RunEditList.IsBinary.target
+#print axioms KroneckerPaperPaths.RunEditList.IsBinary.target
+#check KroneckerPaperPaths.RunEditList.exchangeCount
+#print axioms KroneckerPaperPaths.RunEditList.exchangeCount
+#check KroneckerPaperPaths.RunEditList.insertionCount
+#print axioms KroneckerPaperPaths.RunEditList.insertionCount
+#check KroneckerPaperPaths.binaryProgram_iff_binEdit
+#print axioms KroneckerPaperPaths.binaryProgram_iff_binEdit
+#check KroneckerPaperPaths.binary_boundary_split
+#print axioms KroneckerPaperPaths.binary_boundary_split
+
+-- Lemma 9.17: lem:binary-factor-comparison
+#check KroneckerBinaryFactorLemmas.mechanical_factor_comparison
+#print axioms KroneckerBinaryFactorLemmas.mechanical_factor_comparison
+#check KroneckerBinaryFactorLemmas.mechanical_factor_paths
+#print axioms KroneckerBinaryFactorLemmas.mechanical_factor_paths
+#check KroneckerPaperPaths.mechanical_factor_binEdit
+#print axioms KroneckerPaperPaths.mechanical_factor_binEdit
+
+-- Lemma 9.18: lem:binary-final-completion
+#check KroneckerBinaryFactorLemmas.exceptional_final_factor
+#print axioms KroneckerBinaryFactorLemmas.exceptional_final_factor
+#check KroneckerBinaryFactorLemmas.exceptional_final_paths
+#print axioms KroneckerBinaryFactorLemmas.exceptional_final_paths
+#check KroneckerPaperPaths.exceptional_final_binEdit
+#print axioms KroneckerPaperPaths.exceptional_final_binEdit
+#check KroneckerPaperPaths.exceptional_final_binEdit_fixed
+#print axioms KroneckerPaperPaths.exceptional_final_binEdit_fixed
+#check KroneckerPaperPaths.mechRunFactor_translate_origin
+#print axioms KroneckerPaperPaths.mechRunFactor_translate_origin
+
+-- Lemma 9.19: lem:binary-mechanical
+#check KroneckerMechanicalEditsStatement.Admissible.binary_source
+#print axioms KroneckerMechanicalEditsStatement.Admissible.binary_source
+#check KroneckerMechanicalEditsStatement.binary_mechanical_admissible
+#print axioms KroneckerMechanicalEditsStatement.binary_mechanical_admissible
+#check KroneckerPaperPaths.BinaryProgram
+#print axioms KroneckerPaperPaths.BinaryProgram
+#check KroneckerPaperPaths.binary_mechanical_binEdit
+#print axioms KroneckerPaperPaths.binary_mechanical_binEdit
+#check KroneckerPaperPaths.binary_mechanical_paths
+#print axioms KroneckerPaperPaths.binary_mechanical_paths
+#check KroneckerPaperPaths.rawBinary_realization
+#print axioms KroneckerPaperPaths.rawBinary_realization
+#check KroneckerPaperPaths.rawBinary_translated_target
+#print axioms KroneckerPaperPaths.rawBinary_translated_target
+
+-- Proposition 9.20: prop:exchange-composition
+#check KroneckerManuscriptBinaryEditClaims.binaryWordEquiv
+#print axioms KroneckerManuscriptBinaryEditClaims.binaryWordEquiv
+#check KroneckerManuscriptBinaryEditClaims.naturalWordEquiv
+#print axioms KroneckerManuscriptBinaryEditClaims.naturalWordEquiv
+#check KroneckerManuscriptBinaryEditClaims.prescribedBinaryCode
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedBinaryCode
+#check KroneckerManuscriptBinaryEditClaims.prescribedBinaryMap
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedBinaryMap
+#check KroneckerManuscriptBinaryEditClaims.prescribedBinary_count
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedBinary_count
+#check KroneckerManuscriptBinaryEditClaims.prescribedBinary_fiber
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedBinary_fiber
+#check KroneckerManuscriptBinaryEditClaims.prescribedBinary_map_exists
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedBinary_map_exists
+#check KroneckerManuscriptBinaryEditClaims.prescribedBinary_target_code_injective
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedBinary_target_code_injective
+#check KroneckerManuscriptBinaryEditClaims.prescribedTarget
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedTarget
+#check KroneckerManuscriptBinaryEditClaims.prescribedTargetEquiv
+#print axioms KroneckerManuscriptBinaryEditClaims.prescribedTargetEquiv
+#check KroneckerThreePrescribedRuns.three_prescribed_run_real
+#print axioms KroneckerThreePrescribedRuns.three_prescribed_run_real
+
+-- Proposition 9.21: prop:three-irrational
+#check KroneckerManuscriptCorollaries.profile_continuous
+#print axioms KroneckerManuscriptCorollaries.profile_continuous
+#check KroneckerScopedActualFrameJointTransfer.three_joint
+#print axioms KroneckerScopedActualFrameJointTransfer.three_joint
+#check KroneckerScopedActualFrameJointTransfer.three_positive
+#print axioms KroneckerScopedActualFrameJointTransfer.three_positive
+#check KroneckerSplitThreePropositions.irrational_limit
+#print axioms KroneckerSplitThreePropositions.irrational_limit
+
+-- Lemma 10.1: lem:specified-reduction-word
+#check KroneckerReductionIndexHelpers.ratio_strictMono
+#print axioms KroneckerReductionIndexHelpers.ratio_strictMono
+#check KroneckerReductionIndexHelpers.ratio_le_threshold
+#print axioms KroneckerReductionIndexHelpers.ratio_le_threshold
+#check KroneckerReductionIndexHelpers.log_lower
+#print axioms KroneckerReductionIndexHelpers.log_lower
+#check KroneckerReductionIndexHelpers.log_ratio_orbit
+#print axioms KroneckerReductionIndexHelpers.log_ratio_orbit
+#check KroneckerReductionIndexHelpers.threshold
+#print axioms KroneckerReductionIndexHelpers.threshold
+#check KroneckerReductionIndexHelpers.orbit_hit_iff
+#print axioms KroneckerReductionIndexHelpers.orbit_hit_iff
+#check KroneckerReductionIndexHelpers.stoppingIndex
+#print axioms KroneckerReductionIndexHelpers.stoppingIndex
+#check KroneckerReductionIndexHelpers.ceiling_toNat_le
+#print axioms KroneckerReductionIndexHelpers.ceiling_toNat_le
+#check KroneckerReductionIndexHelpers.stopping_le_iff
+#print axioms KroneckerReductionIndexHelpers.stopping_le_iff
+#check KroneckerReductionIndexHelpers.stopping_eq_firstHit
+#print axioms KroneckerReductionIndexHelpers.stopping_eq_firstHit
+#check KroneckerReductionIndexHelpers.stopping_strip
+#print axioms KroneckerReductionIndexHelpers.stopping_strip
+#check KroneckerReductionIndexHelpers.stopping_zero
+#print axioms KroneckerReductionIndexHelpers.stopping_zero
+#check KroneckerReductionWordHelpers.stepMat
+#print axioms KroneckerReductionWordHelpers.stepMat
+#check KroneckerReductionWordHelpers.wordMat
+#print axioms KroneckerReductionWordHelpers.wordMat
+#check KroneckerReductionWordHelpers.wordMat_append
+#print axioms KroneckerReductionWordHelpers.wordMat_append
+#check KroneckerReductionWordHelpers.wordMat_cast
+#print axioms KroneckerReductionWordHelpers.wordMat_cast
+#check KroneckerReductionWordHelpers.pair
+#print axioms KroneckerReductionWordHelpers.pair
+#check KroneckerReductionWordHelpers.swap_pair
+#print axioms KroneckerReductionWordHelpers.swap_pair
+#check KroneckerReductionWordHelpers.central_pair
+#print axioms KroneckerReductionWordHelpers.central_pair
+#check KroneckerReductionWordHelpers.Good
+#print axioms KroneckerReductionWordHelpers.Good
+#check KroneckerReductionWordHelpers.good_step
+#print axioms KroneckerReductionWordHelpers.good_step
+#check KroneckerReductionWordHelpers.good_word
+#print axioms KroneckerReductionWordHelpers.good_word
+#check KroneckerReductionWordHelpers.scale
+#print axioms KroneckerReductionWordHelpers.scale
+#check KroneckerReductionWordHelpers.slope
+#print axioms KroneckerReductionWordHelpers.slope
+#check KroneckerReductionWordHelpers.scale_slope
+#print axioms KroneckerReductionWordHelpers.scale_slope
+#check KroneckerReductionWordHelpers.continuous_scale
+#print axioms KroneckerReductionWordHelpers.continuous_scale
+#check KroneckerReductionWordHelpers.continuous_slope
+#print axioms KroneckerReductionWordHelpers.continuous_slope
+#check KroneckerReductionWordHelpers.stepSlope
+#print axioms KroneckerReductionWordHelpers.stepSlope
+#check KroneckerReductionWordHelpers.wordSlope
+#print axioms KroneckerReductionWordHelpers.wordSlope
+#check KroneckerReductionWordHelpers.step_slope
+#print axioms KroneckerReductionWordHelpers.step_slope
+#check KroneckerReductionWordHelpers.word_slope
+#print axioms KroneckerReductionWordHelpers.word_slope
+#check KroneckerReductionWordHelpers.slope_eq_wordSlope
+#print axioms KroneckerReductionWordHelpers.slope_eq_wordSlope
+#check KroneckerReductionWordHelpers.wordSlope_append
+#print axioms KroneckerReductionWordHelpers.wordSlope_append
+#check KroneckerReductionWordHelpers.turns
+#print axioms KroneckerReductionWordHelpers.turns
+#check KroneckerReductionWordHelpers.matrix_turns
+#print axioms KroneckerReductionWordHelpers.matrix_turns
+#check KroneckerReductionWordHelpers.slope_turns
+#print axioms KroneckerReductionWordHelpers.slope_turns
+#check KroneckerReductionWordHelpers.specified
+#print axioms KroneckerReductionWordHelpers.specified
+#check KroneckerReductionWordHelpers.specified_matrix
+#print axioms KroneckerReductionWordHelpers.specified_matrix
+#check KroneckerReductionWordHelpers.specified_slope
+#print axioms KroneckerReductionWordHelpers.specified_slope
+#check KroneckerReductionWordHelpers.specified_fundamental
+#print axioms KroneckerReductionWordHelpers.specified_fundamental
+#check KroneckerReductionWordHelpers.specified_identity
+#print axioms KroneckerReductionWordHelpers.specified_identity
+#check KroneckerReductionWordHelpers.applyStep
+#print axioms KroneckerReductionWordHelpers.applyStep
+#check KroneckerReductionWordHelpers.applyWord
+#print axioms KroneckerReductionWordHelpers.applyWord
+#check KroneckerReductionWordHelpers.observed
+#print axioms KroneckerReductionWordHelpers.observed
+#check KroneckerReductionWordHelpers.observed_step
+#print axioms KroneckerReductionWordHelpers.observed_step
+#check KroneckerReductionWordHelpers.observed_word
+#print axioms KroneckerReductionWordHelpers.observed_word
+#check KroneckerReductionWordHelpers.word_euler
+#print axioms KroneckerReductionWordHelpers.word_euler
+#check KroneckerReductionWordHelpers.word_ratios
+#print axioms KroneckerReductionWordHelpers.word_ratios
+#check KroneckerReductionWordHelpers.word_limits
+#print axioms KroneckerReductionWordHelpers.word_limits
+#check KroneckerReductionWordHelpers.specified_reduces
+#print axioms KroneckerReductionWordHelpers.specified_reduces
+
+-- Lemma 10.2: lem:reduction-endpoint-fold
+#check KroneckerEndpointFoldHelpers.radius
+#print axioms KroneckerEndpointFoldHelpers.radius
+#check KroneckerEndpointFoldHelpers.scale
+#print axioms KroneckerEndpointFoldHelpers.scale
+#check KroneckerEndpointFoldHelpers.foldedSlope
+#print axioms KroneckerEndpointFoldHelpers.foldedSlope
+#check KroneckerEndpointFoldHelpers.radius_pos
+#print axioms KroneckerEndpointFoldHelpers.radius_pos
+#check KroneckerEndpointFoldHelpers.lower_neighborhood
+#print axioms KroneckerEndpointFoldHelpers.lower_neighborhood
+#check KroneckerEndpointFoldHelpers.upper_neighborhood
+#print axioms KroneckerEndpointFoldHelpers.upper_neighborhood
+#check KroneckerEndpointFoldHelpers.interior_neighborhood
+#print axioms KroneckerEndpointFoldHelpers.interior_neighborhood
+#check KroneckerEndpointFoldHelpers.max_inverse_bounds
+#print axioms KroneckerEndpointFoldHelpers.max_inverse_bounds
+#check KroneckerEndpointFoldHelpers.case_bounds_and_formula
+#print axioms KroneckerEndpointFoldHelpers.case_bounds_and_formula
+#check KroneckerEndpointFoldHelpers.fold_limits
+#print axioms KroneckerEndpointFoldHelpers.fold_limits
+#check KroneckerEndpointFoldHelpers.actual_fold_neighborhood
+#print axioms KroneckerEndpointFoldHelpers.actual_fold_neighborhood
+
+-- Lemma 10.3: lem:approaching-dimension-reduction
+#check KroneckerReductionWordHelpers.approaching_dimension_reduction_same_indices
+#print axioms KroneckerReductionWordHelpers.approaching_dimension_reduction_same_indices
+#check KroneckerApproachingDimensionReduction.approaching_dimension_reduction
+#print axioms KroneckerApproachingDimensionReduction.approaching_dimension_reduction
+#check KroneckerApproachingDimensionReduction.interior_reduces
+#print axioms KroneckerApproachingDimensionReduction.interior_reduces
+#check KroneckerReductionWordHelpers.specified_reduces
+#print axioms KroneckerReductionWordHelpers.specified_reduces
+
+-- Proposition 10.4: prop:interior-limit
+#check KroneckerManuscriptCorollaries.profile_continuous
+#print axioms KroneckerManuscriptCorollaries.profile_continuous
+#check KroneckerManuscriptCorollaries.profile_joint
+#print axioms KroneckerManuscriptCorollaries.profile_joint
+#check KroneckerManuscriptCorollaries.profile_positive
+#print axioms KroneckerManuscriptCorollaries.profile_positive
+#check KroneckerScopedActualFrameJointTransfer.interior_joint
+#print axioms KroneckerScopedActualFrameJointTransfer.interior_joint
+#check KroneckerScopedActualFrameJointTransfer.interior_positive
+#print axioms KroneckerScopedActualFrameJointTransfer.interior_positive
+#check KroneckerSplitInteriorPropositions.interior_limit
+#print axioms KroneckerSplitInteriorPropositions.interior_limit
+#check KroneckerSplitInteriorPropositions.interior_unique
+#print axioms KroneckerSplitInteriorPropositions.interior_unique
+
+-- Corollary 10.5: cor:upper-bound
+#check KroneckerManuscriptCorollaries.profile_envelope
+#print axioms KroneckerManuscriptCorollaries.profile_envelope
+
+-- Corollary 10.6: cor:central-value
+#check KroneckerManuscriptCorollaries.central_joint_limit
+#print axioms KroneckerManuscriptCorollaries.central_joint_limit
+#check KroneckerManuscriptCorollaries.central_value_formula
+#print axioms KroneckerManuscriptCorollaries.central_value_formula
+
+/-! Lemma 4.2: the literal insertion assembly from connectedness. -/
+#check KroneckerInsertionPrecursorAssembly.fiber
+#print axioms KroneckerInsertionPrecursorAssembly.fiber
+#check KroneckerInsertionPrecursorAssembly.Last
+#print axioms KroneckerInsertionPrecursorAssembly.Last
+#check KroneckerInsertionPrecursorAssembly.crossingEnds
+#print axioms KroneckerInsertionPrecursorAssembly.crossingEnds
+#check KroneckerInsertionPrecursorAssembly.chain
+#print axioms KroneckerInsertionPrecursorAssembly.chain
+#check KroneckerInsertionPrecursorAssembly.mem_chain
+#print axioms KroneckerInsertionPrecursorAssembly.mem_chain
+#check KroneckerInsertionPrecursorAssembly.chain_order
+#print axioms KroneckerInsertionPrecursorAssembly.chain_order
+#check KroneckerInsertionPrecursorAssembly.count_mono
+#print axioms KroneckerInsertionPrecursorAssembly.count_mono
+#check KroneckerInsertionPrecursorAssembly.count_le_fiber
+#print axioms KroneckerInsertionPrecursorAssembly.count_le_fiber
+#check KroneckerInsertionPrecursorAssembly.last_exists
+#print axioms KroneckerInsertionPrecursorAssembly.last_exists
+#check KroneckerInsertionPrecursorAssembly.count_last
+#print axioms KroneckerInsertionPrecursorAssembly.count_last
+#check KroneckerInsertionPrecursorAssembly.chain_owner_order
+#print axioms KroneckerInsertionPrecursorAssembly.chain_owner_order
+#check KroneckerInsertionPrecursorAssembly.next_spec
+#print axioms KroneckerInsertionPrecursorAssembly.next_spec
+#check KroneckerInsertionPrecursorAssembly.next_greatest
+#print axioms KroneckerInsertionPrecursorAssembly.next_greatest
+#check KroneckerInsertionPrecursorAssembly.inserted_none_next
+#print axioms KroneckerInsertionPrecursorAssembly.inserted_none_next
+#check KroneckerInsertionPrecursorAssembly.inserted_mem_next
+#print axioms KroneckerInsertionPrecursorAssembly.inserted_mem_next
+#check KroneckerInsertionPrecursorAssembly.shift
+#print axioms KroneckerInsertionPrecursorAssembly.shift
+#check KroneckerInsertionPrecursorAssembly.verticalIndex
+#print axioms KroneckerInsertionPrecursorAssembly.verticalIndex
+#check KroneckerInsertionPrecursorAssembly.raised
+#print axioms KroneckerInsertionPrecursorAssembly.raised
+#check KroneckerInsertionPrecursorAssembly.shift_strict
+#print axioms KroneckerInsertionPrecursorAssembly.shift_strict
+#check KroneckerInsertionPrecursorAssembly.shift_lt_shift
+#print axioms KroneckerInsertionPrecursorAssembly.shift_lt_shift
+#check KroneckerInsertionPrecursorAssembly.shift_le_shift
+#print axioms KroneckerInsertionPrecursorAssembly.shift_le_shift
+#check KroneckerInsertionPrecursorAssembly.shift_lt_cut
+#print axioms KroneckerInsertionPrecursorAssembly.shift_lt_cut
+#check KroneckerInsertionPrecursorAssembly.cut_lt_shift
+#print axioms KroneckerInsertionPrecursorAssembly.cut_lt_shift
+#check KroneckerInsertionPrecursorAssembly.next_at
+#print axioms KroneckerInsertionPrecursorAssembly.next_at
+#check KroneckerInsertionPrecursorAssembly.shift_lt_small
+#print axioms KroneckerInsertionPrecursorAssembly.shift_lt_small
+#check KroneckerInsertionPrecursorAssembly.shift_lt_after
+#print axioms KroneckerInsertionPrecursorAssembly.shift_lt_after
+#check KroneckerInsertionPrecursorAssembly.count_before_cut
+#print axioms KroneckerInsertionPrecursorAssembly.count_before_cut
+#check KroneckerInsertionPrecursorAssembly.count_after_cut
+#print axioms KroneckerInsertionPrecursorAssembly.count_after_cut
+#check KroneckerInsertionPrecursorAssembly.inserted_precursor
+#print axioms KroneckerInsertionPrecursorAssembly.inserted_precursor
+#check KroneckerInsertionOccurrenceAssembly.occurrence_count
+#print axioms KroneckerInsertionOccurrenceAssembly.occurrence_count
+#check KroneckerInsertionOccurrenceAssembly.occurrence_precursor
+#print axioms KroneckerInsertionOccurrenceAssembly.occurrence_precursor
+#check KroneckerInsertionOccurrenceAssembly.fullRoot_of_connected
+#print axioms KroneckerInsertionOccurrenceAssembly.fullRoot_of_connected
+#check KroneckerInsertionOccurrenceAssembly.connected_saturated
+#print axioms KroneckerInsertionOccurrenceAssembly.connected_saturated
+#check KroneckerInsertionOccurrenceAssembly.insertedWord
+#print axioms KroneckerInsertionOccurrenceAssembly.insertedWord
+#check KroneckerInsertionOccurrenceAssembly.word_new
+#print axioms KroneckerInsertionOccurrenceAssembly.word_new
+#check KroneckerInsertionOccurrenceAssembly.word_copy
+#print axioms KroneckerInsertionOccurrenceAssembly.word_copy
+#check KroneckerInsertionOccurrenceAssembly.horizontal_copy
+#print axioms KroneckerInsertionOccurrenceAssembly.horizontal_copy
+#check KroneckerInsertionOccurrenceAssembly.horizontal_new
+#print axioms KroneckerInsertionOccurrenceAssembly.horizontal_new
+#check KroneckerInsertionOccurrenceAssembly.copyHorizontal
+#print axioms KroneckerInsertionOccurrenceAssembly.copyHorizontal
+#check KroneckerInsertionOccurrenceAssembly.copyVertical
+#print axioms KroneckerInsertionOccurrenceAssembly.copyVertical
+#check KroneckerInsertionOccurrenceAssembly.copyHorizontal_bijective
+#print axioms KroneckerInsertionOccurrenceAssembly.copyHorizontal_bijective
+#check KroneckerInsertionOccurrenceAssembly.copyVertical_bijective
+#print axioms KroneckerInsertionOccurrenceAssembly.copyVertical_bijective
+#check KroneckerInsertionOccurrenceAssembly.horizontalEquiv
+#print axioms KroneckerInsertionOccurrenceAssembly.horizontalEquiv
+#check KroneckerInsertionOccurrenceAssembly.verticalEquiv
+#print axioms KroneckerInsertionOccurrenceAssembly.verticalEquiv
+#check KroneckerInsertionOccurrenceAssembly.succAbove_index
+#print axioms KroneckerInsertionOccurrenceAssembly.succAbove_index
+#check KroneckerInsertionOccurrenceAssembly.horizontal_index
+#print axioms KroneckerInsertionOccurrenceAssembly.horizontal_index
+#check KroneckerInsertionOccurrenceAssembly.vertical_index
+#print axioms KroneckerInsertionOccurrenceAssembly.vertical_index
+#check KroneckerInsertionOccurrenceAssembly.horizontal_grade
+#print axioms KroneckerInsertionOccurrenceAssembly.horizontal_grade
+#check KroneckerInsertionOccurrenceAssembly.assignment
+#print axioms KroneckerInsertionOccurrenceAssembly.assignment
+#check KroneckerInsertionOccurrenceAssembly.reindex_precursor
+#print axioms KroneckerInsertionOccurrenceAssembly.reindex_precursor
+#check KroneckerInsertionOccurrenceAssembly.assignment_isPrecursor
+#print axioms KroneckerInsertionOccurrenceAssembly.assignment_isPrecursor
+#check KroneckerInsertionOccurrenceAssembly.assignment_fiber_card
+#print axioms KroneckerInsertionOccurrenceAssembly.assignment_fiber_card
+#check KroneckerInsertionOccurrenceAssembly.assignment_saturated
+#print axioms KroneckerInsertionOccurrenceAssembly.assignment_saturated
+#check KroneckerInsertionOccurrenceAssembly.assignment_fullRoot
+#print axioms KroneckerInsertionOccurrenceAssembly.assignment_fullRoot
+#check KroneckerGeometricInsertionPrecursor.insertedPath
+#print axioms KroneckerGeometricInsertionPrecursor.insertedPath
+#check KroneckerGeometricInsertionPrecursor.inserted_length
+#print axioms KroneckerGeometricInsertionPrecursor.inserted_length
+#check KroneckerGeometricInsertionPrecursor.ofFn_insertNth
+#print axioms KroneckerGeometricInsertionPrecursor.ofFn_insertNth
+#check KroneckerGeometricInsertionPrecursor.insertedPath_eq
+#print axioms KroneckerGeometricInsertionPrecursor.insertedPath_eq
+#check KroneckerGeometricInsertionPrecursor.edgeIndexEquiv
+#print axioms KroneckerGeometricInsertionPrecursor.edgeIndexEquiv
+#check KroneckerGeometricInsertionPrecursor.edge_index
+#print axioms KroneckerGeometricInsertionPrecursor.edge_index
+#check KroneckerGeometricInsertionPrecursor.inserted_step
+#print axioms KroneckerGeometricInsertionPrecursor.inserted_step
+#check KroneckerGeometricInsertionPrecursor.oldWord
+#print axioms KroneckerGeometricInsertionPrecursor.oldWord
+#check KroneckerGeometricInsertionPrecursor.newWord
+#print axioms KroneckerGeometricInsertionPrecursor.newWord
+#check KroneckerGeometricInsertionPrecursor.newWord_direction
+#print axioms KroneckerGeometricInsertionPrecursor.newWord_direction
+#check KroneckerGeometricInsertionPrecursor.newHorizontalEquiv
+#print axioms KroneckerGeometricInsertionPrecursor.newHorizontalEquiv
+#check KroneckerGeometricInsertionPrecursor.newVerticalEquiv
+#print axioms KroneckerGeometricInsertionPrecursor.newVerticalEquiv
+#check KroneckerGeometricInsertionPrecursor.insertedGrading
+#print axioms KroneckerGeometricInsertionPrecursor.insertedGrading
+#check KroneckerGeometricInsertionPrecursor.geometricAssignment
+#print axioms KroneckerGeometricInsertionPrecursor.geometricAssignment
+#check KroneckerGeometricInsertionPrecursor.addedEdge
+#print axioms KroneckerGeometricInsertionPrecursor.addedEdge
+#check KroneckerGeometricInsertionPrecursor.copiedEdge
+#print axioms KroneckerGeometricInsertionPrecursor.copiedEdge
+#check KroneckerGeometricInsertionPrecursor.grade_added
+#print axioms KroneckerGeometricInsertionPrecursor.grade_added
+#check KroneckerGeometricInsertionPrecursor.grade_copied
+#print axioms KroneckerGeometricInsertionPrecursor.grade_copied
+#check KroneckerGeometricInsertionPrecursor.copiedHorizontal
+#print axioms KroneckerGeometricInsertionPrecursor.copiedHorizontal
+#check KroneckerGeometricInsertionPrecursor.insertedVertical
+#print axioms KroneckerGeometricInsertionPrecursor.insertedVertical
+#check KroneckerGeometricInsertionPrecursor.geometricAssignment_formula
+#print axioms KroneckerGeometricInsertionPrecursor.geometricAssignment_formula
+#check KroneckerGeometricInsertionPrecursor.geometricAssignment_isHPrecursor
+#print axioms KroneckerGeometricInsertionPrecursor.geometricAssignment_isHPrecursor
+#check KroneckerGeometricInsertionPrecursor.connected_assembly
+#print axioms KroneckerGeometricInsertionPrecursor.connected_assembly
+
+/- Explicit statements of the unchanged 140-page PDF (PR #46). -/
+#check KroneckerCurrentLimitStatements.upperLimit_limsup
+#print axioms KroneckerCurrentLimitStatements.upperLimit_limsup
+#check KroneckerCurrentLimitStatements.lowerLimit_liminf
+#print axioms KroneckerCurrentLimitStatements.lowerLimit_liminf
+#check KroneckerCurrentLimitStatements.central_lower_sequence
+#print axioms KroneckerCurrentLimitStatements.central_lower_sequence
+#check KroneckerCurrentLimitStatements.central_upper_sequence
+#print axioms KroneckerCurrentLimitStatements.central_upper_sequence
+#check KroneckerManuscriptCorollaries.dimension_sequence
+#print axioms KroneckerManuscriptCorollaries.dimension_sequence
+#check KroneckerManuscriptCorollaries.central_sequence
+#print axioms KroneckerManuscriptCorollaries.central_sequence
+#check KroneckerSplitContinuityLemmas.approximable_of_sequence
+#print axioms KroneckerSplitContinuityLemmas.approximable_of_sequence
+#check KroneckerSplitContinuityLemmas.neighborhood_explicit
+#print axioms KroneckerSplitContinuityLemmas.neighborhood_explicit
+#check KroneckerSplitContinuityLemmas.continuous_of_sequences
+#print axioms KroneckerSplitContinuityLemmas.continuous_of_sequences
+#check KroneckerSplitContinuityLemmas.endpoint_limits
+#print axioms KroneckerSplitContinuityLemmas.endpoint_limits
+#check KroneckerIntermediateLemmas.binary_exchange_program
+#print axioms KroneckerIntermediateLemmas.binary_exchange_program
+#check KroneckerIntermediateLemmas.binary_completion_program
+#print axioms KroneckerIntermediateLemmas.binary_completion_program
+
+-- Direct proof for Claim 2 of Proposition 2.26.
+#check KroneckerDirectCoprimePosition.natural_tight_position
+#print axioms KroneckerDirectCoprimePosition.natural_tight_position
+#check KroneckerDirectCoprimePosition.source_position
+#print axioms KroneckerDirectCoprimePosition.source_position
+
+#check KroneckerSplitThreePropositions.threeProfile_positive
+#print axioms KroneckerSplitThreePropositions.threeProfile_positive
+
+#check KroneckerSplitInteriorPropositions.interior_exchange
+#print axioms KroneckerSplitInteriorPropositions.interior_exchange
+
+#check KroneckerSplitInteriorPropositions.interior_reflection
+#print axioms KroneckerSplitInteriorPropositions.interior_reflection
+
+#check KroneckerGluingWeightHelpers.flow_equations_balance
+#print axioms KroneckerGluingWeightHelpers.flow_equations_balance

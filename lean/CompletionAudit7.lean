@@ -1,0 +1,8 @@
+import KroneckerIntegerSlopeFamily
+
+#check KroneckerIntegerSlopeFamily.edit_cost
+#print axioms KroneckerIntegerSlopeFamily.edit_cost
+#check KroneckerIntegerSlopeFamily.ratio_above
+#print axioms KroneckerIntegerSlopeFamily.ratio_above
+#check KroneckerIntegerSlopeFamily.ratio_limit
+#print axioms KroneckerIntegerSlopeFamily.ratio_limit

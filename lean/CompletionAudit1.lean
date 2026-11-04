@@ -1,0 +1,113 @@
+import PaperCheck
+import KroneckerGeometricOperations
+import KroneckerGeometricCyclic
+import KroneckerGeometricCounts
+import KroneckerGeometricRunEdits
+import KroneckerGeometricCyclicBridge
+import KroneckerCyclicWitnessTransport
+import KroneckerGeometricCompatibility
+import KroneckerManuscriptCorollaries
+import KroneckerGeneralFrame
+import KroneckerExplicitFiniteBound
+import KroneckerCyclicCutInvariance
+import KroneckerGeometricExchange
+import KroneckerGeometricShadows
+import KroneckerGeometricPeriodicRotation
+import KroneckerSmallFrameClassification
+import KroneckerSmallFrameCount
+import KroneckerExactSlotCounts
+import KroneckerManuscriptMechanicalEdits
+import KroneckerManuscriptExamples
+import KroneckerGeometricPrograms
+import KroneckerManuscriptEnvelope
+
+#check KroneckerPaperPaths.concat_assoc
+#print axioms KroneckerPaperPaths.concat_assoc
+#check KroneckerPaperPaths.ofSteps_concat
+#print axioms KroneckerPaperPaths.ofSteps_concat
+#check KroneckerPaperPaths.ofSteps_self
+#print axioms KroneckerPaperPaths.ofSteps_self
+#check KroneckerPaperPaths.concat_translate
+#print axioms KroneckerPaperPaths.concat_translate
+#check KroneckerPaperPaths.power
+#print axioms KroneckerPaperPaths.power
+#check KroneckerPaperPaths.power_zero
+#print axioms KroneckerPaperPaths.power_zero
+#check KroneckerPaperPaths.power_one
+#print axioms KroneckerPaperPaths.power_one
+#check KroneckerPaperPaths.power_add
+#print axioms KroneckerPaperPaths.power_add
+#check KroneckerPaperPaths.power_translate
+#print axioms KroneckerPaperPaths.power_translate
+#check KroneckerPaperPaths.runPath
+#print axioms KroneckerPaperPaths.runPath
+#check KroneckerPaperPaths.runPath_steps
+#print axioms KroneckerPaperPaths.runPath_steps
+#check KroneckerPaperPaths.runPath_nil
+#print axioms KroneckerPaperPaths.runPath_nil
+#check KroneckerPaperPaths.runPath_append
+#print axioms KroneckerPaperPaths.runPath_append
+#check KroneckerPaperPaths.runPath_singleton
+#print axioms KroneckerPaperPaths.runPath_singleton
+#check KroneckerPaperPaths.runPath_translate
+#print axioms KroneckerPaperPaths.runPath_translate
+#check KroneckerPaperPaths.runPath_power
+#print axioms KroneckerPaperPaths.runPath_power
+#check KroneckerPaperPaths.decodeRuns
+#print axioms KroneckerPaperPaths.decodeRuns
+#check KroneckerPaperPaths.decodeRuns_north
+#print axioms KroneckerPaperPaths.decodeRuns_north
+#check KroneckerPaperPaths.decodeRuns_runWord
+#print axioms KroneckerPaperPaths.decodeRuns_runWord
+#check KroneckerPaperPaths.runWord_injective
+#print axioms KroneckerPaperPaths.runWord_injective
+#check KroneckerPaperPaths.runPath_injective
+#print axioms KroneckerPaperPaths.runPath_injective
+#check KroneckerPaperPaths.rotateRuns
+#print axioms KroneckerPaperPaths.rotateRuns
+#check KroneckerPaperPaths.exchangeRuns
+#print axioms KroneckerPaperPaths.exchangeRuns
+#check KroneckerPaperPaths.rotateRuns_runPath
+#print axioms KroneckerPaperPaths.rotateRuns_runPath
+#check KroneckerPaperPaths.cyclicLength
+#print axioms KroneckerPaperPaths.cyclicLength
+#check KroneckerPaperPaths.cyclicLength_pos
+#print axioms KroneckerPaperPaths.cyclicLength_pos
+#check KroneckerPaperPaths.cyclicLength_le
+#print axioms KroneckerPaperPaths.cyclicLength_le
+#check KroneckerPaperPaths.cyclicIndex
+#print axioms KroneckerPaperPaths.cyclicIndex
+#check KroneckerPaperPaths.cyclicIndex_val
+#print axioms KroneckerPaperPaths.cyclicIndex_val
+#check KroneckerPaperPaths.cyclicIndex_injective
+#print axioms KroneckerPaperPaths.cyclicIndex_injective
+#check KroneckerPaperPaths.cyclicIndex_first
+#print axioms KroneckerPaperPaths.cyclicIndex_first
+#check KroneckerPaperPaths.cyclicIndex_last
+#print axioms KroneckerPaperPaths.cyclicIndex_last
+#check KroneckerPaperPaths.cyclicIndex_first_encounter
+#print axioms KroneckerPaperPaths.cyclicIndex_first_encounter
+#check KroneckerPaperPaths.cyclicRealization
+#print axioms KroneckerPaperPaths.cyclicRealization
+#check KroneckerPaperPaths.cyclicRealization_length
+#print axioms KroneckerPaperPaths.cyclicRealization_length
+#check KroneckerPaperPaths.cyclicRealization_origin
+#print axioms KroneckerPaperPaths.cyclicRealization_origin
+#check KroneckerPaperPaths.cyclicRealization_nonempty
+#print axioms KroneckerPaperPaths.cyclicRealization_nonempty
+#check KroneckerPaperPaths.cyclicRealizationIndex
+#print axioms KroneckerPaperPaths.cyclicRealizationIndex
+#check KroneckerPaperPaths.cyclicAmbientEdge
+#print axioms KroneckerPaperPaths.cyclicAmbientEdge
+#check KroneckerPaperPaths.cyclicAmbientEdge_injective
+#print axioms KroneckerPaperPaths.cyclicAmbientEdge_injective
+#check KroneckerPaperPaths.cyclicRealization_direction
+#print axioms KroneckerPaperPaths.cyclicRealization_direction
+#check KroneckerPaperPathGradings.cyclicGrading
+#print axioms KroneckerPaperPathGradings.cyclicGrading
+#check KroneckerPaperPathGradings.cyclicColoredGrading
+#print axioms KroneckerPaperPathGradings.cyclicColoredGrading
+#check KroneckerPaperPathGradings.cyclicGrading_apply
+#print axioms KroneckerPaperPathGradings.cyclicGrading_apply
+#check KroneckerPaperPathGradings.cyclicColoredGrading_color
+#print axioms KroneckerPaperPathGradings.cyclicColoredGrading_color

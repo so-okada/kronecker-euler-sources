@@ -1,0 +1,27 @@
+import KroneckerGeometricBinaryPrograms
+import KroneckerManuscriptFiniteStatements
+
+#check KroneckerPaperPaths.Binary
+#print axioms KroneckerPaperPaths.Binary
+#check KroneckerPaperPaths.binary_runPath_iff
+#print axioms KroneckerPaperPaths.binary_runPath_iff
+#check KroneckerPaperPaths.insert_runPath_zero
+#print axioms KroneckerPaperPaths.insert_runPath_zero
+#check KroneckerPaperPaths.exchange_pairRuns
+#print axioms KroneckerPaperPaths.exchange_pairRuns
+#check KroneckerPaperPaths.BinaryProgram
+#print axioms KroneckerPaperPaths.BinaryProgram
+#check KroneckerPaperPaths.rawBinary_realization
+#print axioms KroneckerPaperPaths.rawBinary_realization
+#check KroneckerPaperPaths.rawBinary_translated_target
+#print axioms KroneckerPaperPaths.rawBinary_translated_target
+#check KroneckerPaperPaths.binary_mechanical_paths
+#print axioms KroneckerPaperPaths.binary_mechanical_paths
+#check KroneckerManuscriptFiniteStatements.euler_symmetries
+#print axioms KroneckerManuscriptFiniteStatements.euler_symmetries
+#check KroneckerManuscriptFiniteStatements.coprime_symmetries
+#print axioms KroneckerManuscriptFiniteStatements.coprime_symmetries
+#check KroneckerManuscriptFiniteStatements.quadratic_symmetries
+#print axioms KroneckerManuscriptFiniteStatements.quadratic_symmetries
+#check KroneckerManuscriptFiniteStatements.central_finite_comparison
+#print axioms KroneckerManuscriptFiniteStatements.central_finite_comparison

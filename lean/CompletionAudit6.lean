@@ -1,0 +1,94 @@
+import KroneckerGeometricPredecessor
+import KroneckerIntegerSlopeFamily
+import KroneckerManuscriptGraphDefinitions
+
+#check KroneckerPaperPathGradings.edgeIndex
+#print axioms KroneckerPaperPathGradings.edgeIndex
+#check KroneckerPaperPathGradings.Horizontal
+#print axioms KroneckerPaperPathGradings.Horizontal
+#check KroneckerPaperPathGradings.Vertical
+#print axioms KroneckerPaperPathGradings.Vertical
+#check KroneckerPaperPathGradings.horizontal_geometry
+#print axioms KroneckerPaperPathGradings.horizontal_geometry
+#check KroneckerPaperPathGradings.vertical_geometry
+#print axioms KroneckerPaperPathGradings.vertical_geometry
+#check KroneckerPaperPathGradings.occurrenceWord
+#print axioms KroneckerPaperPathGradings.occurrenceWord
+#check KroneckerPaperPathGradings.occurrenceWord_horizontal
+#print axioms KroneckerPaperPathGradings.occurrenceWord_horizontal
+#check KroneckerPaperPathGradings.occurrenceWord_grade
+#print axioms KroneckerPaperPathGradings.occurrenceWord_grade
+#check KroneckerPaperPathGradings.occurrenceWord_raw
+#print axioms KroneckerPaperPathGradings.occurrenceWord_raw
+#check KroneckerPaperPathGradings.horizontalEquiv
+#print axioms KroneckerPaperPathGradings.horizontalEquiv
+#check KroneckerPaperPathGradings.verticalEquiv
+#print axioms KroneckerPaperPathGradings.verticalEquiv
+#check KroneckerPaperPathGradings.predecessorOccurrences
+#print axioms KroneckerPaperPathGradings.predecessorOccurrences
+#check KroneckerPaperPathGradings.assignmentCount
+#print axioms KroneckerPaperPathGradings.assignmentCount
+#check KroneckerPaperPathGradings.predecessorGeometry
+#print axioms KroneckerPaperPathGradings.predecessorGeometry
+#check KroneckerPaperPathGradings.predecessorOccurrences_geometry
+#print axioms KroneckerPaperPathGradings.predecessorOccurrences_geometry
+#check KroneckerPaperPathGradings.assignmentCount_occurrences
+#print axioms KroneckerPaperPathGradings.assignmentCount_occurrences
+#check KroneckerPaperPathGradings.IsPredecessor
+#print axioms KroneckerPaperPathGradings.IsPredecessor
+#check KroneckerPaperPathGradings.isPredecessor_iff
+#print axioms KroneckerPaperPathGradings.isPredecessor_iff
+#check KroneckerPaperPathGradings.predecessor_unique
+#print axioms KroneckerPaperPathGradings.predecessor_unique
+#check KroneckerPaperPathGradings.predecessor_exists_iff
+#print axioms KroneckerPaperPathGradings.predecessor_exists_iff
+#check KroneckerPaperPathGradings.Debt
+#print axioms KroneckerPaperPathGradings.Debt
+#check KroneckerPaperPathGradings.debt_and_assignments
+#print axioms KroneckerPaperPathGradings.debt_and_assignments
+#check KroneckerPaperPathGradings.IsNode
+#print axioms KroneckerPaperPathGradings.IsNode
+#check KroneckerPaperPathGradings.isNode_iff
+#print axioms KroneckerPaperPathGradings.isNode_iff
+#check KroneckerPaperPathGradings.nodePath
+#print axioms KroneckerPaperPathGradings.nodePath
+#check KroneckerPaperPathGradings.nodePath_edges
+#print axioms KroneckerPaperPathGradings.nodePath_edges
+#check KroneckerPaperPathGradings.nodePath_mem_edge_iff
+#print axioms KroneckerPaperPathGradings.nodePath_mem_edge_iff
+#check KroneckerPaperPathGradings.Node
+#print axioms KroneckerPaperPathGradings.Node
+#check KroneckerPaperPathGradings.nodeEdges
+#print axioms KroneckerPaperPathGradings.nodeEdges
+#check KroneckerPaperPathGradings.Ancestor
+#print axioms KroneckerPaperPathGradings.Ancestor
+#check KroneckerPaperPathGradings.Parent
+#print axioms KroneckerPaperPathGradings.Parent
+#check KroneckerManuscriptGraphs.Bipartition
+#print axioms KroneckerManuscriptGraphs.Bipartition
+#check KroneckerManuscriptGraphs.incidence_bipartition
+#print axioms KroneckerManuscriptGraphs.incidence_bipartition
+#check KroneckerManuscriptGraphs.bipartition_iff_bipartite
+#print axioms KroneckerManuscriptGraphs.bipartition_iff_bipartite
+#check KroneckerManuscriptGraphs.Leaf
+#print axioms KroneckerManuscriptGraphs.Leaf
+#check KroneckerManuscriptGraphs.left_leaf_iff
+#print axioms KroneckerManuscriptGraphs.left_leaf_iff
+#check KroneckerManuscriptGraphs.right_leaf_iff
+#print axioms KroneckerManuscriptGraphs.right_leaf_iff
+#check KroneckerIntegerSlopeFamily.coprime
+#print axioms KroneckerIntegerSlopeFamily.coprime
+#check KroneckerIntegerSlopeFamily.inverse
+#print axioms KroneckerIntegerSlopeFamily.inverse
+#check KroneckerIntegerSlopeFamily.slope
+#print axioms KroneckerIntegerSlopeFamily.slope
+#check KroneckerIntegerSlopeFamily.family_prefix
+#print axioms KroneckerIntegerSlopeFamily.family_prefix
+#check KroneckerIntegerSlopeFamily.run
+#print axioms KroneckerIntegerSlopeFamily.run
+#check KroneckerIntegerSlopeFamily.frame
+#print axioms KroneckerIntegerSlopeFamily.frame
+#check KroneckerIntegerSlopeFamily.parameters
+#print axioms KroneckerIntegerSlopeFamily.parameters
+#check KroneckerIntegerSlopeFamily.geometric_frame
+#print axioms KroneckerIntegerSlopeFamily.geometric_frame

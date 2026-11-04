@@ -1,0 +1,28 @@
+import KroneckerDirectCoprimePosition
+
+/-! Axiom profiles for the direct shadow argument and its frame dictionary.
+Every declaration below must use only Lean's standard logical axioms. -/
+
+#check KroneckerDirectShadowBudget.shadow_cost_bound
+#check KroneckerDirectShadowBudget.budget_decomposition
+#check KroneckerDirectShadowBudget.support_shift
+#check KroneckerDirectShadowBudget.exists_min_cut
+#check KroneckerDirectShadowBudget.one_cyclic_block
+#check KroneckerDirectCoprimePosition.tight_position
+#check KroneckerDirectCoprimePosition.natural_tight_position
+#check KroneckerDirectCoprimePosition.located
+#check KroneckerDirectCoprimePosition.source_position
+#check KroneckerDirectCoprimePosition.tight_count_frame
+#check KroneckerDirectCoprimePosition.weighted_frame_count
+
+#print axioms KroneckerDirectShadowBudget.shadow_cost_bound
+#print axioms KroneckerDirectShadowBudget.budget_decomposition
+#print axioms KroneckerDirectShadowBudget.support_shift
+#print axioms KroneckerDirectShadowBudget.exists_min_cut
+#print axioms KroneckerDirectShadowBudget.one_cyclic_block
+#print axioms KroneckerDirectCoprimePosition.tight_position
+#print axioms KroneckerDirectCoprimePosition.natural_tight_position
+#print axioms KroneckerDirectCoprimePosition.located
+#print axioms KroneckerDirectCoprimePosition.source_position
+#print axioms KroneckerDirectCoprimePosition.tight_count_frame
+#print axioms KroneckerDirectCoprimePosition.weighted_frame_count

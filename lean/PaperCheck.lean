@@ -1,0 +1,214 @@
+import KroneckerReadableMain
+import KroneckerPaperNodeRestriction
+import KroneckerPaperCompatibility
+import KroneckerPaperPathGradings
+
+/- Audit commands for the current paper-to-Lean correspondence. -/
+#check @KroneckerReadableMain.semantic_main
+#check @KroneckerTotalLatticeWeight.fixed_lattice_weight_lower
+#check @KroneckerDeletePrescribedRuns.prescribed_delete_run_count
+#check @KroneckerDeletePrescribedRuns.prescribed_run_count
+#check @KroneckerDeletePrescribedRuns.prescribed_run_real
+#check @KroneckerBinaryMechanicalLemma.binary_mechanical_seven
+#check @KroneckerReflectedLinearBlock.reflectedBlock
+#check @KroneckerReflectedLinearBlock.reflected_total_source
+#check @KroneckerReflectedLinearBlock.reflected_positive_defect
+#check @KroneckerReflectedLinearBlock.reflected_arrows_generate
+#check @KroneckerDeleteBinaryCount.binary_count
+#check @KroneckerScopedWeistFiniteLower.finite_lower
+#check @KroneckerBadHoleCount.bad_holes_le_bad_windows
+#check @KroneckerLogic.common_intervals_limit
+#check @KroneckerScopedDeleteActualCentral.central_limit
+#check @KroneckerScopedActualFiniteEnvelope.endpoints
+#print axioms KroneckerTotalLatticeWeight.fixed_lattice_weight_lower
+#print axioms KroneckerDeletePrescribedRuns.prescribed_delete_run_count
+#print axioms KroneckerDeletePrescribedRuns.prescribed_run_count
+#print axioms KroneckerDeletePrescribedRuns.prescribed_run_real
+#print axioms KroneckerBinaryMechanicalLemma.binary_mechanical_seven
+#print axioms KroneckerReflectedLinearBlock.reflected_positive_defect
+#print axioms KroneckerDeleteBinaryCount.binary_count
+#print axioms KroneckerWeistUniformConstants.gamma_lower
+#print axioms KroneckerReadableMain.semantic_main
+
+/- Literal manuscript definitions and their proved internal correspondences. -/
+#check @KroneckerPaper.starting_boundary_injective
+#print axioms KroneckerPaper.starting_boundary_injective
+#check @KroneckerPaper.balance_formula
+#print axioms KroneckerPaper.balance_formula
+#check @KroneckerPaper.colored_balance_eq
+#print axioms KroneckerPaper.colored_balance_eq
+#check @KroneckerPaper.connected_colored_count
+#print axioms KroneckerPaper.connected_colored_count
+#check @KroneckerPaper.grading_color_count
+#print axioms KroneckerPaper.grading_color_count
+#check @KroneckerPredecessor.isHorizontalPredecessor_iff
+#print axioms KroneckerPredecessor.isHorizontalPredecessor_iff
+#check @KroneckerPredecessor.assignedBefore_eq_card
+#print axioms KroneckerPredecessor.assignedBefore_eq_card
+#check @KroneckerPredecessor.horizontalPredecessor_unique
+#print axioms KroneckerPredecessor.horizontalPredecessor_unique
+#check @KroneckerPredecessor.exists_horizontalPredecessor_iff
+#print axioms KroneckerPredecessor.exists_horizontalPredecessor_iff
+#check @KroneckerPredecessor.Debt_add_assignedBefore
+#print axioms KroneckerPredecessor.Debt_add_assignedBefore
+#check @KroneckerPredecessor.node_exists
+#print axioms KroneckerPredecessor.node_exists
+#check @KroneckerPredecessor.IsNode.end_unique
+#print axioms KroneckerPredecessor.IsNode.end_unique
+#check @KroneckerPredecessor.IsNode.internal_assignment
+#print axioms KroneckerPredecessor.IsNode.internal_assignment
+#check @KroneckerPredecessor.IsNode.interior_node
+#print axioms KroneckerPredecessor.IsNode.interior_node
+#check @KroneckerPredecessor.IsNode.disjoint_or_nested
+#print axioms KroneckerPredecessor.IsNode.disjoint_or_nested
+#check @KroneckerPredecessor.IsNode.balance_lower_bound
+#print axioms KroneckerPredecessor.IsNode.balance_lower_bound
+#check @KroneckerPredecessor.IsNode.interior_baseline_lt
+#print axioms KroneckerPredecessor.IsNode.interior_baseline_lt
+#check @KroneckerPredecessor.node_balance_difference
+#print axioms KroneckerPredecessor.node_balance_difference
+#check @KroneckerPredecessor.IsNode.surplus_nonnegative
+#print axioms KroneckerPredecessor.IsNode.surplus_nonnegative
+#check @KroneckerPaperTraceBridge.valid_iff_trace
+#print axioms KroneckerPaperTraceBridge.valid_iff_trace
+#check @KroneckerPaperTraceBridge.valid_followsTrace
+#print axioms KroneckerPaperTraceBridge.valid_followsTrace
+#check @KroneckerPaperTraceBridge.predecessor_entry_debt
+#print axioms KroneckerPaperTraceBridge.predecessor_entry_debt
+
+#check @KroneckerPredecessor.isNode_iff_first_horizontal_shadow
+#print axioms KroneckerPredecessor.isNode_iff_first_horizontal_shadow
+#check @KroneckerPredecessor.full_node_root_component
+#print axioms KroneckerPredecessor.full_node_root_component
+#check @KroneckerPredecessor.root_component_full_node
+#print axioms KroneckerPredecessor.root_component_full_node
+#check @KroneckerPaperExecutionTrace.nodeRun_guardedTrace
+#print axioms KroneckerPaperExecutionTrace.nodeRun_guardedTrace
+#check @KroneckerPaperExecutionTrace.operational_guardedTrace
+#print axioms KroneckerPaperExecutionTrace.operational_guardedTrace
+
+#check @KroneckerPaperConnected.connected_surplus_iff
+#print axioms KroneckerPaperConnected.connected_surplus_iff
+#check @KroneckerPaperConnected.connected_iff_operational
+#print axioms KroneckerPaperConnected.connected_iff_operational
+#check @KroneckerPaperConnected.operational_surplus_formula
+#print axioms KroneckerPaperConnected.operational_surplus_formula
+#check @KroneckerPredecessor.IsNode.restriction_connected
+#print axioms KroneckerPredecessor.IsNode.restriction_connected
+#check @KroneckerPredecessor.restriction_load
+#print axioms KroneckerPredecessor.restriction_load
+#check @KroneckerPredecessor.restriction_balance
+#print axioms KroneckerPredecessor.restriction_balance
+#check @KroneckerWrappedExchangeAssembly.wrapped_exchange_theorem
+#print axioms KroneckerWrappedExchangeAssembly.wrapped_exchange_theorem
+
+#check @KroneckerPaperColors.surplus_formula
+#print axioms KroneckerPaperColors.surplus_formula
+#check @KroneckerPaperColors.literal_connected_binomial_sum
+#print axioms KroneckerPaperColors.literal_connected_binomial_sum
+#check @KroneckerPaperColors.literal_count_eq_pathCount
+#print axioms KroneckerPaperColors.literal_count_eq_pathCount
+#check @KroneckerPaperColors.pathCount_binomial_sum
+#print axioms KroneckerPaperColors.pathCount_binomial_sum
+
+#check @KroneckerPaperCompatibility.connected_iff_cyclic
+#print axioms KroneckerPaperCompatibility.connected_iff_cyclic
+#check @KroneckerPaperCompatibility.ownedBalance_iff_cyclic
+#print axioms KroneckerPaperCompatibility.ownedBalance_iff_cyclic
+#check @KroneckerPaperCompatibility.compatible_restriction
+#print axioms KroneckerPaperCompatibility.compatible_restriction
+#check @KroneckerPaperCompatibility.zero_extension_iff_connected
+#print axioms KroneckerPaperCompatibility.zero_extension_iff_connected
+#check @KroneckerPaperCompatibility.zero_extension_iff_ownedBalance
+#print axioms KroneckerPaperCompatibility.zero_extension_iff_ownedBalance
+
+#check @KroneckerScopedActualFrameApplication.literal_identity
+
+#check @KroneckerPaperPaths.eq_empty_iff
+#print axioms KroneckerPaperPaths.eq_empty_iff
+#check @KroneckerPaperPaths.edge_injective
+#print axioms KroneckerPaperPaths.edge_injective
+#check @KroneckerPaperPaths.edgeEquiv
+#print axioms KroneckerPaperPaths.edgeEquiv
+#check @KroneckerPaperPaths.translate_empty
+#print axioms KroneckerPaperPaths.translate_empty
+#check @KroneckerPaperPaths.translate_zero
+#print axioms KroneckerPaperPaths.translate_zero
+#check @KroneckerPaperPaths.translate_add
+#print axioms KroneckerPaperPaths.translate_add
+#check @KroneckerPaperPaths.translate_neg
+#print axioms KroneckerPaperPaths.translate_neg
+#check @KroneckerPaperPaths.edge_translate
+#print axioms KroneckerPaperPaths.edge_translate
+#check @KroneckerPaperPaths.concat_steps
+#print axioms KroneckerPaperPaths.concat_steps
+#check @KroneckerPaperPaths.empty_concat
+#print axioms KroneckerPaperPaths.empty_concat
+#check @KroneckerPaperPaths.concat_empty
+#print axioms KroneckerPaperPaths.concat_empty
+#check @KroneckerPaperPaths.subpath_steps
+#print axioms KroneckerPaperPaths.subpath_steps
+#check @KroneckerPaperPaths.subpath_self
+#print axioms KroneckerPaperPaths.subpath_self
+#check @KroneckerPaperPaths.simpleRun_steps
+#print axioms KroneckerPaperPaths.simpleRun_steps
+#check @KroneckerPaperPaths.insert_steps
+#print axioms KroneckerPaperPaths.insert_steps
+#check @KroneckerPaperPaths.insert_empty
+#print axioms KroneckerPaperPaths.insert_empty
+#check @KroneckerPaperPaths.deleteVertical_steps
+#print axioms KroneckerPaperPaths.deleteVertical_steps
+#check @KroneckerPaperPathGradings.gradingEquiv
+#print axioms KroneckerPaperPathGradings.gradingEquiv
+#check @KroneckerPaperPathGradings.coloredGradingEquiv
+#print axioms KroneckerPaperPathGradings.coloredGradingEquiv
+#check @KroneckerPaperPathGradings.translateEdge_geometry
+#print axioms KroneckerPaperPathGradings.translateEdge_geometry
+#check @KroneckerPaperPathGradings.translateGrading_apply
+#print axioms KroneckerPaperPathGradings.translateGrading_apply
+#check @KroneckerPaperPathGradings.translateColorFunction_apply
+#print axioms KroneckerPaperPathGradings.translateColorFunction_apply
+#check @KroneckerPaperPathGradings.translateColoredGrading_add
+#print axioms KroneckerPaperPathGradings.translateColoredGrading_add
+#check @KroneckerPaperPathGradings.translateColoredGrading_neg
+#print axioms KroneckerPaperPathGradings.translateColoredGrading_neg
+#check @KroneckerPaperPathGradings.boundaryBalance_formula
+#print axioms KroneckerPaperPathGradings.boundaryBalance_formula
+#check @KroneckerPaperPathGradings.boundaryBalance_translate
+#print axioms KroneckerPaperPathGradings.boundaryBalance_translate
+#check @KroneckerPaperPathGradings.edgeBalance_translate
+#print axioms KroneckerPaperPathGradings.edgeBalance_translate
+#check @KroneckerPaperPathGradings.surplus_formula
+#print axioms KroneckerPaperPathGradings.surplus_formula
+#check @KroneckerPaperPathGradings.surplus_translate
+#print axioms KroneckerPaperPathGradings.surplus_translate
+#check @KroneckerPaperPathGradings.connectedGrade_translate
+#print axioms KroneckerPaperPathGradings.connectedGrade_translate
+#check @KroneckerPaperPathGradings.connectedTranslationEquiv
+#print axioms KroneckerPaperPathGradings.connectedTranslationEquiv
+#check @KroneckerPaperPathGradings.connectedCount_translate
+#print axioms KroneckerPaperPathGradings.connectedCount_translate
+#check @KroneckerPaperPathGradings.connectedCount_eq_pathCount
+#print axioms KroneckerPaperPathGradings.connectedCount_eq_pathCount
+
+#check @KroneckerPaperPaths.edge_direction
+#print axioms KroneckerPaperPaths.edge_direction
+#check @KroneckerPaperPaths.subpath_edge
+#print axioms KroneckerPaperPaths.subpath_edge
+#check @KroneckerPaperPaths.subpath_translate
+#print axioms KroneckerPaperPaths.subpath_translate
+#check @KroneckerPaperPaths.concat_suffix
+#print axioms KroneckerPaperPaths.concat_suffix
+#check @KroneckerPaperPaths.insert_paper_formula
+#print axioms KroneckerPaperPaths.insert_paper_formula
+#check @KroneckerPaperPaths.deleteVertical_paper_formula
+#print axioms KroneckerPaperPaths.deleteVertical_paper_formula
+#check @KroneckerPaperPathGradings.translationEquiv_symm_apply
+#print axioms KroneckerPaperPathGradings.translationEquiv_symm_apply
+#check @KroneckerPaperPathGradings.boundaryBalance_geometric_prefix_sum
+#print axioms KroneckerPaperPathGradings.boundaryBalance_geometric_prefix_sum
+#check @KroneckerPaperPathGradings.connectedCount_empty
+#print axioms KroneckerPaperPathGradings.connectedCount_empty
+
+#check @KroneckerPaperPathGradings.connectedGrade_surplus
+#print axioms KroneckerPaperPathGradings.connectedGrade_surplus

@@ -1,0 +1,35 @@
+import KroneckerManuscriptExchangeDefinitions
+import KroneckerUniversalWeightedSupportCriterion
+import CurrentManuscriptCheck
+import ManuscriptProofSyncAudit
+import ConnectedConventionAudit
+import ArrowOperatorsAudit
+import DimensionsAudit
+import FurtherDefinitionsAudit
+import GluingStabilityAudit
+import GraphHomAudit
+import NotationAudit
+import PriorityDefinitionsAudit
+import FiveIssueCorrectionsAudit
+import KroneckerManuscriptBranchCounting
+import KroneckerManuscriptSupportEquivalence
+import KroneckerManuscriptTraversalLifting
+import KroneckerManuscriptTreeRigidity
+
+/-! Integration check for the manuscript revision dated 26 October 2026.
+Imports assemble the corrected manuscript models and their audit modules.
+The external interfaces and main theorem statement are unchanged.
+An import does not assert that every prose proof has a formal translation.
+-/
+#print axioms KroneckerReadableMain.main
+#print axioms KroneckerReadableMain.semantic_main
+#print axioms KroneckerManuscriptFiveIssueCorrections.source_closed_flow_difference_positive
+#print axioms KroneckerManuscriptFiveIssueCorrections.internal_mark_attachments
+#print axioms KroneckerManuscriptFiveIssueCorrections.zero_budget_composition
+#print axioms KroneckerManuscriptFiveIssueCorrections.three_arrow_fiber_budget
+#print axioms KroneckerChainSkeletonTree.chain_tree
+
+#print axioms KroneckerUniversalWeightedSupportCriterion.weightedIso_dimension_relation
+#print axioms KroneckerUniversalWeightedSupportCriterion.dimension_relation_weightedIso
+#print axioms KroneckerUniversalDeckRootTorsor.deck_ext_at
+#print axioms KroneckerUniversalColoredMapRigidity.walk_agreement

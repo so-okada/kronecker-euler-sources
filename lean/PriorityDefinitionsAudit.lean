@@ -1,0 +1,35 @@
+import KroneckerManuscriptPriorityDefinitions
+open KroneckerManuscriptQuiverDefinitions
+#print axioms Representation.RepSupp
+#print axioms VecSupp
+#print axioms repSupp_eq_vecSupp
+#print axioms Graph.DelEdge
+#print axioms Graph.CtdComp
+#print axioms Graph.CtdCompAt
+#print axioms Graph.ctdCompAt_mem
+#print axioms Graph.ctdComp_eq_empty
+#print axioms Graph.sinkEnd
+#print axioms Graph.SnkCtdComp
+#print axioms Graph.delete_boundary
+#print axioms LabeledChain.Ch
+#print axioms LabeledChain.LeftEdge
+#print axioms LabeledChain.MidEdge
+#print axioms LabeledChain.RightEdge
+#print axioms LabeledChain.source_degree
+#print axioms Quiver.Embedding
+#print axioms Quiver.sourceFiberMap
+#print axioms Quiver.targetFiberMap
+#print axioms Quiver.Covering
+#print axioms Quiver.Covering.IsUniversal
+#print axioms Quiver.Deck
+#print axioms Quiver.DeckAction
+#print axioms Quiver.DeckClass
+#print axioms Quiver.deck_action_at_image
+#print axioms Quiver.deck_action_support
+#print axioms Quiver.deck_action_finite_support
+#print axioms DimVecFin
+#print axioms VecSrcDim
+#print axioms VecSnkDim
+#print axioms CovDim
+#print axioms CoverWeight
+#print axioms compatible_weight_zero

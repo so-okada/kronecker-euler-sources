@@ -1,0 +1,29 @@
+import KroneckerManuscriptFurtherDefinitions
+open KroneckerManuscriptQuiverDefinitions
+#print axioms Quiver.DirectedPath
+#print axioms Quiver.DirectedCycle.path
+#print axioms Quiver.DirectedCycle
+#print axioms Quiver.Acyclic
+#print axioms Quiver.Traversal
+#print axioms Quiver.Covering.unique_outgoing
+#print axioms Quiver.Covering.unique_incoming
+#print axioms ColoredBranch.Data
+#print axioms ColoredBranch.parentColor
+#print axioms ColoredBranch.IsSource
+#print axioms ColoredBranch.IsSink
+#print axioms ColoredBranch.sourceCount
+#print axioms ColoredBranch.leafCount
+#print axioms ColoredBranch.Iso
+#print axioms Representation.Res
+#print axioms Representation.res_dimension
+#print axioms Representation.ResHom
+#print axioms Representation.ExtZero
+#print axioms Representation.ExtZeroHom
+#print axioms Representation.extZero_off_support
+#print axioms Representation.extZeroAt
+#print axioms Representation.extZero_dimension
+#print axioms PrefDiff
+#print axioms PrefSum
+#print axioms prefDiff_self
+#print axioms prefSum_self
+#print axioms prefDiff_swap

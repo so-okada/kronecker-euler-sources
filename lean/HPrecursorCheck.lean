@@ -1,0 +1,11 @@
+import KroneckerHPrecursor
+import InsertionConventionCheck
+import StatementAudit
+import KroneckerReadableMain
+
+#print axioms KroneckerPaperPathGradings.isHPrecursor_iff
+#print axioms KroneckerPaperPathGradings.hPrecursor_unique
+#print axioms KroneckerPaperPathGradings.hPrecursor_exists_iff
+#print axioms KroneckerPaperPathGradings.hPrecursor_nodePath_edges
+#print axioms KroneckerPaperPathGradings.hPrecursor_debt_formula
+#print axioms KroneckerReadableMain.semantic_main

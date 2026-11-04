@@ -1,0 +1,88 @@
+import KroneckerPaperPathGradings
+
+#check @KroneckerPaperPaths.eq_empty_iff
+#print axioms KroneckerPaperPaths.eq_empty_iff
+#check @KroneckerPaperPaths.edge_injective
+#print axioms KroneckerPaperPaths.edge_injective
+#check @KroneckerPaperPaths.edgeEquiv
+#print axioms KroneckerPaperPaths.edgeEquiv
+#check @KroneckerPaperPaths.translate_empty
+#print axioms KroneckerPaperPaths.translate_empty
+#check @KroneckerPaperPaths.translate_zero
+#print axioms KroneckerPaperPaths.translate_zero
+#check @KroneckerPaperPaths.translate_add
+#print axioms KroneckerPaperPaths.translate_add
+#check @KroneckerPaperPaths.translate_neg
+#print axioms KroneckerPaperPaths.translate_neg
+#check @KroneckerPaperPaths.edge_translate
+#print axioms KroneckerPaperPaths.edge_translate
+#check @KroneckerPaperPaths.concat_steps
+#print axioms KroneckerPaperPaths.concat_steps
+#check @KroneckerPaperPaths.empty_concat
+#print axioms KroneckerPaperPaths.empty_concat
+#check @KroneckerPaperPaths.concat_empty
+#print axioms KroneckerPaperPaths.concat_empty
+#check @KroneckerPaperPaths.subpath_steps
+#print axioms KroneckerPaperPaths.subpath_steps
+#check @KroneckerPaperPaths.subpath_self
+#print axioms KroneckerPaperPaths.subpath_self
+#check @KroneckerPaperPaths.simpleRun_steps
+#print axioms KroneckerPaperPaths.simpleRun_steps
+#check @KroneckerPaperPaths.insert_steps
+#print axioms KroneckerPaperPaths.insert_steps
+#check @KroneckerPaperPaths.insert_empty
+#print axioms KroneckerPaperPaths.insert_empty
+#check @KroneckerPaperPaths.deleteVertical_steps
+#print axioms KroneckerPaperPaths.deleteVertical_steps
+#check @KroneckerPaperPathGradings.gradingEquiv
+#print axioms KroneckerPaperPathGradings.gradingEquiv
+#check @KroneckerPaperPathGradings.coloredGradingEquiv
+#print axioms KroneckerPaperPathGradings.coloredGradingEquiv
+#check @KroneckerPaperPathGradings.translateEdge_geometry
+#print axioms KroneckerPaperPathGradings.translateEdge_geometry
+#check @KroneckerPaperPathGradings.translateGrading_apply
+#print axioms KroneckerPaperPathGradings.translateGrading_apply
+#check @KroneckerPaperPathGradings.translateColorFunction_apply
+#print axioms KroneckerPaperPathGradings.translateColorFunction_apply
+#check @KroneckerPaperPathGradings.translateColoredGrading_add
+#print axioms KroneckerPaperPathGradings.translateColoredGrading_add
+#check @KroneckerPaperPathGradings.translateColoredGrading_neg
+#print axioms KroneckerPaperPathGradings.translateColoredGrading_neg
+#check @KroneckerPaperPathGradings.boundaryBalance_formula
+#print axioms KroneckerPaperPathGradings.boundaryBalance_formula
+#check @KroneckerPaperPathGradings.boundaryBalance_translate
+#print axioms KroneckerPaperPathGradings.boundaryBalance_translate
+#check @KroneckerPaperPathGradings.edgeBalance_translate
+#print axioms KroneckerPaperPathGradings.edgeBalance_translate
+#check @KroneckerPaperPathGradings.surplus_formula
+#print axioms KroneckerPaperPathGradings.surplus_formula
+#check @KroneckerPaperPathGradings.surplus_translate
+#print axioms KroneckerPaperPathGradings.surplus_translate
+#check @KroneckerPaperPathGradings.connectedGrade_translate
+#print axioms KroneckerPaperPathGradings.connectedGrade_translate
+#check @KroneckerPaperPathGradings.connectedTranslationEquiv
+#print axioms KroneckerPaperPathGradings.connectedTranslationEquiv
+#check @KroneckerPaperPathGradings.connectedCount_translate
+#print axioms KroneckerPaperPathGradings.connectedCount_translate
+#check @KroneckerPaperPathGradings.connectedCount_eq_pathCount
+#print axioms KroneckerPaperPathGradings.connectedCount_eq_pathCount
+#check @KroneckerPaperPaths.edge_direction
+#print axioms KroneckerPaperPaths.edge_direction
+#check @KroneckerPaperPaths.subpath_edge
+#print axioms KroneckerPaperPaths.subpath_edge
+#check @KroneckerPaperPaths.subpath_translate
+#print axioms KroneckerPaperPaths.subpath_translate
+#check @KroneckerPaperPaths.concat_suffix
+#print axioms KroneckerPaperPaths.concat_suffix
+#check @KroneckerPaperPaths.insert_paper_formula
+#print axioms KroneckerPaperPaths.insert_paper_formula
+#check @KroneckerPaperPaths.deleteVertical_paper_formula
+#print axioms KroneckerPaperPaths.deleteVertical_paper_formula
+#check @KroneckerPaperPathGradings.translationEquiv_symm_apply
+#print axioms KroneckerPaperPathGradings.translationEquiv_symm_apply
+#check @KroneckerPaperPathGradings.boundaryBalance_geometric_prefix_sum
+#print axioms KroneckerPaperPathGradings.boundaryBalance_geometric_prefix_sum
+#check @KroneckerPaperPathGradings.connectedCount_empty
+#print axioms KroneckerPaperPathGradings.connectedCount_empty
+#check @KroneckerPaperPathGradings.connectedGrade_surplus
+#print axioms KroneckerPaperPathGradings.connectedGrade_surplus
